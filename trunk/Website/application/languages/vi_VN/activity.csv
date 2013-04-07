@@ -1,0 +1,47 @@
+# notify_commented
+"_EMAIL_NOTIFY_COMMENTED_TITLE";"Comment"
+"_EMAIL_NOTIFY_COMMENTED_DESCRIPTION";"This email is sent to someone when a comment is made on their post."
+"_EMAIL_NOTIFY_COMMENTED_SUBJECT";"[sender_title] vừa bình luận trên một bài đăng nào đó của bạn"
+"_EMAIL_NOTIFY_COMMENTED_BODY";"[header]
+
+Một bình luận mới vừa được đăng cho một trong số những bài đăng của bạn bởi [sender_title]. Hãy click vào link dưới đây để xem:
+
+http://[host][object_link]
+
+[footer]"
+
+# notify_commented_commented
+"_EMAIL_NOTIFY_COMMENTED_COMMENTED_TITLE";"Also Commented"
+"_EMAIL_NOTIFY_COMMENTED_COMMENTED_DESCRIPTION";"This email is sent to the member when someone comments on a post the member has commented on."
+"_EMAIL_NOTIFY_COMMENTED_COMMENTED_SUBJECT";"[sender_title] vừa bình luận trên một bài viết bạn đã bình luận"
+"_EMAIL_NOTIFY_COMMENTED_COMMENTED_BODY";"[header]
+
+[sender_title] vừa bình luận trên một bài viết bạn đã bình luận. Hãy click vào liên kết bên dưới để xem:
+
+http://[host][object_link]
+
+[footer]"
+
+# notify_liked
+"_EMAIL_NOTIFY_LIKED_TITLE";"Like"
+"_EMAIL_NOTIFY_LIKED_DESCRIPTION";"This email is sent to the member when someone likes the member's post."
+"_EMAIL_NOTIFY_LIKED_SUBJECT";"[sender_title] thích bài post của bạn"
+"_EMAIL_NOTIFY_LIKED_BODY";"[header]
+
+[sender_title] vừa thích một trong những post của bạn. Hãy click vào link bên dưới để xem:
+
+http://[host][object_link]
+
+[footer]"
+
+# notify_liked_commented
+"_EMAIL_NOTIFY_LIKED_COMMENTED_TITLE";"Comment on Liked"
+"_EMAIL_NOTIFY_LIKED_COMMENTED_DESCRIPTION";"This email is sent to the member when someone comments on a post the member liked."
+"_EMAIL_NOTIFY_LIKED_COMMENTED_SUBJECT";"[sender_title] vừa bình luận một post bạn thích"
+"_EMAIL_NOTIFY_LIKED_COMMENTED_BODY";"[header]
+
+[sender_title] vừa bình luận bài post bạn thích. Hãy click vào liên kết bên dưới để xem:
+
+http://[host][object_link]
+
+[footer]"

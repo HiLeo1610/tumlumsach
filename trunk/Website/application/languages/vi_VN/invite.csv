@@ -1,0 +1,33 @@
+# mail templates
+
+# invite
+"_EMAIL_INVITE_TITLE";"Invitation"
+"_EMAIL_INVITE_DESCRIPTION";"This is the email that gets sent when members invite their friends to join during the signup process."
+"_EMAIL_INVITE_SUBJECT";"Bạn vừa nhận được một lời mời tham gia vào mạng xã hội của chúng tôi."
+"_EMAIL_INVITE_BODY";"[header]
+
+Bạn vừa nhận được một lời mời tham gia mạng xã hội của chúng tôi từ [sender_title]. Để tham gia hãy click vào liên kết bên dưới:
+
+http://[host][object_link]
+
+----------------------------------------
+[message]
+----------------------------------------
+
+[footer]"
+
+# invite_code
+"_EMAIL_INVITE_CODE_TITLE";"Invite Code"
+"_EMAIL_INVITE_CODE_DESCRIPTION";"This email is sent to someone when they are invited by a member and an invite code is required."
+"_EMAIL_INVITE_CODE_SUBJECT";"Bạn vừa nhận được một lời mời tham dự mạng xã hội của chúng tôi!"
+"_EMAIL_INVITE_CODE_BODY";"[header]
+
+Bạn vừa nhận được lời mời tham gia mạng xã hội của chúng tôi từ [sender_title]. Để tham gia, hãy click vào liên kết bên dưới:
+
+http://[host][object_link]
+
+----------------------------------------
+[message]
+----------------------------------------
+
+[footer]"
