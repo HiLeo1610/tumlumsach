@@ -1,0 +1,4810 @@
+{
+  "type": "module",
+  "name": "book",
+  "version": "4.01",
+  "revision": null,
+  "path": "application\/modules\/Book",
+  "repository": null,
+  "date": "Tue, 09 Oct 2012 16:17:24 +0000",
+  "title": "Book",
+  "description": "Book",
+  "thumb": null,
+  "developer": null,
+  "authors": [
+    "Dang Tran Hai"
+  ],
+  "changeLog": null,
+  "meta": {
+    "date": "Tue, 09 Oct 2012 16:17:24 +0000",
+    "title": "Book",
+    "description": "Book",
+    "developer": null,
+    "authors": [
+      "Dang Tran Hai"
+    ],
+    "changeLog": null
+  },
+  "actions": [
+    "install",
+    "upgrade",
+    "refresh",
+    "enable",
+    "disable"
+  ],
+  "callback": {
+    "path": null,
+    "class": "Engine_Package_Installer_Module",
+    "priority": 100
+  },
+  "dependencies": null,
+  "tests": [
+    
+  ],
+  "permissions": [
+    
+  ],
+  "structure": {
+    "application\/modules\/Book": {
+      "type": "directory",
+      "path": "application\/modules\/Book",
+      "structure": [
+        {
+          "path": "libs",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier.safe-includes.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 12732,
+          "sha1": "c75e904134b2ac8c8e39404ac4d3ed63bf575958"
+        },
+        {
+          "path": "libs\/HTMLPurifier.autoload.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 835,
+          "sha1": "50ac099bd9eac3eefd1c9cf6cb90052484af37f6"
+        },
+        {
+          "path": "libs\/HTMLPurifier.includes.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 9935,
+          "sha1": "fac832a67b114f86bd95b4e1c2560529058f7d88"
+        },
+        {
+          "path": "libs\/HTMLPurifier.path.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 235,
+          "sha1": "bcc9994de1c6c8aefc4ae1bdc1fd60688b650f68"
+        },
+        {
+          "path": "libs\/HTMLPurifier.func.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 545,
+          "sha1": "8ac54950952f37fbb9ace56ad6adda5c148e0418"
+        },
+        {
+          "path": "libs\/HTMLPurifier.auto.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 274,
+          "sha1": "d6a053a38a53b43868536276af235a9411185bb2"
+        },
+        {
+          "path": "libs\/HTMLPurifier.kses.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 955,
+          "sha1": "3f109fe2d4dcf57ae34a736955fc92e18efce6f8"
+        },
+        {
+          "path": "libs\/HTMLPurifier.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 8831,
+          "sha1": "fa844a36d630ad845fb09462cb82b63ee340ee7a"
+        },
+        {
+          "path": "libs\/HTMLPurifier",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Exception.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 177,
+          "sha1": "63e72fd5a444937abd65e0ef3c5d8c044a3da02f"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrCollections.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 4385,
+          "sha1": "6df8024864d555991052a276aecb9b8e8b5bd232"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/EntityParser.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 4730,
+          "sha1": "57b894003bfc81591bf641b5896ff88816f6c4e9"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/IDAccumulator.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1537,
+          "sha1": "180ee91864d9765671f23faedfc348a911c27508"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/EntityLookup",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/EntityLookup\/entities.ser",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 5311,
+          "sha1": "1d0b8949624eb12e246896475219634c1dd4b3c2"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/CSSDefinition.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 13332,
+          "sha1": "148b5c5f47a459afb082016bd1d808b8e89ccbcf"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/TagTransform.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 998,
+          "sha1": "ac07cb85d81d62eb3a7b90f06b982d186b50b0df"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Length.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3143,
+          "sha1": "d131b5b4a0a33ec8543db5519b990053b839f5ff"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Language",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Language\/messages",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Language\/messages\/en-x-test.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 171,
+          "sha1": "3951095afda6396d52ecc32777b11df157a10597"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Language\/messages\/en.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 4045,
+          "sha1": "20f27b9f730c73a18cf0b437296ac7f79358aa39"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Language\/messages\/en-x-testmini.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 229,
+          "sha1": "bdfaa9b96b6ce9c2c82d6e4183be5eabef41da22"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Language\/classes",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Language\/classes\/en-x-test.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 140,
+          "sha1": "f496705e0e997f97c09ce05a502c01b8c2da907c"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLDefinition.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 16101,
+          "sha1": "fe7d4a013a8d5bdc6d92d51c3c9b040b03735500"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/TokenFactory.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2661,
+          "sha1": "578537b6c91e4d7aa19652f4822932e65e619045"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTypes.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3522,
+          "sha1": "5c40848b2be0910043fee11e36c619ebe218eb83"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URIScheme",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URIScheme\/news.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 484,
+          "sha1": "679397084067c5e21b5fdfaa356aeaa5e5bd0d60"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URIScheme\/https.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 233,
+          "sha1": "043c9425e9f54d00403a262cf243b2daade37414"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URIScheme\/http.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 392,
+          "sha1": "e6ca18705fa7eb227e9bbb808d70ffc7d3b2ac95"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URIScheme\/mailto.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 664,
+          "sha1": "8a02ddc0d2fd9e153e3ab92b66effeee67068e54"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URIScheme\/data.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3455,
+          "sha1": "c245ef54b22163bb456be66c1760ae936589747d"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URIScheme\/nntp.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 403,
+          "sha1": "b968cc96ba4d5ca9ccc14a5119d3aacfe643703a"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URIScheme\/ftp.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1387,
+          "sha1": "271862ac28e11b4e434a34cf7edb0acc123aae78"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URIScheme\/file.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1055,
+          "sha1": "7c58b2ef2371e1daa7ea28b78738f1a02c2a1f8e"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URIFilter",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URIFilter\/MakeAbsolute.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 4346,
+          "sha1": "087587ba470185d18afaac5880e930d34ebece40"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URIFilter\/SafeIframe.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1263,
+          "sha1": "da9704e82a36140fd2296d22b03fafc4bb87aa39"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URIFilter\/DisableResources.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 263,
+          "sha1": "f132e199e55bd4e99de7e114b59b34b2f83ee16e"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URIFilter\/HostBlacklist.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 833,
+          "sha1": "a08f25b3e95cc60cdbbd5db610910041a7e594cf"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URIFilter\/DisableExternal.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 820,
+          "sha1": "533cb957c19911a7df2bc5e435d44ebaf277f180"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URIFilter\/Munge.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2136,
+          "sha1": "e24d70bf20140da160bfc9e314e400983f9921a1"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URIFilter\/DisableExternalResources.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 361,
+          "sha1": "5e681fd7fae69fb9ee3e7ccc253be976bdeae459"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Encoder.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 23705,
+          "sha1": "ef5d4c6268536c4314218af367ec66a96d664b6b"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/VarParser.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 5198,
+          "sha1": "281369bec7befb52659ebf7e773e15ef8cf377cb"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/UnitConverter.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 9205,
+          "sha1": "5c1ad9453208eb8b892f7d8a5b71123e4d35b823"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/StringHashParser.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3236,
+          "sha1": "3caeaab44f85a7af64475f9e1e04576442904163"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Lexer",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Lexer\/DirectLex.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 19260,
+          "sha1": "ecdc9e961de007b2208566e838ea1a3d1c4f0abb"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Lexer\/DOMLex.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 9473,
+          "sha1": "907924db60f2187a1d2c0caac0bcaac8e88fb763"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Lexer\/PH5P.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 164936,
+          "sha1": "af59e0deffc4d9df38a0f8684d89d1a15e70f455"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModuleManager.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 14832,
+          "sha1": "634b7e0865cb847c77cc335d5da91d494e47414d"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/VarParserException.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 157,
+          "sha1": "15b61048b14ce9db66d5d9cef2db29e7bee2779c"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/DefinitionCache.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3266,
+          "sha1": "a84506fcdbab859a0afd051436933ac90b70380e"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Filter.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1327,
+          "sha1": "6db547db6c629c4e52688fbe1977d2d2ea2ed760"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Generator.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 9655,
+          "sha1": "eec5de5f46647b3fc9ca5557f4f37af1e8f9fde8"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 5758,
+          "sha1": "155e8655f8933eecfd0f9fcdd6a9169761e80f1b"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/PercentEncoder.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3370,
+          "sha1": "2d156e0c409f8ec78130711c74ecc89aa7c3b7e8"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1858,
+          "sha1": "8d58ab1723b57f1e318dfc03815b3fcc30410357"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Strategy.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 680,
+          "sha1": "d42eb4f40e890cfe1a377bda69c8d0a302bfa8d8"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URIParser.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2280,
+          "sha1": "4984ebff443228fe3982570fd28fb218bcf3cc6f"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URIDefinition.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3316,
+          "sha1": "e685481cddc44dcf5298b7f64959d095473fe675"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ContentSets.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 5298,
+          "sha1": "90bf4c0b7e4441dc6ef4e3c6c2de9170a0cea3a5"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Definition.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1296,
+          "sha1": "1656236d507715b9ad6d108148492d386296083a"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/LanguageFactory.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 6398,
+          "sha1": "0b948633c6b2999250000437a00fe598ca8edab5"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Edit.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1168,
+          "sha1": "1ebe99c112fb1b3cd687fed47a14bc1cb90c1f52"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Hypertext.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 863,
+          "sha1": "5bde730e5f8548878a05237d000f0520e95b1057"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Target.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 503,
+          "sha1": "8595bf68e2c567eff333c62d54f3c818f0d789dc"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Ruby.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 923,
+          "sha1": "f9d87e185ebf1d1328bd37d30ec95a76dd74dddd"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Name.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 583,
+          "sha1": "b8a3aa4d514ca667619ec6d803485457631de5aa"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Legacy.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 5431,
+          "sha1": "52d08886dc9e3d2aa79603c3acc232ff4a388fc0"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Nofollow.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 410,
+          "sha1": "5ad406c937c948997177918d529b91f1a0fe9e10"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/TargetBlank.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 426,
+          "sha1": "12d5ff430a283adb348480893665fa745cce9850"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Image.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1256,
+          "sha1": "ae60388ca155c04cab014308fb55ff3ec1ce4b7f"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Forms.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 4673,
+          "sha1": "1bfb93c250d1c2e3b12dad7e631220462241d1a3"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Presentation.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1348,
+          "sha1": "fdbdea6f54409ebd3af01593b8a2334fd93dee7b"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/SafeEmbed.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 967,
+          "sha1": "f33f4fc9ee1ee875ee11cf9f35668b5de0e5cb21"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/List.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1778,
+          "sha1": "5be1ce872b1c666f7f1f4a663d1bc09611e1610b"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Tidy.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 7039,
+          "sha1": "429e49997666bcc0935ba928615650d5ae1fb38f"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/CommonAttributes.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 600,
+          "sha1": "27648937de00f1b2ec53af5f23c817e37a204c69"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Proprietary.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 852,
+          "sha1": "e3177c9222e8537e756cab408b215db665751126"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Scripting.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2149,
+          "sha1": "7956ec22e68dda7f990b015889ab4b5df25fa83e"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Tidy",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Tidy\/Name.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 645,
+          "sha1": "f81bf91f54b1a776c44e2d48be6a4c675c224b32"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Tidy\/XHTMLAndHTML4.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 6765,
+          "sha1": "e1d66c0d546a5ee311519cbbb293ad2514a83d3a"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Tidy\/Proprietary.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 905,
+          "sha1": "cb3853654830b0b1d06a018c35396cd6d46fa5d9"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Tidy\/Transitional.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 209,
+          "sha1": "58008136d1ded24e19c2f8646d5103141ed23726"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Tidy\/Strict.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 616,
+          "sha1": "97218f8f789bcc1a925c9382dc0590fead7bf320"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Tidy\/XHTML.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 327,
+          "sha1": "aae970452ea3976b0ba1e727393789cf6a42299e"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Tables.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2241,
+          "sha1": "827297e7edf989e498ad2e251fa1b33fe5405699"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Bdo.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 873,
+          "sha1": "5ef68f6af2449bf9cbbb11a6ecc5b0897870a261"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/SafeObject.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1746,
+          "sha1": "d8fabc61ebb6ac85d450a225b74489091247c6a3"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Object.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1296,
+          "sha1": "592305b40c564ed986509f7c7cb9e96e2fad9c16"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Iframe.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1009,
+          "sha1": "b550b0330530c97f8b1b83139ee96ea108bd2d08"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/NonXMLCommonAttributes.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 283,
+          "sha1": "dac0d33d0e1366fca395dc76faca840d96482812"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/Text.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3248,
+          "sha1": "ec3d13183a94a26af17164c49758fcc70611fd97"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/XMLCommonAttributes.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 281,
+          "sha1": "2fa4f78f295e6ab9f6337e1dae130d6414ef9f1d"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule\/StyleAttribute.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 648,
+          "sha1": "a7d80319c9d1a3727f961be62b64f1a0f5301eef"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ElementDef.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 6317,
+          "sha1": "b5f20ec5fbb4d67bd5f812a880422181d7b49ed8"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/DoctypeRegistry.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3527,
+          "sha1": "8aa69c1275268c5e8b0ae10776fac716ab5c1af0"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URI.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 9443,
+          "sha1": "e937fcdf3fb0f8a64b54af3c140820a0775b1e66"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/DefinitionCache",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/DefinitionCache\/Serializer.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 6795,
+          "sha1": "32da7dc4a535fa343795e685238cb12379c26a6d"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/DefinitionCache\/Decorator.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1388,
+          "sha1": "1e1b1e35ff83d808def408294f7aa3b3997c4315"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/DefinitionCache\/Serializer",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/DefinitionCache\/Serializer\/README",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 96,
+          "sha1": "02c36fd9f7a0bf3cb631bfbda52a3584f8fabdec"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/DefinitionCache\/Serializer\/HTML",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/DefinitionCache\/Serializer\/HTML\/4.4.0,7dbdc3d58ab57a278defc6669c7aa098,1.ser",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 93607,
+          "sha1": "1da42dfc861f53511b5a7e77b60a8b3ca121786a"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/DefinitionCache\/Serializer\/HTML\/4.4.0,437239bc2200e6b2580e77392b10cb1c,1.ser",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 79670,
+          "sha1": "af9e74a905fd2480cd1f4bab9322963d91c49040"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/DefinitionCache\/Serializer\/URI",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/DefinitionCache\/Serializer\/URI\/4.4.0,fdfc1465c1553db684e2f90f64511cd4,1.ser",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 516,
+          "sha1": "3ee53ad41341cf5ff2887aa944bf1ec6d8078f7e"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/DefinitionCache\/Decorator",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/DefinitionCache\/Decorator\/Template.php.in",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 947,
+          "sha1": "e3d3513f73ca85ec163ba667738e7219f4d29be4"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/DefinitionCache\/Decorator\/Cleanup.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1032,
+          "sha1": "7f533ffce318509663afdd049f847002ea52e01d"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/DefinitionCache\/Decorator\/Memory.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1356,
+          "sha1": "ca0cf1af707c169fd5f8ddc54d000d5466a23665"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/DefinitionCache\/Null.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 650,
+          "sha1": "33aebb2dd146c4adac03bfc82aea0d507198eed9"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Doctype.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1398,
+          "sha1": "fd4daec6a0f36ff4849eedd732df4f4125d79b99"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Strategy",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Strategy\/Core.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 516,
+          "sha1": "d438b52b3f5f72f33b5f53d4017d7a1a9b917e07"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Strategy\/Composite.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 506,
+          "sha1": "b5936d161095295297240ad57e753509f0fd487f"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Strategy\/ValidateAttributes.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1039,
+          "sha1": "11be9d6b520e01cb15173ac14f08332d6c60dd83"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Strategy\/RemoveForeignElements.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 8505,
+          "sha1": "f3b72ffb0398f4a599efcd1ce24f802648f8ee78"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Strategy\/FixNesting.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 13022,
+          "sha1": "21ede634f2ed13d9e686f5c128083217c4ac1755"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Strategy\/MakeWellFormed.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 23026,
+          "sha1": "0fe416746c6fe5a818d507fecc6d7e92a3593989"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/HTMLModule.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 9482,
+          "sha1": "94d13d07f34f96ce882eb00aba34885ecf215941"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Config.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 27327,
+          "sha1": "e4a8079f15d04b22ab6f99dcb6b5d1ef8506b68d"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URIScheme.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3360,
+          "sha1": "15eeb1bcd9a5383db881bde1771642f8f2ac142c"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Context.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2398,
+          "sha1": "30b9bba22f3c64e037ab3e808a343d38b6e39a0f"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Token",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Token\/Empty.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 136,
+          "sha1": "4de08e24be931032dd94bc345a0838acd73d1a19"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Token\/Tag.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1711,
+          "sha1": "40b7cf2de38e543e27482357360a72ebf03354eb"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Token\/Comment.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 509,
+          "sha1": "76a8d9dd684360970db3f6216b9740ae534fdd9d"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Token\/Start.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 136,
+          "sha1": "8206c2c971dbab0622555043568c1062edec89dd"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Token\/Text.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1014,
+          "sha1": "1decdd6cdfe6b599885a7f8d28b9e655acdcb49b"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Token\/End.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 440,
+          "sha1": "14088e2085b8537f477121eed54267ad987dd331"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ErrorStruct.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1646,
+          "sha1": "7a6b724af4c0c4de0d2a93ce131365f4e446e30f"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 4592,
+          "sha1": "fe49670c8c69927435bebfb3aec0e12a2ead04fb"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Bootstrap.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 4013,
+          "sha1": "6edfadc0d733520063f4f8280485abfb461f699b"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/PropertyList.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2133,
+          "sha1": "230ed95e1f15593ec9aa784a8b761c1d350ee62a"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Token.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1594,
+          "sha1": "ee0bfc1b7b5def137888fb2eb4afeeb7aefcba6d"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/TagTransform",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/TagTransform\/Font.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2967,
+          "sha1": "f8bf92e28efb5dd08612c3e83c4020d75f6fbe32"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/TagTransform\/Simple.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 952,
+          "sha1": "ee28649d7ce182438994423cae8c76f48607cfe3"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/DefinitionCacheFactory.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2805,
+          "sha1": "c691856df5f6a1ab55b51561d25c0270c6198e05"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Injector",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Injector\/PurifierLinkify.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1391,
+          "sha1": "6f2b81f57a3469aae2abbe8d92e42fcb3b0ae7e0"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Injector\/DisplayLinkURI.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 686,
+          "sha1": "cb10af0e606a405e0d76f8dc266b8c4f7d62d1d8"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Injector\/Linkify.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1432,
+          "sha1": "8d1310e5bbfc73286d3b18cd6094c6c7739d601c"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Injector\/SafeObject.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3362,
+          "sha1": "e195bd59f5366259304976bc3fbf2ec5ff3376d5"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Injector\/RemoveEmpty.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2142,
+          "sha1": "1674c20e5733cedbac9a44fde072c509a61b1071"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Injector\/RemoveSpansWithoutAttributes.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1714,
+          "sha1": "04e93721bc5775203f826689d309bb573305d552"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Injector\/AutoParagraph.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 13479,
+          "sha1": "f6edbeae22a35e1b643a2d95dd1e23265b748728"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Filter",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Filter\/YouTube.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1378,
+          "sha1": "bf90dd754a18e5ecd2e7aa246bc6ae91ea0c36b4"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Filter\/ExtractStyleBlocks.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 12636,
+          "sha1": "756610cf0e77cbb6f2086c49a09855cf34e17adf"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/StringHash.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 975,
+          "sha1": "573819477420fecd03838b9509088eca9df814c8"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/Exception.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 162,
+          "sha1": "d8bfdc646cf076cf49992aa29a7cbf25f5519b30"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/Validator.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 7522,
+          "sha1": "ed74da54ccc7769ebeb959a968da94610a56430d"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/ValidatorAtom.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1884,
+          "sha1": "e8d297adb7be24b22acf0299fcbb4a6b0c8ea622"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/Interchange.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1068,
+          "sha1": "5ccbf758099d852820b00fb553db17d2875cf077"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/Builder",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/Builder\/ConfigSchema.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1152,
+          "sha1": "b589a71821a3f71eca4baf5477b09a30c7d48b8d"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/Builder\/Xml.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3862,
+          "sha1": "7ecb3a542550a65eda76ef712f44f98788f96946"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema.ser",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 14690,
+          "sha1": "2e89d0339c9b7e99675b8aa1fe849210bda2d089"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/InterchangeBuilder.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 6055,
+          "sha1": "3ae2cf1d5040e8f679e0e58329684055524c6315"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/Interchange",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/Interchange\/Id.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 781,
+          "sha1": "ee531e38b89cccd9f0d3a93880876e329131b806"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/Interchange\/Directive.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1754,
+          "sha1": "eca2ff5c84b132cedc669bd53bc33ed5129eeee6"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Attr.AllowedRev.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 255,
+          "sha1": "1c401be057802f36ad1c16290f3695a51ab1d130"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Output.Newline.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 358,
+          "sha1": "86f1e05fd47cdedcdd0343f22896c75018a53a5f"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/CSS.DefinitionRev.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 196,
+          "sha1": "faa92453b827598b512c62b9bc5be2e004a2bb3d"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/AutoFormat.RemoveEmpty.RemoveNbsp.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 449,
+          "sha1": "a915fec227d732f67ce33ec1503a1a02ec970c53"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/URI.AllowedSchemes.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 468,
+          "sha1": "4ff48ef115d6dea2caa8c7791be5adc10c5ce642"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Output.TidyFormat.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 827,
+          "sha1": "db6678bc9a341a564b6c7c548517fa40207ca7b7"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/CSS.ForbiddenProperties.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 463,
+          "sha1": "2184ea0fbcc51d24555d083edd62a2b1d447558c"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Cache.SerializerPermissions.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 254,
+          "sha1": "2cee86b67e3e902290f5d56f2b30be7630301cb6"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Core.LexerImpl.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1044,
+          "sha1": "55ff9d12e7f10ee42b6fa6c930ec8d33b37f5aaa"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.BlockWrapper.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 571,
+          "sha1": "6d5ace924d94d4782ac8dca89f910b4fa24c1ca0"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Test.ForceNoIconv.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 197,
+          "sha1": "85d3adeb819b01e5cea680db2f04402714b55fd8"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Output.SortAttr.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 509,
+          "sha1": "f189097db9b4e829c243507fbffc117ed7225906"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Filter.Custom.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 307,
+          "sha1": "41d6211a5d26b567dd29793878ca646c97aefbd6"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/AutoFormat.PurifierLinkify.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 308,
+          "sha1": "102723bc6d98b155c750c618afef8146f47157db"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/URI.Base.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 654,
+          "sha1": "857fa0a89d1c0339e39e68a98abd7c44debd7da4"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.Trusted.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 266,
+          "sha1": "f6338365fec120fd3f0ffce691c69d904320a82c"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Attr.DefaultInvalidImageAlt.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 301,
+          "sha1": "e2f10caca57cb9f39f5c213402290741dd8c18f0"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Filter.ExtractStyleBlocks.Escaping.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 485,
+          "sha1": "2531c22a93a550d78d4dfa0df70032c9e4c9114a"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Output.FlashCompat.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 269,
+          "sha1": "0506200dcc8208ccb52e9ae691aac098bd4913bc"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Core.ConvertDocumentToFragment.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 433,
+          "sha1": "efbf09b74dcced4bd9ae03299a690bb048ddadd5"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/AutoFormat.PurifierLinkify.DocURL.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 326,
+          "sha1": "f4b3ffda21a0bb87cacadec11a77d6fcb210a849"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.DefinitionRev.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 533,
+          "sha1": "7770537d4e5e155c9713fbef94c413c3e64c0eab"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/URI.HostBlacklist.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 310,
+          "sha1": "9ec1024c53b2c3d8943548617862ec0992ca3804"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/URI.DefaultScheme.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 245,
+          "sha1": "24530193097d6dde810b85e471eb4c043735b29b"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/AutoFormat.RemoveSpansWithoutAttributes.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 295,
+          "sha1": "cf80054bb8d5d9bfb7cd2c1e8b2165ec029a5c3c"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Core.Language.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 292,
+          "sha1": "3b4bcf914b2496995d7e3c75b73eb307c62b1df6"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.Nofollow.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 163,
+          "sha1": "5b8e3b0bb980fb980f485985611e36baa8c408df"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.Parent.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 314,
+          "sha1": "da82cd10f9f1ac8a328e9e27ca48d0b690792321"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Attr.EnableID.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 645,
+          "sha1": "3dc8fb04614442bcca9405119cf650d6098f294f"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/URI.MakeAbsolute.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 390,
+          "sha1": "257b33865f7a91732e28ac0991f241108743aa78"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.DefinitionID.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1210,
+          "sha1": "252a9e3ae45eac9f537da6e983d201a3a170ebfa"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.ForbiddenElements.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 754,
+          "sha1": "b9f721a649f43912c42a49473d4ae9482f3c0901"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Attr.AllowedClasses.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 222,
+          "sha1": "d8218f8c70be1746d43e5f947ffca3e663d7555d"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.MaxImgLength.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 490,
+          "sha1": "b3be7f7ef81372a7d9fd8248a76d545f2ca72b86"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/CSS.AllowedFonts.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 351,
+          "sha1": "cd492b0591e0288e2aef5aa200cf7604cf1a774a"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Attr.AllowedFrameTargets.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 578,
+          "sha1": "970bb3429ea9acaf0b73d8d0c25e56a0d221946a"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/URI.DefinitionID.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 242,
+          "sha1": "76b9fdf8d127b31668dc22745b8ed5215e167101"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/CSS.Trusted.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 251,
+          "sha1": "739fbd04e1f277ebd45b314fd5691bdc2ba9e9ad"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Attr.IDBlacklist.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 123,
+          "sha1": "d27abb2daa480db54968424fbe2700af52a6a61c"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/URI.Host.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 818,
+          "sha1": "ed1a21b8c75138b69a147625b552c53ac6964ad8"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/URI.Disable.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 272,
+          "sha1": "f0de51615fc027dfeba572775975b32b2a07ac25"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.TidyLevel.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 620,
+          "sha1": "f7ecaeeb1ecde09508a521ea0f9d75dd01dc4243"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Core.AggressivelyFixLt.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 662,
+          "sha1": "fc5395b2c671f2b85e4145ff250ffa9921229f8f"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.AllowedAttributes.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 607,
+          "sha1": "d5c0df4e453552433b974d5f689fc5fbf82e5e91"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Core.RemoveProcessingInstructions.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 398,
+          "sha1": "09fa50d91ea0970d4c481c978e5dc2fc402b4af4"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.SafeObject.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 441,
+          "sha1": "0e204e32d8532f33615d8a63df0e0ba78186f416"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/AutoFormat.DisplayLinkURI.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 317,
+          "sha1": "0f1887773090a2592576cff8de225233854525d7"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.TargetBlank.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 253,
+          "sha1": "0581159e6ef8149f9fcdee4baa707553209aa233"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Cache.DefinitionImpl.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 374,
+          "sha1": "a6aad7ea1636eee9ff75170cb9df6c425dc89bf2"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Output.CommentScriptContents.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 275,
+          "sha1": "b7b570c2c35ab45f84765920f6370104ea04f539"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/CSS.Proprietary.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 164,
+          "sha1": "da18bd4c879e618593c9e9052e188dea9397071a"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.AllowedComments.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 367,
+          "sha1": "ebe033434687a050c9a0198e66fd3b398817a1b6"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/URI.DefinitionRev.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 196,
+          "sha1": "9c35d955b19c5c44813532caf4a0a133f7ab55db"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Attr.AllowedRel.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 288,
+          "sha1": "0547ba29a4f3c7267af80e837a8ee39f015adcb8"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/URI.MungeResources.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 611,
+          "sha1": "e394c2d433cee6dbc361bcf12443131d1451bb05"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/CSS.AllowedProperties.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 608,
+          "sha1": "96884d6eabc263a8eb2a492c38586850bfcc20b6"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.AllowedCommentsRegexp.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 711,
+          "sha1": "535fddc63498a9fb0e48ce016d1c403e4788518c"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/info.ini",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 45,
+          "sha1": "53d2cf947ce0d8008058eba3f912af9202bfa270"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.Doctype.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 473,
+          "sha1": "ec375832b303235f4219a46a19a9343db042d2ff"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Attr.DefaultTextDir.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 294,
+          "sha1": "ef67b19c47c65d85e131fe3f9355cd052574d781"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.TidyAdd.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 163,
+          "sha1": "3cc275a2367b0617b62031baa7d3e29108b5cd57"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Core.EscapeInvalidChildren.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 396,
+          "sha1": "8e4de884dcc8073c4fef194e71f56315e771a799"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/URI.Munge.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2759,
+          "sha1": "036b2d27b8e22eaf33842f0582f9ae150a551d96"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.CustomDoctype.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 233,
+          "sha1": "0f340606c847d972446f3b287695c501d5d2e5b7"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/URI.DisableExternal.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 443,
+          "sha1": "d82be17fd148207fd8d3ca318d5d5110b949f63a"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/URI.MungeSecretKey.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 970,
+          "sha1": "d222427afdddde262591ea1c01f66e7a9d0a5bec"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/URI.SafeIframeRegexp.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 897,
+          "sha1": "56e05f75881669ec91ab8122730ceed66794d595"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Core.Encoding.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 767,
+          "sha1": "378e50df88dd1bea0dabb31f754746e9ee248c3a"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.XHTML.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 235,
+          "sha1": "2fc94328c20ade5dbb455bc4a55e19f7374f9548"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Core.NormalizeNewlines.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 279,
+          "sha1": "dad1f73c970fe3957355f5f5eb6418c92e278ca9"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.SafeEmbed.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 483,
+          "sha1": "f0171fcf7b796bd3b48903a697608f13279b9afe"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.AllowedElements.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 882,
+          "sha1": "190c06b0d462344b1ec86d7dd90ee8418f9be49c"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Output.FixInnerHTML.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 543,
+          "sha1": "fb17dfbde9c506c8e8a7152aa821e11b33ad08cc"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Core.DirectLexLineNumberSyncInterval.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 632,
+          "sha1": "965358e1e433b7316b13c8e5ce349c200bd5bd01"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.FlashAllowFullScreen.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 287,
+          "sha1": "ac2408f5b832318c73ecf23436ab83690b8cb8e0"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/URI.OverrideAllowedSchemes.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 326,
+          "sha1": "cf89e39d5137cc217754e51b600a8709b1ada17f"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/AutoFormat.Custom.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 301,
+          "sha1": "c7e711b0861792f8f9e41ef7a0908f82477ee1bd"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.Allowed.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 996,
+          "sha1": "cbbb8042cf08a4ace1b4ee1d49c9a9f7a06101dd"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.AllowedModules.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 726,
+          "sha1": "fac20b1c2cfa662b46eeed64cbeb517022b86428"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Attr.ForbiddenClasses.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 262,
+          "sha1": "b048447398c3834f82e54368226da2ed88336e03"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.CoreModules.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 622,
+          "sha1": "07f9415052c4bf513b8a062c50a7ad232a1734d7"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.ForbiddenAttributes.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 852,
+          "sha1": "03dd47349a55d198436bf18972a0f4835295d1ed"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.Proprietary.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 334,
+          "sha1": "0fc731475b66453800d4781bc9d2ab61d4a124fc"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Filter.ExtractStyleBlocks.Scope.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1200,
+          "sha1": "d4d1be41d9dc644145720d446784e82abd730d61"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Core.RemoveScriptContents.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 280,
+          "sha1": "1ce40c869c6a186a00acc0b90f1404b97cec8d46"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Core.CollectErrors.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 433,
+          "sha1": "a97d4e4e09c60be3593a322e4aac2d49b7194d61"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/AutoFormat.Linkify.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 267,
+          "sha1": "a3c73357639fa119059c22b210849a7989bd6942"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Filter.ExtractStyleBlocks.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2758,
+          "sha1": "53d122726c7dababa63f2b6ab069354dfd21b333"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.Attr.Name.UseCDATA.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 471,
+          "sha1": "76393d21c4a27681c60fa94340b9fe646579c14b"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Cache.SerializerPath.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 330,
+          "sha1": "09d7a1e3d2e3ccc5c18ae01774f12819433cb38a"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/CSS.AllowTricky.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 461,
+          "sha1": "95620fda15bf0dfde9bf9f5ce0647ff9862f1b3c"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Attr.DefaultImageAlt.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 479,
+          "sha1": "30cd66684396f43d62b3f8de46b7ae0ddede9057"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Attr.ClassUseCDATA.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 926,
+          "sha1": "6103d12d842945b88749846310152aafffbc4832"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/URI.DisableExternalResources.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 549,
+          "sha1": "2d2d201898b8dfbdd736b4755f685006820b563f"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Filter.YouTube.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 495,
+          "sha1": "58b37430ab546902a77705db985e004b22d8243a"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/CSS.MaxImgLength.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 623,
+          "sha1": "eee6a024b129ab7f740f134ffe8f8941886f9340"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/AutoFormat.AutoParagraph.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1138,
+          "sha1": "5b86d92293fe1accf805830b66b703961a3360a0"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Attr.DefaultInvalidImage.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 320,
+          "sha1": "e7d5b7e696f6dd669ffedf6ca48b407e380c9c55"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/CSS.AllowImportant.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 236,
+          "sha1": "fa83d2a72d0849d310695b02846ea8bb50c47bc2"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Core.HiddenElements.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 575,
+          "sha1": "1da52c717fb983c784abe385b4e0f49a57f65148"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/URI.DisableResources.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 427,
+          "sha1": "3113b814ede28158f9d5304a983bee9f1acac7f8"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.Strict.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 221,
+          "sha1": "fcb92bd24807dec1d782ea4d91099a9cc6d57c3e"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Core.ColorKeywords.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 700,
+          "sha1": "5100c2c2af51a740c092e6c3ef9d2fa973a128cb"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Attr.IDBlacklistRegexp.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 317,
+          "sha1": "015daa94517440b53ea9cbf11e1ba595ca62c6c0"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Filter.ExtractStyleBlocks.TidyImpl.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 576,
+          "sha1": "93398b77db1077b7a50e8a7a755836a93b72c579"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.TidyRemove.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 171,
+          "sha1": "68fec1adba20f4b42156bc4a808665c38cbc47d6"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/AutoFormat.RemoveEmpty.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1774,
+          "sha1": "673e87f1cd4a2c286c69427583a876d8cc78ae5c"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Core.MaintainLineNumbers.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 556,
+          "sha1": "3f514660b6de165a910d12ec7e65cd3535cc70fa"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Core.EnableIDNA.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 303,
+          "sha1": "d1b64998fbcec49297705dd623648ff6ec7f976b"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/HTML.SafeIframe.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 398,
+          "sha1": "7048d49232874c178daaab7eca819cfd83f5e225"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/AutoFormat.RemoveEmpty.RemoveNbsp.Exceptions.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 364,
+          "sha1": "a8b2bb1d4cff0d391522603c35e38c3ca7b5bafa"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Core.EscapeInvalidTags.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 202,
+          "sha1": "a33e2e41c3d9fcbbf775fb17c98bfa6a00b45cab"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Core.EscapeNonASCIICharacters.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 567,
+          "sha1": "1a2838086d16863e825db19471b28e0f7b22f580"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Attr.IDPrefix.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 475,
+          "sha1": "b12beb1f3bbe67e6fd3ae69e3f711cba7c2bd509"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Core.RemoveInvalidImg.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 334,
+          "sha1": "7e638fe776966a375aaa85cf8ae48137273484dc"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ConfigSchema\/schema\/Attr.IDPrefixLocal.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 660,
+          "sha1": "df95a234b648f63380b3c36992b50bed56bea4c7"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Injector.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 8661,
+          "sha1": "0a0f107ebd54d4320072fdd9dff85880728b277a"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/VarParser",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/VarParser\/Native.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 669,
+          "sha1": "e74ecb6afd786950acd3292317a4566d4d892e4e"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/VarParser\/Flexible.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 4355,
+          "sha1": "c951d9587484a5b14960cb7e2d9800a0d4af6997"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URISchemeRegistry.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2155,
+          "sha1": "d5e210d600cb70fc5992c98e0a2bae762f0d45fd"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrValidator.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 6415,
+          "sha1": "80296fb0490f489b1189b5856fe0975205735155"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Lexer.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 11550,
+          "sha1": "dde836cfc75a7c21e01f515094ad2951f17fd403"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Printer.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 5261,
+          "sha1": "bb9cb88a40d0ea7867574981ff62c190d717d054"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ErrorCollector.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 7347,
+          "sha1": "d810cfbaeb9338220cf7ca1a3c74b2d1202fb43e"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ChildDef.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1408,
+          "sha1": "4f14a46f0b64eb736ddcbeb22b129c6bb4885ae0"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/EntityLookup.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1293,
+          "sha1": "57e603932a4e9d9bf882e2eb50ae06f15627d82d"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ChildDef",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ChildDef\/Table.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 9440,
+          "sha1": "fe614d623987c61537423efa70d55c1ee40f3c8b"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ChildDef\/Empty.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 623,
+          "sha1": "ece7b725de8bf0e749f7a21fc453dea538f94066"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ChildDef\/List.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 5007,
+          "sha1": "3efd0c9423d89797498aa7563b4eff25a95a0c3c"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ChildDef\/Required.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3862,
+          "sha1": "ec3936351cff257b58587921bc4e68d03739aff9"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ChildDef\/Optional.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 958,
+          "sha1": "0068efaaaf896406ae0bd3f4a094312d0774cc2e"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ChildDef\/Chameleon.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1529,
+          "sha1": "77376359fce4f4cc1432b171e339abe00ae07a1a"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ChildDef\/Custom.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2741,
+          "sha1": "e16aed89dbe1d3ecc0607b5bc21c0f48839aec4b"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/ChildDef\/StrictBlockquote.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3161,
+          "sha1": "212745d8a2bcb71913116bd96c6b3ddbb5636af6"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Language.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 5423,
+          "sha1": "30a3a289b043d9bd1c1223029af1aec810805702"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform\/NameSync.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 798,
+          "sha1": "2a825760dd49e8f001b52fce79c1b39adef2415a"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform\/Length.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 706,
+          "sha1": "8f104e9050b9337de5574be48e8de90f12a1f3ad"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform\/Name.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 587,
+          "sha1": "61926e9f75c8bcf2291ff2394a3d2e5870de4e1c"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform\/Nofollow.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1097,
+          "sha1": "7164fb1db66ef172e1c95c8f5418b9b7c6665f59"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform\/ImgSpace.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1084,
+          "sha1": "4b2514fad5649ab3a0079c8d40e7d9d2e534636f"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform\/TargetBlank.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 886,
+          "sha1": "f91422894fb361d9932e584c6de09a356283fb53"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform\/SafeEmbed.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 381,
+          "sha1": "9310fffb0242bbc6179ac25ddfa88c98b3c762b4"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform\/SafeParam.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2289,
+          "sha1": "94718c1818ce7f1c685a1e08b9a8928ac22ea43a"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform\/BgColor.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 500,
+          "sha1": "d34dd067ad83c3e1e3ad136a39069ebc9d995d30"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform\/Border.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 501,
+          "sha1": "1eece81f30e8727df1acf545b291089e1ab051f2"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform\/EnumToCSS.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1462,
+          "sha1": "6b2b06a149889db11de491a95375f701815c3241"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform\/Textarea.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 400,
+          "sha1": "12a0bda87b4ea80779c5dcab679c65bbe2e092ef"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform\/Lang.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 711,
+          "sha1": "57faba6f4c602a76eebfb17465d74f4ded44ad6f"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform\/SafeObject.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 389,
+          "sha1": "b72ae55ccd7d7dd3c0cebfb5cb722751941c5494"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform\/BdoDir.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 463,
+          "sha1": "6f8c34514df11619294e1568f905414c578c34b2"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform\/Input.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1291,
+          "sha1": "4a42fc6c0a0bf64014ee615b4a467db3e4efa091"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform\/ImgRequired.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1218,
+          "sha1": "fbd833b5d7006f1ace97fe51081ae5ed0911d71a"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform\/Background.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 524,
+          "sha1": "74198b6cd0c82ec240c75166e9e5debedd3a8d23"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform\/ScriptRequired.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 363,
+          "sha1": "e221ab11486023788b90710aa94ff962ddcbfcc9"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrTransform\/BoolToCSS.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 867,
+          "sha1": "5d89a21136383af01be3c06413d9df512fe0c978"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/PropertyListIterator.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 734,
+          "sha1": "10202547821ded1a4c9e7369858525a2d4c5dd79"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/URIFilter.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2237,
+          "sha1": "364fee3e4d6a4e42b7674f9c713aafa092858f0f"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Printer",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Printer\/CSSDefinition.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1056,
+          "sha1": "096dd2d50186bbdfc8a6e80a5006eeb4c81ecbb6"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Printer\/ConfigForm.css",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 301,
+          "sha1": "3811836333609c854f694ccc61cbae382304bd8f"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Printer\/HTMLDefinition.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 9843,
+          "sha1": "60327bf3d605198364d8a340b4711ed1756c27c2"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Printer\/ConfigForm.js",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 142,
+          "sha1": "fea8a3b01a8ca8c6e650eb27f98274c5dbaa9db9"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/Printer\/ConfigForm.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 13438,
+          "sha1": "de73ec1feba4dfab5f8e177f86c55024ef218e28"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/Switch.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 972,
+          "sha1": "847be97e8af0abcbfcfd38f865c14085bf707231"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/CSS.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3082,
+          "sha1": "24717f715089513d7b181df7b5faf356354319f9"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/Enum.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1996,
+          "sha1": "cdca0beeec8ecd344b029f7de2b7d3489401f166"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/Integer.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2247,
+          "sha1": "49824e0f7cf7efcbfb51e11be5c9ab857dc17ba8"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/HTML",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/HTML\/Length.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 950,
+          "sha1": "777ecf890fb86c120011670f60d25396fe2231ec"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/HTML\/Pixels.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1250,
+          "sha1": "194c9d6e5d20c04496b21691b917612cb751e61b"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/HTML\/Class.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1184,
+          "sha1": "4720154ad6daddd52e84d3670a0e8d294892ca35"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/HTML\/FrameTarget.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 570,
+          "sha1": "58e0f3fa60333fec529c41b047cecca939441ead"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/HTML\/MultiLength.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 984,
+          "sha1": "da7aff4b829553aeeffed8135f01fd8e771e0193"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/HTML\/Color.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 819,
+          "sha1": "3b36f4e2199d150569aef3bd7dfb34a9ea6097de"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/HTML\/Bool.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 560,
+          "sha1": "a71e768b1df88f46b22a70516267a5bd3e9f40f8"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/HTML\/Nmtokens.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1671,
+          "sha1": "8d598de00608716a85b0d396662f387abc0f9679"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/HTML\/ID.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2517,
+          "sha1": "e8f5d39569e9735290b23027b0ea81dba59f046e"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/HTML\/LinkTypes.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1404,
+          "sha1": "e0d2663ecc0ecb35fb6ee59af742abf1feb9e810"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/URI.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2118,
+          "sha1": "42b9af3aa26bf3953ef003dc8138930b12402e52"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/Lang.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2164,
+          "sha1": "0bd1411c6ed160350a0aec3c9f9856e14a0e4be0"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/Text.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 269,
+          "sha1": "4f5eee2024abf89fea048d8eedf2cfe0331a60de"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/Clone.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 534,
+          "sha1": "140c0d409cf3dc0648788b89d268f07225a61c6f"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/URI",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/URI\/Email.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 282,
+          "sha1": "a32ac89434bfd587dc501df1f56229181bbd7ab3"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/URI\/Host.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3634,
+          "sha1": "8f746ab4d09821139de64a33b5a464b467444276"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/URI\/IPv4.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 806,
+          "sha1": "f6179d7f10fc68560394faf26e1b08189cf1ee5e"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/URI\/IPv6.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2600,
+          "sha1": "ea60ec3cf028b97febb111dd602254f6980d23cd"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/URI\/Email",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/URI\/Email\/SimpleCheck.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 639,
+          "sha1": "5fb0836b8319d5fe00b95c798a7226f779bd15e8"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/CSS",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/CSS\/Font.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 5938,
+          "sha1": "0ac8ea82abb2548e0c044910cb4bd6190d212a84"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/CSS\/Length.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1368,
+          "sha1": "c5b66d0763d81d7322fe89079d61ff2654fe754a"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/CSS\/Percentage.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1003,
+          "sha1": "f2ace53ecf7b930ee8004424ecd5dd426f2be852"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/CSS\/Composite.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1096,
+          "sha1": "df944ac8177c00c82d9212e1d814a96999bb202f"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/CSS\/Multiple.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1772,
+          "sha1": "df82d16fc9ba7c86189abff913ae1f974473b22d"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/CSS\/Ident.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 517,
+          "sha1": "dac39022e1753bc2d21090ef61804cd41732d17c"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/CSS\/ListStyle.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2263,
+          "sha1": "1eeec3cf57fc844f22735f03eb5868b7a4aac60f"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/CSS\/Number.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1797,
+          "sha1": "2dd4a0e9cd80afb8c80904d754c3740a1f8d986c"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/CSS\/DenyElementDecorator.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 775,
+          "sha1": "0f93af811a84625951cb236706dca41e7f706085"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/CSS\/Filter.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1904,
+          "sha1": "51ebcf3849f91dfd4d5b1b093c540efd320d9b6c"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/CSS\/AlphaValue.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 562,
+          "sha1": "ab2dc3da12acea564dd7fb72d159192c7a080e37"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/CSS\/FontFamily.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 9020,
+          "sha1": "ad90e28d7383e5ae372cbbdc1efb5ec50f28e628"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/CSS\/Color.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2570,
+          "sha1": "b175ac8512d26c84816805a45ad20fab906e8976"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/CSS\/Border.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1292,
+          "sha1": "1751f83af94235d007a2a50d10aa400325317c14"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/CSS\/BackgroundPosition.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3735,
+          "sha1": "9f0ec0d44ca3519690323182c50bdecc624c4e3a"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/CSS\/URI.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2221,
+          "sha1": "d2def4f2cfa6f43351dc6cb214b11338f3884ca6"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/CSS\/TextDecoration.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 949,
+          "sha1": "13e227e1f1105a88749b6213deb104a1bde92ce3"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/CSS\/Background.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2722,
+          "sha1": "e0a0c428036e569105c258558898e1021ead4df7"
+        },
+        {
+          "path": "libs\/HTMLPurifier\/AttrDef\/CSS\/ImportantDecorator.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1301,
+          "sha1": "86c50d99cc0e19c9ce15a6b78f680eef7d8c0e71"
+        },
+        {
+          "path": "views",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-manage",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-manage\/delete.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 941,
+          "sha1": "5a0a7461da8bb3caa5ff7284b7f564617ec7e5d9"
+        },
+        {
+          "path": "views\/scripts\/admin-manage\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3444,
+          "sha1": "98ee17f34b9d67796391462514ecfa2b7cf77807"
+        },
+        {
+          "path": "views\/scripts\/_do_rate.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1275,
+          "sha1": "7922f60e17bec64ced70d78bcf3185fef119a5fb"
+        },
+        {
+          "path": "views\/scripts\/_profile_book_photos.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1628,
+          "sha1": "589c8bbd5adcdb8337418456b3696703613fdba9"
+        },
+        {
+          "path": "views\/scripts\/shop",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/shop\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 0,
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+        },
+        {
+          "path": "views\/scripts\/_book.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1763,
+          "sha1": "ce4ebd5931490e8001d3a8ad65d1b6b750afee43"
+        },
+        {
+          "path": "views\/scripts\/_rating_big.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 578,
+          "sha1": "7fe9b76d03d14821ccbc5199b94caffa95fd3b80"
+        },
+        {
+          "path": "views\/scripts\/_autosuggest_book.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3892,
+          "sha1": "55463638c89e07a12ab7236eaee0545e5c1bba2e"
+        },
+        {
+          "path": "views\/scripts\/index",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/index\/create-book.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3244,
+          "sha1": "776d42d80f7b32c6091a8f40a5c6a292afb6d190"
+        },
+        {
+          "path": "views\/scripts\/index\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 0,
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+        },
+        {
+          "path": "views\/scripts\/_autosuggest_post.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 10808,
+          "sha1": "74930800e42316eef96f78801dc97d0ff964c762"
+        },
+        {
+          "path": "views\/scripts\/publisher",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/publisher\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1660,
+          "sha1": "6a914f9919834acb4b48ee4f643507807a95deb3"
+        },
+        {
+          "path": "views\/scripts\/book",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/book\/create.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 109,
+          "sha1": "25d391a68440cbb05ce36da3c7ff36464f562279"
+        },
+        {
+          "path": "views\/scripts\/book\/edit.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 198,
+          "sha1": "4a8f12623e2d4a653f3972f18b92f991bf1e6d33"
+        },
+        {
+          "path": "views\/scripts\/book\/view.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2982,
+          "sha1": "dc832ddf9b9de8d251b7f011fb8c0fa3874eb986"
+        },
+        {
+          "path": "views\/scripts\/book\/upload-photo.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 44,
+          "sha1": "2d1c68ad46bc94f871b2be6d104094b9345a0d86"
+        },
+        {
+          "path": "views\/scripts\/book\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1283,
+          "sha1": "d08751b8505df077d2ea1feae78aef31235cab90"
+        },
+        {
+          "path": "views\/scripts\/admin-settings",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-settings\/categories.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 5930,
+          "sha1": "b02a2751761144f317586a49e872c804369ced5f"
+        },
+        {
+          "path": "views\/scripts\/post",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/post\/delete.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 40,
+          "sha1": "e6510171c4ac79e0cb2ecbf0e1d800de52504110"
+        },
+        {
+          "path": "views\/scripts\/post\/create.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 113,
+          "sha1": "730c009ddee9cd407d0e4cc92788aa5bdd908273"
+        },
+        {
+          "path": "views\/scripts\/post\/edit.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 273,
+          "sha1": "1f1a697ba899439d943c7525ca015ca373492be3"
+        },
+        {
+          "path": "views\/scripts\/post\/view.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 4734,
+          "sha1": "8377d9fbabbeec12d6a745c4a69372e276bb87b3"
+        },
+        {
+          "path": "views\/scripts\/post\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2801,
+          "sha1": "6d46e2937df7954ed36908bc44690f11dd17363b"
+        },
+        {
+          "path": "views\/scripts\/_rating.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 283,
+          "sha1": "3891e03e2fc5e307ab0954ca66c2c8a492d05a12"
+        },
+        {
+          "path": "views\/scripts\/author",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/author\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 892,
+          "sha1": "ea4b5469fe8d7f7bf38ada5e8752e0ab48ea38ad"
+        },
+        {
+          "path": "views\/scripts\/_profile_book.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3641,
+          "sha1": "cd6bb6b8829b0b64ce53d3b33cdd110cd120b632"
+        },
+        {
+          "path": "views\/scripts\/_list_books_widget.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1677,
+          "sha1": "491e4ec736d858e97778b03600f9119813d4a955"
+        },
+        {
+          "path": "views\/scripts\/_post.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 836,
+          "sha1": "fe1ce3e52f1cdfeeba666518e594715379096322"
+        },
+        {
+          "path": "views\/scripts\/multi-level",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/multi-level\/change.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 0,
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+        },
+        {
+          "path": "settings",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/my-install.sql",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 159,
+          "sha1": "0fdaf17b9e785359b5a3511c0ec7a859bbe9f0c6"
+        },
+        {
+          "path": "settings\/content.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 4611,
+          "sha1": "5d9e9038b3bcc72f15e64abbdf5b78129bfa2eb3"
+        },
+        {
+          "path": "settings\/manifest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2863,
+          "sha1": "43b43c666e2f55a8c17f808c61c5a380ef589dcf"
+        },
+        {
+          "path": "Api",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Api\/Core.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2223,
+          "sha1": "6b00eed3ab0ae8ffde0f7bb32ecb7ed5df7b6243"
+        },
+        {
+          "path": "Model",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Model\/Category.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2347,
+          "sha1": "db7c67a695a480422c8c0ee777ae492494fc53b7"
+        },
+        {
+          "path": "Model\/Photo.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 666,
+          "sha1": "807768eaceb33700913fa3f0ec2a6200b1e0e071"
+        },
+        {
+          "path": "Model\/DbTable",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Model\/DbTable\/Categories.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 429,
+          "sha1": "d48e6f643ca80d856f6cbdc42f9ea2c34daba482"
+        },
+        {
+          "path": "Model\/DbTable\/Ratings.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 70,
+          "sha1": "4695914d92918cbed84a3062af898b9db2d115c2"
+        },
+        {
+          "path": "Model\/DbTable\/.htempty",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 0,
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+        },
+        {
+          "path": "Model\/DbTable\/Favorites.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 118,
+          "sha1": "e133615f165dd214c45fc84d7c27b52d7c72faa6"
+        },
+        {
+          "path": "Model\/DbTable\/Tags.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 67,
+          "sha1": "d65efab28194051050e4c6cc18c6bb3255a9318f"
+        },
+        {
+          "path": "Model\/DbTable\/BookTranslator.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 71,
+          "sha1": "69192413882a0d1322ec3c1c18cb7f50cec4ffac"
+        },
+        {
+          "path": "Model\/DbTable\/BookSeller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 71,
+          "sha1": "69192413882a0d1322ec3c1c18cb7f50cec4ffac"
+        },
+        {
+          "path": "Model\/DbTable\/BookAuthor.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 71,
+          "sha1": "315fa22013b58665648fdf5ef2928cbdbf261c4a"
+        },
+        {
+          "path": "Model\/DbTable\/Bases.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 823,
+          "sha1": "35da5917383b7d4dbd39f040b347e1e1ef8f2c35"
+        },
+        {
+          "path": "Model\/DbTable\/Photos.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 112,
+          "sha1": "1a13d8704afbce9fc561b73337dc39c268d1fef2"
+        },
+        {
+          "path": "Model\/DbTable\/Posts.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 872,
+          "sha1": "ae4af0adaab96013612163d3890d962a8c086ee4"
+        },
+        {
+          "path": "Model\/DbTable\/Books.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 666,
+          "sha1": "dfa13475b39ee9bde576aa7c72f8eeb2b81ec347"
+        },
+        {
+          "path": "Model\/DbTable\/Signatures.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 724,
+          "sha1": "62049f2c346769894d3fcef9e6ee638eb09730e8"
+        },
+        {
+          "path": "Model\/Signature.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 71,
+          "sha1": "f00792c9643fa1a874164bd19357888a0d82870c"
+        },
+        {
+          "path": "Model\/Favorite.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 70,
+          "sha1": "57a7624fbb19b25d13812122893dc6716a43e8ce"
+        },
+        {
+          "path": "Model\/Base.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 4762,
+          "sha1": "892b222fc0451e729e8b7ca539b29670a3a69e87"
+        },
+        {
+          "path": "Model\/Book.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 6302,
+          "sha1": "2eceeb99ccb916a11e84cd4e1fc4abc6c254876b"
+        },
+        {
+          "path": "Model\/Author.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 693,
+          "sha1": "4e56d3894da91caf850339e2c31beb66d6a93885"
+        },
+        {
+          "path": "Model\/Post.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3842,
+          "sha1": "278db1c1341a52f7a58c6cf9097a9f4d024b5f90"
+        },
+        {
+          "path": "Plugin",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Plugin\/Utilities.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1036,
+          "sha1": "f7f9e4ac29c4de4f457f4565764dee705045afd7"
+        },
+        {
+          "path": "Plugin\/Constants.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 363,
+          "sha1": "bef4cbf5a59202a6e76c0724adc3b8adfbb725bb"
+        },
+        {
+          "path": "Plugin\/Menus.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3979,
+          "sha1": "21c995977f60784c03ab1a885b1dff1f7a793125"
+        },
+        {
+          "path": "Plugin\/CoverType.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 890,
+          "sha1": "919409d720db20e98352923872861559a15608b0"
+        },
+        {
+          "path": "Controller",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Controller\/Base.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 4845,
+          "sha1": "6898629992025474f5f73c232f859f5f6f6e9641"
+        },
+        {
+          "path": "externals",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "externals\/images",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "externals\/images\/image.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 169511,
+          "sha1": "50552dd5c5ad0b157794ee95fa1a7147026dc9aa"
+        },
+        {
+          "path": "externals\/images\/star_big_half.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1450,
+          "sha1": "981b4cb8877e4e2964e541272b6be4fc8505869a"
+        },
+        {
+          "path": "externals\/images\/.htempty",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 0,
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+        },
+        {
+          "path": "externals\/images\/thumb_invisible.gif",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 883,
+          "sha1": "730e7a7063bb8dfd290d114154caf082743ad074"
+        },
+        {
+          "path": "externals\/images\/book_favorite.png",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1552,
+          "sha1": "e1e317847d0a1e9534909400dd75a0ab0887ffe0"
+        },
+        {
+          "path": "externals\/images\/book_remove_favorite.png",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3306,
+          "sha1": "4f707ee305007b89130b73aa1a88fe080fb5b29f"
+        },
+        {
+          "path": "externals\/images\/nophoto_book_thumb_icon.png",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2337,
+          "sha1": "687b9cadcd0630c51914d6122b534e9981f7faf1"
+        },
+        {
+          "path": "externals\/images\/star.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 894,
+          "sha1": "230f3affc94129a066dd1f3b71c9890f2d44b76a"
+        },
+        {
+          "path": "externals\/images\/upload_icon.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1640,
+          "sha1": "8624a238622cb74958b8eeb30d38957fdeaecaf0"
+        },
+        {
+          "path": "externals\/images\/nophoto_book_thumb_profile.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 26754,
+          "sha1": "7d6282d4211915ceb4c48a5b4fc66666f0fc4442"
+        },
+        {
+          "path": "externals\/images\/star_big.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1283,
+          "sha1": "c0c0ec4309caea57a57cabb2e426ab73632d8d95"
+        },
+        {
+          "path": "externals\/images\/star_big_half_rtl.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1442,
+          "sha1": "8353db4a84866ac8f24275a32b1db40da6a832d1"
+        },
+        {
+          "path": "externals\/images\/thumbs_mask.gif",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1416,
+          "sha1": "4c1973a4ab1f216d6e8bc3003cc41712e77ee3c5"
+        },
+        {
+          "path": "externals\/images\/nophoto_book_thumb_big.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 21724,
+          "sha1": "f4cb98fef448c26bcb3aa09688a523ea19c0db71"
+        },
+        {
+          "path": "externals\/images\/book_add.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 688,
+          "sha1": "281db19250d2375ed1c49b5c0e5a97871c682bc5"
+        },
+        {
+          "path": "externals\/images\/edit.png",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 807,
+          "sha1": "e25fb883611d467ce7ad9c4dc2ea76c733b0b926"
+        },
+        {
+          "path": "externals\/images\/star_big_disabled.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1407,
+          "sha1": "0eb4dfd3c615f55db1d896044be31433977ebba7"
+        },
+        {
+          "path": "externals\/images\/book_post.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 782,
+          "sha1": "a70bae79c260b4070816c0695ce359ae9011f9d0"
+        },
+        {
+          "path": "externals\/images\/nophoto_book_thumb_profile.png",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 14116,
+          "sha1": "7a7f5e39919ac17b085f8a2783e8f7bbc9a601c4"
+        },
+        {
+          "path": "externals\/images\/book_create.png",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1890,
+          "sha1": "497346a62b40cdca1e7b73548485a051c1d9ca1b"
+        },
+        {
+          "path": "externals\/images\/post_create.png",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 2694,
+          "sha1": "8d3da8c6942d03125d1f401d9c7f74b516a4d113"
+        },
+        {
+          "path": "externals\/images\/delete.png",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 715,
+          "sha1": "8f0ebcb45d7ba71a541d4781329f4a6900c7ee65"
+        },
+        {
+          "path": "externals\/images\/book_edit.gif",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 604,
+          "sha1": "791e7458a499ecf8f9214b40a5663d7cdd06b8c1"
+        },
+        {
+          "path": "externals\/scripts",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "externals\/scripts\/_class.noobSlide.packed.js",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2555,
+          "sha1": "669fe035f53aeee769423d8b1cd02efcd3551637"
+        },
+        {
+          "path": "externals\/scripts\/.htempty",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 0,
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+        },
+        {
+          "path": "externals\/scripts\/core.js",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 4931,
+          "sha1": "8370958be81e04ba709cf55f2aec9a67941dc2c3"
+        },
+        {
+          "path": "externals\/scripts\/collapsible.js",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1435,
+          "sha1": "c5f6e52c5f8496cdedbcd255d91c751e97bf7b36"
+        },
+        {
+          "path": "externals\/styles",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "externals\/styles\/main.css",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 11349,
+          "sha1": "b4470cee3b752322bbde6846dc0f0923e5e38c32"
+        },
+        {
+          "path": "externals\/.htaccess",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 147,
+          "sha1": "9f1638a8edbe1c5d28789e017fb35b2f2465f01e"
+        },
+        {
+          "path": "View",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "View\/Helper",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "View\/Helper\/PriceVnd.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 211,
+          "sha1": "7897be41018ed5aa0effc616075c80ab23f5924a"
+        },
+        {
+          "path": "View\/Helper\/FormMultiLevel2.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2217,
+          "sha1": "408d47931f48a26acafae92c85843a6c31eea10c"
+        },
+        {
+          "path": "Form",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Form\/.htempty",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 0,
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+        },
+        {
+          "path": "Form\/Book",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Book\/UploadPhoto.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 790,
+          "sha1": "6c83c544933f8818dc8ff0af087ba66d7016b6a8"
+        },
+        {
+          "path": "Form\/Book\/Search.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 582,
+          "sha1": "396c037ffda7daed9b80fe41eb69a519616be8b7"
+        },
+        {
+          "path": "Form\/Book.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 7267,
+          "sha1": "c630cbf960ede173679cf9cacbd713bb25c25227"
+        },
+        {
+          "path": "Form\/Post.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3576,
+          "sha1": "ff5dfe35640af8c4305772a20ea9ae10fb7424ec"
+        },
+        {
+          "path": "Form\/Element",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Element\/MultiLevel2.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 481,
+          "sha1": "83aeda2bb9802a0cefdebde7e2c9ef04084a3770"
+        },
+        {
+          "path": "Form\/Post",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Post\/Delete.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 927,
+          "sha1": "efa0b0ff765e3ce5c14000b10cad2145c8696bc6"
+        },
+        {
+          "path": "Form\/Post\/Search.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 798,
+          "sha1": "e6228d8d8434ae1f1f7e5e980db664ad8d97fe19"
+        },
+        {
+          "path": "Bootstrap.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 632,
+          "sha1": "2696673d6044af97bc684598590abdfdcf7a2a16"
+        },
+        {
+          "path": "Filter",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Filter\/Null.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 194,
+          "sha1": "8e078ea35fdf38849d723376954f247b9342f09a"
+        },
+        {
+          "path": "Filter\/HTMLPurifier.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 520,
+          "sha1": "4c08fc0361937beb6b7416b80dce19f692da1a42"
+        },
+        {
+          "path": "controllers",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "controllers\/MultiLevelController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 916,
+          "sha1": "ee8e0fb9c3ec434ee92078edee5b9c129052f98a"
+        },
+        {
+          "path": "controllers\/AuthorController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1420,
+          "sha1": "7e7af882b7d6d3193252cc3425f8776ef748ffef"
+        },
+        {
+          "path": "controllers\/ShopController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 160,
+          "sha1": "e96523ff0eb63c504e966fac1f46ab18cc3325c8"
+        },
+        {
+          "path": "controllers\/PublisherController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 852,
+          "sha1": "2428f9f48784af7d0f91a97f53e1813911874d1d"
+        },
+        {
+          "path": "controllers\/PostController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 9895,
+          "sha1": "b5fe699490add20bcf37caa08d58e1a7fce717c4"
+        },
+        {
+          "path": "controllers\/IndexController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 3877,
+          "sha1": "dacee123b53dbf2a3983f164a2e3fa32e0319e99"
+        },
+        {
+          "path": "controllers\/AdminSettingsController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 577,
+          "sha1": "57ad254bfd8aa877ced9e5c0bb646d156401f849"
+        },
+        {
+          "path": "controllers\/AdminManageController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 789,
+          "sha1": "8717cb19ae7637885d2f420eabd36ca13be7a71a"
+        },
+        {
+          "path": "controllers\/BookController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 13595,
+          "sha1": "f46fe6173addb207a682e9a335f477fc839e697a"
+        },
+        {
+          "path": "widgets",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/post-profile-book",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/post-profile-book\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1091,
+          "sha1": "0574a3ecf185b2ff8e296f324cfd20130035372b"
+        },
+        {
+          "path": "widgets\/post-profile-book\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 204,
+          "sha1": "808caa7554eb0abe371fc0d05a55b5263d23eae2"
+        },
+        {
+          "path": "widgets\/list-books",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/list-books\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2226,
+          "sha1": "0c18ef9d5861ef7b02407995c925527503c1ae0e"
+        },
+        {
+          "path": "widgets\/list-books\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 2197,
+          "sha1": "df23a45e8789255cb5a8d7821b68ec058182bd80"
+        },
+        {
+          "path": "widgets\/post-profile-book-photos",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/post-profile-book-photos\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 393,
+          "sha1": "e9b5a961652a223c73c40a736774f538160467b9"
+        },
+        {
+          "path": "widgets\/post-profile-book-photos\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 94,
+          "sha1": "15c4d7b67ef6bf99ef9a2b8a4c9ab07c3cc2efa0"
+        },
+        {
+          "path": "widgets\/posts-of-book",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/posts-of-book\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 965,
+          "sha1": "11ca5ed61e5cac8d687f937bceb9215f802d08d5"
+        },
+        {
+          "path": "widgets\/posts-of-book\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 176,
+          "sha1": "9f0c1a06b756dc24c6681783fca275fb0d02362f"
+        },
+        {
+          "path": "widgets\/posts-of-user",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/posts-of-user\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 956,
+          "sha1": "99cbdaf1646263ff40b0b828bc47ba5aa61a0b6c"
+        },
+        {
+          "path": "widgets\/posts-of-user\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 176,
+          "sha1": "9f0c1a06b756dc24c6681783fca275fb0d02362f"
+        },
+        {
+          "path": "widgets\/highest-rating-books",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/highest-rating-books\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 727,
+          "sha1": "f2f2eefccd74cc47339bc0efbce3520d913e4b6c"
+        },
+        {
+          "path": "widgets\/highest-rating-books\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 147,
+          "sha1": "611442aed210cf0f135e8a0b30db2ebd9b4023e0"
+        },
+        {
+          "path": "widgets\/list-categories",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/list-categories\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 301,
+          "sha1": "794edf71f2fcf94f4df7ee47cfb6e7008d890356"
+        },
+        {
+          "path": "widgets\/list-categories\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 274,
+          "sha1": "a1a7f10008f7fbfe479d126e532a657013090003"
+        },
+        {
+          "path": "widgets\/list-random-publishers",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/list-random-publishers\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1183,
+          "sha1": "82050701acd13c65c15899f55f73aefb2a5443b9"
+        },
+        {
+          "path": "widgets\/list-random-publishers\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 527,
+          "sha1": "fb7b9b6e04170581f4105ab56f300c747cefe13d"
+        },
+        {
+          "path": "widgets\/profile-book",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/profile-book\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 983,
+          "sha1": "2923a6d4f756bd5bb16f534c6f5b4f1913081709"
+        },
+        {
+          "path": "widgets\/profile-book\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 326,
+          "sha1": "624ada819e56707ac48663c4919ec622a42bbbe2"
+        },
+        {
+          "path": "widgets\/link-post-book",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/link-post-book\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 129,
+          "sha1": "a22f0bcda92a89eba401957ed941791c792e5c40"
+        },
+        {
+          "path": "widgets\/link-post-book\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 49,
+          "sha1": "a307cbd6a808df065d4ccb83011e19062b5d66ee"
+        },
+        {
+          "path": "widgets\/manage-book-photos",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/manage-book-photos\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 727,
+          "sha1": "58bed14f57e6b73a59342f03144b80f1aa84f176"
+        },
+        {
+          "path": "widgets\/manage-book-photos\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 3869,
+          "sha1": "dd451728c2a59809106c891812b4b070d05657ca"
+        },
+        {
+          "path": "widgets\/list-random-authors",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/list-random-authors\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1145,
+          "sha1": "db552ad770b80444ce49c9476c833c5b17d39568"
+        },
+        {
+          "path": "widgets\/list-random-authors\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 527,
+          "sha1": "fb7b9b6e04170581f4105ab56f300c747cefe13d"
+        },
+        {
+          "path": "widgets\/search-posts",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/search-posts\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 397,
+          "sha1": "e7bff8d5024edd252aada2cd68e978d9dabf18ce"
+        },
+        {
+          "path": "widgets\/search-posts\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 49,
+          "sha1": "07c999c16af655bbf9c5a43254d5e5edeb09d4d7"
+        },
+        {
+          "path": "widgets\/browse-menu-quick",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/browse-menu-quick\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 301,
+          "sha1": "d3c60b27e72213e8b4bb04d5242ce4fc428cccf6"
+        },
+        {
+          "path": "widgets\/browse-menu-quick\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 225,
+          "sha1": "26ec6058a8d955a4ae10a307688a581fbb928210"
+        },
+        {
+          "path": "widgets\/search-books",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/search-books\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 393,
+          "sha1": "ef36292b0f5cd341d92c94103e60e49d58309c13"
+        },
+        {
+          "path": "widgets\/search-books\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 49,
+          "sha1": "a307cbd6a808df065d4ccb83011e19062b5d66ee"
+        },
+        {
+          "path": "widgets\/book-reader-feelings",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/book-reader-feelings\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 925,
+          "sha1": "3d1e23f5632cc809db6df4a004538b79c78c8d60"
+        },
+        {
+          "path": "widgets\/book-reader-feelings\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 1514,
+          "sha1": "1c97b8d249d5ed7719edd01f0e1456f801b9b2f0"
+        },
+        {
+          "path": "widgets\/profile-menu-book",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/profile-menu-book\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 280,
+          "sha1": "2f2dd5143b01232f7ba68eafbe5dc94b5a6503de"
+        },
+        {
+          "path": "widgets\/profile-menu-book\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 202,
+          "sha1": "e73cd70a4a70a49b42582f3a68010d82ed98ad76"
+        },
+        {
+          "path": "widgets\/popular-books",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/popular-books\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 719,
+          "sha1": "fcbce399ef3a8e7f1de3bacd6a03967bfb49459d"
+        },
+        {
+          "path": "widgets\/popular-books\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 147,
+          "sha1": "82c4f65f7daed62a36d5c0a08d321528c5f43fcd"
+        },
+        {
+          "path": "widgets\/list-random-books",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/list-random-books\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 437,
+          "sha1": "86a97070670633e3154cfd777369f35664966c6e"
+        },
+        {
+          "path": "widgets\/list-random-books\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1232,
+          "sha1": "b403fd59ac9b677678f1c4f354a0f98f7c8d1b92"
+        },
+        {
+          "path": "widgets\/books-of-author",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/books-of-author\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 1288,
+          "sha1": "24577cc0a94f03a6ad1a1111196a01038880ec38"
+        },
+        {
+          "path": "widgets\/books-of-author\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0666",
+          "size": 150,
+          "sha1": "994031e0b7f3b27845a1110346999ea0a9002a29"
+        },
+        {
+          "path": "widgets\/newest-books",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/newest-books\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 821,
+          "sha1": "0c114f92036d63429a7ff0debfe7a1c74d3da102"
+        },
+        {
+          "path": "widgets\/newest-books\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 140,
+          "sha1": "cffb78fdf4a5a8ef44fe126eb553c8090a910fae"
+        },
+        {
+          "path": "widgets\/profile-book-photos",
+          "dir": true,
+          "file": false,
+          "perms": "0777",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/profile-book-photos\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 264,
+          "sha1": "6ab0262ef95096b4db230d847063c631650810b5"
+        },
+        {
+          "path": "widgets\/profile-book-photos\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 479,
+          "sha1": "42e76524793eda434b20eb233ce64d9f4a1f67e6"
+        }
+      ]
+    },
+    "application\/languages\/en\/book.csv": {
+      "type": "file",
+      "path": "application\/languages\/en\/book.csv",
+      "structure": {
+        "path": "book.csv",
+        "dir": false,
+        "file": true,
+        "perms": "0666",
+        "size": 0,
+        "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+"_CORE_PRIVACY_STATEMENT";"Trang này chứa những thông tin quyền hạn."
+"_CORE_TERMS_OF_SERVICE";"Trang này chứa những thông tin về các điều khoản sử dụng."
+
+# mail templates
+
+# header
+"_EMAIL_HEADER_TITLE";"Header (Non-members)"
+"_EMAIL_HEADER_DESCRIPTION";"This can be added to other emails using the [header] placeholder."
+"_EMAIL_HEADER_SUBJECT";""
+"_EMAIL_HEADER_BODY";"Xin chào,"
+
+# footer
+"_EMAIL_FOOTER_TITLE";"Footer (Non-members)"
+"_EMAIL_FOOTER_DESCRIPTION";"This can be added to other emails using the [footer] placeholder."
+"_EMAIL_FOOTER_SUBJECT";""
+"_EMAIL_FOOTER_BODY";"Thân mến,
+Ban quản trị mạng xã hội"
+
+# header_member
+"_EMAIL_HEADER_MEMBER_TITLE";"Header (Members)"
+"_EMAIL_HEADER_MEMBER_DESCRIPTION";"This can be added to other emails using the [header] placeholder."
+"_EMAIL_HEADER_MEMBER_SUBJECT";""
+"_EMAIL_HEADER_MEMBER_BODY";"Xin chào [recipient_title],"
+
+# footer_member
+"_EMAIL_FOOTER_MEMBER_TITLE";"Footer (Members)"
+"_EMAIL_FOOTER_MEMBER_DESCRIPTION";"This can be added to other emails using the [footer] placeholder."
+"_EMAIL_FOOTER_MEMBER_SUBJECT";""
+"_EMAIL_FOOTER_MEMBER_BODY";"Thân mến,
+Ban quản trị mạng xã hội"
+
+# core_contact
+"_EMAIL_CORE_CONTACT_TITLE";"Contact Form Email"
+"_EMAIL_CORE_CONTACT_DESCRIPTION";"This email is sent to the Super Admin when a member sends a message using the contact page."
+"_EMAIL_CORE_CONTACT_SUBJECT";"Một thành viên đã gửi cho bạn một tin nhắn qua trang liên hệ." 
+"_EMAIL_CORE_CONTACT_BODY";"[header]
+
+[sender_title] vừa gửi cho bạn một tin nhắn qua trang liên hệ : 
+
+Email : [sender_email]
+Tin nhắn:
+[message][error_report]
+
+[footer]"
+
+# core_verification
+"_EMAIL_CORE_VERIFICATION_TITLE";"Email Address Verification"
+"_EMAIL_CORE_VERIFICATION_DESCRIPTION";"This is the email that gets sent to members to verify their email addresses if random passwords are disabled."
+"_EMAIL_CORE_VERIFICATION_SUBJECT";"Mạng xã hội - Email xác nhận"
+"_EMAIL_CORE_VERIFICATION_BODY";"[header]
+
+Cám ơn bạn đã tham gia vào mạng xã hội của chúng tôi. Để xác nhận địa chỉ email và tiếp tục, hãy click vào link dưới đây:
+http://[host][object_link]
+
+Email: [email]
+
+[footer]"
+
+# core_verification_password
+"_EMAIL_CORE_VERIFICATION_PASSWORD_TITLE";"Email Address Verification With Password"
+"_EMAIL_CORE_VERIFICATION_PASSWORD_DESCRIPTION";"This is the email that gets sent to members to verify their email addresses if you have enabled random passwords."
+"_EMAIL_CORE_VERIFICATION_PASSWORD_SUBJECT";"Mạng xã hội - Email xác nhận"
+"_EMAIL_CORE_VERIFICATION_PASSWORD_BODY";"[header]
+
+Cảm ơn bãn đã tham gia mạng xã hội của chúng tôi. Để xác nhận địa chỉ email của bạn và tiếp tục, hãy click vào link dưới đây:
+
+http://[host][object_link]
+
+Email: [email]
+Mật khẩu: [password]
+
+[footer]"
+
+# notify_admin_user_signup
+"_EMAIL_NOTIFY_ADMIN_USER_SIGNUP_TITLE";"Admin signup notification "
+"_EMAIL_NOTIFY_ADMIN_USER_SIGNUP_DESCRIPTION";"This is the email that gets sent to the admin when a member signs up."
+"_EMAIL_NOTIFY_ADMIN_USER_SIGNUP_SUBJECT";"Có một thành viên vừa tham gia mạng xã hội!"
+"_EMAIL_NOTIFY_ADMIN_USER_SIGNUP_BODY";"
+
+Xin chúc mừng, có một thành viên vừa tham gia vào mạng xã hội của bạn. Hãy chào đón thành viên mới này đến với website:
+
+[object_title] : http://[host][object_link]
+Ngày đăng ký: [date]
+
+"
+
+# core_welcome
+"_EMAIL_CORE_WELCOME_TITLE";"Welcome"
+"_EMAIL_CORE_WELCOME_DESCRIPTION";"This is the email that gets sent when a member signs up if random passwords are disabled."
+"_EMAIL_CORE_WELCOME_SUBJECT";"Chào mừng bạn đến với mạng xã hội!"
+"_EMAIL_CORE_WELCOME_BODY";"[header]
+
+Cảm ơn bãn đã tham gia mạng xã hội của chúng tôi. Hãy click vào liên kết bên dưới và điền thông tin đăng nhập:
+
+http://[host][object_link]
+
+Email: [email]
+
+[footer]"
+
+# core_welcome_password
+"_EMAIL_CORE_WELCOME_PASSWORD_TITLE";"Welcome With Password"
+"_EMAIL_CORE_WELCOME_PASSWORD_DESCRIPTION";"This is the email that gets sent when a member signs up if random passwords are enabled. Please note that if you have email verification enabled, the password variable is not available. This is due to the fact that passwords are securely encrypted upon signup and cannot be unencrypted when a member verifies their email address and the welcome email is sent."
+"_EMAIL_CORE_WELCOME_PASSWORD_SUBJECT";"Chào mừng bạn đến với mạng xã hội!"
+"_EMAIL_CORE_WELCOME_PASSWORD_BODY";"[header]
+
+Cảm ơn bạn đã tham gia mạng xã hội của chúng tôi. Hãy click vào link dưới đây và điền thông tin của bạn để đăng nhập:
+
+http://[host][object_link]
+
+Email: [email]
+Mật khẩu: [password]
+
+[footer]"
+
+# core_lostpassword
+"_EMAIL_CORE_LOSTPASSWORD_TITLE";"Lost Password"
+"_EMAIL_CORE_LOSTPASSWORD_DESCRIPTION";"This is the email that gets sent if a member forgets their password and requests to create a new one."
+"_EMAIL_CORE_LOSTPASSWORD_SUBJECT";"Mạng xã hội - Mất mật khẩu"
+"_EMAIL_CORE_LOSTPASSWORD_BODY";"[header]
+
+Bạn vừa yêu cầu reset lại mật khẩu bạn đã quên. Nếu bạn không yêu cầu, hãy bỏ qua nó. Nó sẽ hết hạn trong vòng 24 giờ. Để reset lại mật khẩu, hãy click vào link dưới đây:
+  
+http://[host][object_link]
+
+[footer]"
+
+#error messages
+"We're sorry!";"Xin lỗi!"
+"We are currently experiencing some technical issues. Please try again or report this to your site administrator using the %1$scontact%2$s form.";"Chúng tôi gặp phải một số vấn đề kỹ thuật. Hãy thử lại lần nữa và báo cáo với quản trị viên của trang web bằng cách dùng %1$scontact%2$s form. ."
+"Administrator: Please check the error log in your admin panel for more information regarding this error.";"Quản trị viên: Hãy kiểm tra log lỗi ở phía admin để có thêm thông tin về lỗi này."
+"Some information is available below:";"Một vài thông tin đã sẵn sàng bên dưới:"
+"Error Code: %s";"Mã lỗi: %s"
+"Maintenance Mode Code";"Mã maintenance"
+"CORE_FORM_ADMIN_SETTINGS_MAINTENANCE_MODE_CODE";"Nếu trống, một mật khẩu sẽ được phát sinh tự động."

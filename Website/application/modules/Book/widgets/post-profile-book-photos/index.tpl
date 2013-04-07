@@ -1,0 +1,1 @@
+<?php echo $this->partial('_profile_book_photos.tpl', 'book', array('book' => $this->book)) ?>

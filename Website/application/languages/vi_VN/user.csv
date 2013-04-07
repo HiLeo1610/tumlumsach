@@ -1,0 +1,106 @@
+# mail templates
+
+# user_account_approved
+"_EMAIL_USER_ACCOUNT_APPROVED_TITLE";"Member Account Approved"
+"_EMAIL_USER_ACCOUNT_APPROVED_DESCRIPTION";"This is the email that gets sent to a member when their account is approved by an admin."
+"_EMAIL_USER_ACCOUNT_APPROVED_SUBJECT";"Tài khoản của bạn đã được đồng ý."
+"_EMAIL_USER_ACCOUNT_APPROVED_BODY";"[header]
+
+Tài khoản của bạn đã được đồng ý bởi quản trị viên. Hãy click vào liên kết bên dưới để đăng nhập:
+
+http://[host][object_link]
+
+[footer]"
+
+# notify_friend_accepted
+"_EMAIL_NOTIFY_FRIEND_ACCEPTED_TITLE";"Friend Approved"
+"_EMAIL_NOTIFY_FRIEND_ACCEPTED_DESCRIPTION";"This is the email that gets sent to a member when their friendship request have been approved."
+"_EMAIL_NOTIFY_FRIEND_ACCEPTED_SUBJECT";"[sender_title] vừa đồng ý kết bạn với bạn."
+"_EMAIL_NOTIFY_FRIEND_ACCEPTED_BODY";"[header]
+
+[sender_title] vừa đồng ý kết bạn với bạn. Hãy click vào liên kết bên dưới để đăng nhập:
+
+http://[host][object_link]
+
+[footer]"
+
+# notify_friend_follow
+"_EMAIL_NOTIFY_FRIEND_FOLLOW_TITLE";"Friend Follow"
+"_EMAIL_NOTIFY_FRIEND_FOLLOW_DESCRIPTION";"This is the email that gets sent to a member when another member starts following them."
+"_EMAIL_NOTIFY_FRIEND_FOLLOW_SUBJECT";"[sender_title] vừa bắt đầu follow bạn."
+"_EMAIL_NOTIFY_FRIEND_FOLLOW_BODY";"[header]
+
+[sender_title] vừa bắt đầu follow bạn. Hãy click vào liên kết bên dưới để xem về thành viên này:
+
+http://[host][object_link]
+
+[footer]"
+
+# notify_friend_follow_accepted
+"_EMAIL_NOTIFY_FRIEND_FOLLOW_ACCEPTED_TITLE";"Follow Approved"
+"_EMAIL_NOTIFY_FRIEND_FOLLOW_ACCEPTED_DESCRIPTION";"This is the email that gets sent to a member when their follow request have been approved."
+"_EMAIL_NOTIFY_FRIEND_FOLLOW_ACCEPTED_SUBJECT";"[sender_title] vừa đồng ý để nghị follow của bạn."
+"_EMAIL_NOTIFY_FRIEND_FOLLOW_ACCEPTED_BODY";"[header]
+
+[sender_title] vừa đồng ý cho bạn follow. Hãy click vào liên kết bên dưới để đăng nhập:
+
+http://[host][object_link]
+
+[footer]"
+
+# notify_friend_follow_request
+"_EMAIL_NOTIFY_FRIEND_FOLLOW_REQUEST_TITLE";"Follow Request"
+"_EMAIL_NOTIFY_FRIEND_FOLLOW_REQUEST_DESCRIPTION";"This is the email that gets sent to a member when they are requested to be followed by another member."
+"_EMAIL_NOTIFY_FRIEND_FOLLOW_REQUEST_SUBJECT";"[sender_title] vừa đề nghị follow bạn."
+"_EMAIL_NOTIFY_FRIEND_FOLLOW_REQUEST_BODY";"[header]
+
+[sender_title] vừa đề nghị follow bạn. Hãy click vào liên kết bên dưới để đăng nhập và xác nhận yêu cầu này: 
+
+http://[host][object_link]
+
+[footer]"
+
+# notify_friend_request
+"_EMAIL_NOTIFY_FRIEND_REQUEST_TITLE";"Friend Request"
+"_EMAIL_NOTIFY_FRIEND_REQUEST_DESCRIPTION";"This is the email that gets sent to a member when they are requested to be a friend by another member."
+"_EMAIL_NOTIFY_FRIEND_REQUEST_SUBJECT";"[sender_title] vừa kết bạn với bạn."
+"_EMAIL_NOTIFY_FRIEND_REQUEST_BODY";"[header]
+
+[sender_title] vừa kết bạn với bạn. Hãy click vào liên kết bên dưới để đăng nhập và xác nhận yêu cầu kết bạn này: 
+
+http://[host][object_link]
+
+[footer]"
+
+# notify_post_user
+"_EMAIL_NOTIFY_POST_USER_TITLE";"Post on Profile"
+"_EMAIL_NOTIFY_POST_USER_DESCRIPTION";"This email is sent to the member when someone has posted something on the member's profile."
+"_EMAIL_NOTIFY_POST_USER_SUBJECT";"[sender_title] vừa đăng bài trên trang cá nhân của bạn"
+"_EMAIL_NOTIFY_POST_USER_BODY";"[header]
+
+[sender_title] vừa đăng điều gì đó trên trang cá nhân của bạn. Hãy click vào liên kết bên dưới để xem.
+
+http://[host][object_link]
+
+[footer]"
+
+# notify_tagged
+"_EMAIL_NOTIFY_TAGGED_TITLE";"Tagged"
+"_EMAIL_NOTIFY_TAGGED_DESCRIPTION";"This email is sent to the member when someone tags them."
+"_EMAIL_NOTIFY_TAGGED_SUBJECT";"Bạn vừa được tag"
+"_EMAIL_NOTIFY_TAGGED_BODY";"[header]
+
+Bạn vừa được tag với [object_type_name]. Hãy click vào liên kết bên dưới để xem:
+
+http://[host][object_link]
+
+[footer]"
+
+"_EMAIL_NOTIFY_ADMIN_SIGNUP";"Admin signup notification"
+"_EMAIL_NOTIFY_ADMIN_SIGNUP_DESCRIPTION";"This email is sent to the admin when an new member joins when ""Auto-approve Members"" is disabled."
+"_EMAIL_NOTIFY_ADMIN_SIGNUP_SUBJECT";"Một thành viên mới đang chờ sự đồng ý của bạn để tham gia mạng xã hội"
+"_EMAIL_NOTIFY_ADMIN_SIGNUP_BODY";"[header]
+
+Hãy đăng nhập vào phía admin để đồng ý thành viên cho thành viên này tham gia mạng xã hội.
+
+[footer]"

@@ -1,0 +1,17 @@
+# mail templates
+
+# notify_message_new
+"_EMAIL_NOTIFY_MESSAGE_NEW_TITLE";"New Message"
+"_EMAIL_NOTIFY_MESSAGE_NEW_DESCRIPTION";"This is the email that gets sent to a member when they receive a new message."
+"_EMAIL_NOTIFY_MESSAGE_NEW_SUBJECT";"Bạn vừa nhận được một tin nhắn từ [sender_title]."
+"_EMAIL_NOTIFY_MESSAGE_NEW_BODY";"[header]
+
+Bạn vừa nhận được một tin nhắn mới từ [sender_title]:
+
+[object_description]
+
+Hãy click vào liên kết bên dưới để đăng nhập và xem:
+
+http://[host][object_link]
+
+[footer]"

@@ -1,0 +1,13 @@
+"_ACTIVITY_ACTIONTYPE_CHAPTER_NEW";"Khi có một chương sách mới được tạo"
+"_ACTIVITY_ACTIONTYPE_WORK_NEW";"Khi có một bài viết mới được tạo"
+# notify_commented
+"_EMAIL_NOTIFY_POST_TAGGED_TITLE";"User is tagged in a post"
+"_EMAIL_NOTIFY_POST_TAGGED_DESCRIPTION";"This email is sent to someone who is tagged in a post."
+"_EMAIL_NOTIFY_POST_TAGGED_SUBJECT";"[sender_title] vừa tag bạn vào bài viết của bạn ấy"
+"_EMAIL_NOTIFY_POST_TAGGED_BODY";"[header]
+
+[sender_title] vừa tag bạn vào bài viết của bạn ấy. Hãy click vào link dưới đây để xem:
+
+http://[host][object_link]
+
+[footer]"
