@@ -1,0 +1,1742 @@
+2013/04/05 12:03:09 [trace] [system.CModule] Loading "log" application component
+2013/04/05 12:03:09 [trace] [system.CModule] Loading "db" application component
+2013/04/05 12:03:09 [trace] [system.db.CDbConnection] Opening DB connection
+2013/04/05 12:03:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `links`
+2013/04/05 12:03:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `links`
+2013/04/05 12:03:09 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:10 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp0 LIMIT 1
+2013/04/05 12:03:10 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:10 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp1 LIMIT 1
+2013/04/05 12:03:10 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:10 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:10 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:10 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:10 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp2 LIMIT 1
+2013/04/05 12:03:10 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:10 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp3 LIMIT 1
+2013/04/05 12:03:10 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:10 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:10 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:11 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:11 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp4 LIMIT 1
+2013/04/05 12:03:11 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:11 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp5 LIMIT 1
+2013/04/05 12:03:11 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:11 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:11 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:11 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:16 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp6 LIMIT 1
+2013/04/05 12:03:16 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:16 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp7 LIMIT 1
+2013/04/05 12:03:16 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:16 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:16 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:16 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:16 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp8 LIMIT 1
+2013/04/05 12:03:16 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:16 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp9 LIMIT 1
+2013/04/05 12:03:16 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:16 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:16 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:16 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:17 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp10 LIMIT 1
+2013/04/05 12:03:17 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:17 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp11 LIMIT 1
+2013/04/05 12:03:17 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:17 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:17 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:17 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:20 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp12 LIMIT 1
+2013/04/05 12:03:20 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:20 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp13 LIMIT 1
+2013/04/05 12:03:20 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:20 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:20 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:20 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:25 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp14 LIMIT 1
+2013/04/05 12:03:25 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:25 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp15 LIMIT 1
+2013/04/05 12:03:25 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:25 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:25 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:25 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:25 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp16 LIMIT 1
+2013/04/05 12:03:25 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:25 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp17 LIMIT 1
+2013/04/05 12:03:25 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:25 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:25 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:25 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:26 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp18 LIMIT 1
+2013/04/05 12:03:26 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:26 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp19 LIMIT 1
+2013/04/05 12:03:26 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:26 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:26 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:26 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:26 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp20 LIMIT 1
+2013/04/05 12:03:26 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:26 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp21 LIMIT 1
+2013/04/05 12:03:26 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:26 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:26 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:26 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:26 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp22 LIMIT 1
+2013/04/05 12:03:26 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:26 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp23 LIMIT 1
+2013/04/05 12:03:26 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:26 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:26 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:27 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:27 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp24 LIMIT 1
+2013/04/05 12:03:27 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:27 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp25 LIMIT 1
+2013/04/05 12:03:27 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:27 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:27 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:27 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:27 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp26 LIMIT 1
+2013/04/05 12:03:27 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:27 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp27 LIMIT 1
+2013/04/05 12:03:27 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:27 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:27 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:27 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:31 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp28 LIMIT 1
+2013/04/05 12:03:31 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:31 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp29 LIMIT 1
+2013/04/05 12:03:31 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:31 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:31 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:31 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:36 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp30 LIMIT 1
+2013/04/05 12:03:36 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:36 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp31 LIMIT 1
+2013/04/05 12:03:36 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:36 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:36 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:36 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:39 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp32 LIMIT 1
+2013/04/05 12:03:39 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:39 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp33 LIMIT 1
+2013/04/05 12:03:39 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:39 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:39 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:39 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:40 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:40 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp34 LIMIT 1
+2013/04/05 12:03:40 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:40 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:40 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:40 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp35 LIMIT 1
+2013/04/05 12:03:40 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:40 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:40 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:40 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:40 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:40 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:43 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp36 LIMIT 1
+2013/04/05 12:03:43 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:43 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp37 LIMIT 1
+2013/04/05 12:03:43 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:43 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:43 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:43 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:43 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp38 LIMIT 1
+2013/04/05 12:03:43 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:43 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp39 LIMIT 1
+2013/04/05 12:03:43 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:43 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:43 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:43 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:47 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp40 LIMIT 1
+2013/04/05 12:03:47 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:47 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp41 LIMIT 1
+2013/04/05 12:03:47 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:47 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:47 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:47 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:50 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp42 LIMIT 1
+2013/04/05 12:03:50 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:50 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp43 LIMIT 1
+2013/04/05 12:03:50 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:50 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:50 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:50 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:54 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp44 LIMIT 1
+2013/04/05 12:03:54 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:54 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp45 LIMIT 1
+2013/04/05 12:03:54 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:54 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:54 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:54 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:03:57 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:57 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp46 LIMIT 1
+2013/04/05 12:03:57 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:57 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:57 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:03:57 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp47 LIMIT 1
+2013/04/05 12:03:57 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:03:57 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:03:57 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:03:57 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:03:57 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:03:57 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:00 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp48 LIMIT 1
+2013/04/05 12:04:00 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:00 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp49 LIMIT 1
+2013/04/05 12:04:00 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:00 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:04:00 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:04:00 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:03 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp50 LIMIT 1
+2013/04/05 12:04:03 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:03 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp51 LIMIT 1
+2013/04/05 12:04:03 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:03 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:04:03 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:04:03 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:04 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp52 LIMIT 1
+2013/04/05 12:04:04 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:04 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp53 LIMIT 1
+2013/04/05 12:04:04 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:04 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:04:04 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:04:04 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:07 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp54 LIMIT 1
+2013/04/05 12:04:07 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:07 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp55 LIMIT 1
+2013/04/05 12:04:07 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:07 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:04:07 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:04:07 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:08 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp56 LIMIT 1
+2013/04/05 12:04:08 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:08 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp57 LIMIT 1
+2013/04/05 12:04:08 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:08 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:04:08 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:04:08 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:11 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp58 LIMIT 1
+2013/04/05 12:04:11 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:11 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp59 LIMIT 1
+2013/04/05 12:04:11 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:11 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:04:11 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:04:11 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:13 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp60 LIMIT 1
+2013/04/05 12:04:13 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:13 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp61 LIMIT 1
+2013/04/05 12:04:13 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:13 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:04:13 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:04:13 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:16 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp62 LIMIT 1
+2013/04/05 12:04:16 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:16 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp63 LIMIT 1
+2013/04/05 12:04:16 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:16 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:04:16 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:04:16 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:17 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp64 LIMIT 1
+2013/04/05 12:04:17 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:17 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp65 LIMIT 1
+2013/04/05 12:04:17 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:17 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:04:17 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:04:17 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:20 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp66 LIMIT 1
+2013/04/05 12:04:20 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:20 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp67 LIMIT 1
+2013/04/05 12:04:20 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:20 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:04:20 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:04:20 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:21 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp68 LIMIT 1
+2013/04/05 12:04:21 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:21 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp69 LIMIT 1
+2013/04/05 12:04:21 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:21 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:04:21 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:04:21 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:23 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:23 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp70 LIMIT 1
+2013/04/05 12:04:23 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:23 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:23 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:23 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp71 LIMIT 1
+2013/04/05 12:04:23 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:23 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:23 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:04:23 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:04:24 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:24 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:26 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp72 LIMIT 1
+2013/04/05 12:04:26 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:26 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp73 LIMIT 1
+2013/04/05 12:04:26 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:26 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:04:26 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:04:26 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:26 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp74 LIMIT 1
+2013/04/05 12:04:26 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:26 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp75 LIMIT 1
+2013/04/05 12:04:26 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:26 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:04:26 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:04:26 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:27 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp76 LIMIT 1
+2013/04/05 12:04:27 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:27 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp77 LIMIT 1
+2013/04/05 12:04:27 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:27 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:04:27 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:04:27 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:27 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp78 LIMIT 1
+2013/04/05 12:04:27 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:27 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp79 LIMIT 1
+2013/04/05 12:04:27 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:27 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:04:27 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:04:27 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:27 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:30 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:30 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp80 LIMIT 1
+2013/04/05 12:04:30 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:30 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:30 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:30 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp81 LIMIT 1
+2013/04/05 12:04:30 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:30 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:30 [trace] [system.db.ar.CActiveRecord] Link.insert()
+2013/04/05 12:04:30 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `links` (`fetched`, `href`, `content`, `provider`) VALUES (:yp0, :yp1, :yp2, :yp3)
+2013/04/05 12:04:30 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:30 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t`
+2013/04/05 12:04:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `books`
+2013/04/05 12:04:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `books`
+2013/04/05 12:04:30 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:30 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 1 LIMIT 1
+2013/04/05 12:04:30 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:30 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:30 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:30 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:31 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp82 LIMIT 1
+2013/04/05 12:04:31 [trace] [system.CModule] Loading "coreMessages" application component
+2013/04/05 12:04:31 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:31 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:31 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:31 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 2 LIMIT 1
+2013/04/05 12:04:31 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:31 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:31 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp83 LIMIT 1
+2013/04/05 12:04:31 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:31 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:31 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:31 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 3 LIMIT 1
+2013/04/05 12:04:31 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:31 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:32 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:32 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp84 LIMIT 1
+2013/04/05 12:04:32 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:32 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:32 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:32 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:32 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:32 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 4 LIMIT 1
+2013/04/05 12:04:32 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:32 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:32 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:32 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:32 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:32 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp85 LIMIT 1
+2013/04/05 12:04:32 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:32 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:32 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:32 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:32 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:32 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 5 LIMIT 1
+2013/04/05 12:04:32 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:32 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:32 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:32 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:33 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:33 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp86 LIMIT 1
+2013/04/05 12:04:33 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:33 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:33 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:33 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:33 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:33 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 6 LIMIT 1
+2013/04/05 12:04:33 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:33 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:33 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:33 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:33 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:33 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp87 LIMIT 1
+2013/04/05 12:04:33 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:33 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:33 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:33 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:33 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:33 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 7 LIMIT 1
+2013/04/05 12:04:33 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:33 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:33 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:33 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:34 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp88 LIMIT 1
+2013/04/05 12:04:34 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:34 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:34 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:34 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 8 LIMIT 1
+2013/04/05 12:04:34 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:34 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:34 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp89 LIMIT 1
+2013/04/05 12:04:34 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:34 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:34 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:34 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 9 LIMIT 1
+2013/04/05 12:04:34 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:34 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:35 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp90 LIMIT 1
+2013/04/05 12:04:35 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:35 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:35 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:35 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 10 LIMIT 1
+2013/04/05 12:04:35 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:35 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:35 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp91 LIMIT 1
+2013/04/05 12:04:35 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:35 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:35 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:35 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 11 LIMIT 1
+2013/04/05 12:04:35 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:35 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:36 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp92 LIMIT 1
+2013/04/05 12:04:36 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:36 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:36 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:36 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 12 LIMIT 1
+2013/04/05 12:04:36 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:36 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:36 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp93 LIMIT 1
+2013/04/05 12:04:36 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:36 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:36 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:36 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 13 LIMIT 1
+2013/04/05 12:04:36 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:36 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:36 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp94 LIMIT 1
+2013/04/05 12:04:36 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:36 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:36 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:36 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 14 LIMIT 1
+2013/04/05 12:04:36 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:36 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp95 LIMIT 1
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 15 LIMIT 1
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp96 LIMIT 1
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 16 LIMIT 1
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp97 LIMIT 1
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 17 LIMIT 1
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp98 LIMIT 1
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 18 LIMIT 1
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:37 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:38 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp99 LIMIT 1
+2013/04/05 12:04:38 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:38 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:38 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:38 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 19 LIMIT 1
+2013/04/05 12:04:38 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:38 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:38 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp100 LIMIT 1
+2013/04/05 12:04:38 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:38 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:38 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:38 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 20 LIMIT 1
+2013/04/05 12:04:38 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:38 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:39 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp101 LIMIT 1
+2013/04/05 12:04:39 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:39 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:39 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:39 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 21 LIMIT 1
+2013/04/05 12:04:39 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:39 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:39 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp102 LIMIT 1
+2013/04/05 12:04:39 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:39 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:39 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:39 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 22 LIMIT 1
+2013/04/05 12:04:39 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:39 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:40 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:40 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp103 LIMIT 1
+2013/04/05 12:04:40 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:40 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:40 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:40 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:40 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:40 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 23 LIMIT 1
+2013/04/05 12:04:40 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:40 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:40 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:40 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:41 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp104 LIMIT 1
+2013/04/05 12:04:41 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:41 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:41 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:41 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 24 LIMIT 1
+2013/04/05 12:04:41 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:41 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:41 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp105 LIMIT 1
+2013/04/05 12:04:41 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:41 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:41 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:41 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 25 LIMIT 1
+2013/04/05 12:04:41 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:41 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:42 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp106 LIMIT 1
+2013/04/05 12:04:42 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:42 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:42 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:42 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 26 LIMIT 1
+2013/04/05 12:04:42 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:42 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:42 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp107 LIMIT 1
+2013/04/05 12:04:42 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:42 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:42 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:42 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 27 LIMIT 1
+2013/04/05 12:04:42 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:42 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:43 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp108 LIMIT 1
+2013/04/05 12:04:43 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:43 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:43 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:43 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 28 LIMIT 1
+2013/04/05 12:04:43 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:43 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:43 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp109 LIMIT 1
+2013/04/05 12:04:43 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:43 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:43 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:43 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 29 LIMIT 1
+2013/04/05 12:04:43 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:43 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:44 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp110 LIMIT 1
+2013/04/05 12:04:44 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:44 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:44 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:44 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 30 LIMIT 1
+2013/04/05 12:04:44 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:44 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:44 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp111 LIMIT 1
+2013/04/05 12:04:44 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:44 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:44 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:44 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 31 LIMIT 1
+2013/04/05 12:04:44 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:44 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:45 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp112 LIMIT 1
+2013/04/05 12:04:45 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:45 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:45 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:45 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 32 LIMIT 1
+2013/04/05 12:04:45 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:45 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:45 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp113 LIMIT 1
+2013/04/05 12:04:45 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:45 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:45 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:45 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 33 LIMIT 1
+2013/04/05 12:04:45 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:45 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:46 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp114 LIMIT 1
+2013/04/05 12:04:46 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:46 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:46 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:46 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 34 LIMIT 1
+2013/04/05 12:04:46 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:46 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:46 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp115 LIMIT 1
+2013/04/05 12:04:46 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:46 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:46 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:46 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 35 LIMIT 1
+2013/04/05 12:04:46 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:46 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:47 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp116 LIMIT 1
+2013/04/05 12:04:47 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:47 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:47 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:47 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 36 LIMIT 1
+2013/04/05 12:04:47 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:47 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:48 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp117 LIMIT 1
+2013/04/05 12:04:48 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:48 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:48 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:48 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 37 LIMIT 1
+2013/04/05 12:04:48 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:48 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:48 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp118 LIMIT 1
+2013/04/05 12:04:48 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:48 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:48 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:48 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 38 LIMIT 1
+2013/04/05 12:04:48 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:48 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:49 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp119 LIMIT 1
+2013/04/05 12:04:49 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:49 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:49 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:49 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 39 LIMIT 1
+2013/04/05 12:04:49 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:49 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:49 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp120 LIMIT 1
+2013/04/05 12:04:49 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:49 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:49 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:49 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 40 LIMIT 1
+2013/04/05 12:04:49 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:49 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:50 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp121 LIMIT 1
+2013/04/05 12:04:50 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:50 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:50 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:04:50 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:04:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 41 LIMIT 1
+2013/04/05 12:04:50 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:50 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:04:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:04:50 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:04:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp122 LIMIT 1
+2013/04/05 12:04:50 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:04:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:04:50 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:04:50 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:10:20 [trace] [system.CModule] Loading "log" application component
+2013/04/05 12:10:20 [trace] [system.CModule] Loading "db" application component
+2013/04/05 12:10:20 [trace] [system.db.CDbConnection] Opening DB connection
+2013/04/05 12:10:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `links`
+2013/04/05 12:10:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `links`
+2013/04/05 12:10:20 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:25 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp0 LIMIT 1
+2013/04/05 12:10:25 [trace] [system.CModule] Loading "coreMessages" application component
+2013/04/05 12:10:25 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:25 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:25 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp1 LIMIT 1
+2013/04/05 12:10:25 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:25 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:25 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp2 LIMIT 1
+2013/04/05 12:10:25 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:25 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:26 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp3 LIMIT 1
+2013/04/05 12:10:26 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:26 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:28 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp4 LIMIT 1
+2013/04/05 12:10:28 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:28 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:29 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:29 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp5 LIMIT 1
+2013/04/05 12:10:29 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:29 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:29 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:29 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:29 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:29 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp6 LIMIT 1
+2013/04/05 12:10:29 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:29 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:29 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:29 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:30 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:30 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp7 LIMIT 1
+2013/04/05 12:10:30 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:30 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:30 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:30 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:33 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:33 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp8 LIMIT 1
+2013/04/05 12:10:33 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:33 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:33 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:33 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:34 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp9 LIMIT 1
+2013/04/05 12:10:34 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:34 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:34 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp10 LIMIT 1
+2013/04/05 12:10:34 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:34 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:34 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp11 LIMIT 1
+2013/04/05 12:10:34 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:34 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:35 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp12 LIMIT 1
+2013/04/05 12:10:35 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:35 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:37 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp13 LIMIT 1
+2013/04/05 12:10:37 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:37 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:37 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp14 LIMIT 1
+2013/04/05 12:10:37 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:37 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:38 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp15 LIMIT 1
+2013/04/05 12:10:38 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:38 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:38 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp16 LIMIT 1
+2013/04/05 12:10:38 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:38 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:38 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp17 LIMIT 1
+2013/04/05 12:10:38 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:38 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:39 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp18 LIMIT 1
+2013/04/05 12:10:39 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:39 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:39 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp19 LIMIT 1
+2013/04/05 12:10:39 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:39 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:40 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:40 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp20 LIMIT 1
+2013/04/05 12:10:40 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:40 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:40 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:40 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:40 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:40 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp21 LIMIT 1
+2013/04/05 12:10:40 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:40 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:40 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:40 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:41 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp22 LIMIT 1
+2013/04/05 12:10:41 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:41 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:41 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp23 LIMIT 1
+2013/04/05 12:10:41 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:41 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:42 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp24 LIMIT 1
+2013/04/05 12:10:42 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:42 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:42 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp25 LIMIT 1
+2013/04/05 12:10:42 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:42 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:43 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp26 LIMIT 1
+2013/04/05 12:10:43 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:43 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:44 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp27 LIMIT 1
+2013/04/05 12:10:44 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:44 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:44 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp28 LIMIT 1
+2013/04/05 12:10:44 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:44 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:45 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp29 LIMIT 1
+2013/04/05 12:10:45 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:45 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:45 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp30 LIMIT 1
+2013/04/05 12:10:45 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:45 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:46 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp31 LIMIT 1
+2013/04/05 12:10:46 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:46 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:46 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp32 LIMIT 1
+2013/04/05 12:10:46 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:46 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:47 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp33 LIMIT 1
+2013/04/05 12:10:47 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:47 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:50 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp34 LIMIT 1
+2013/04/05 12:10:50 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:50 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:51 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:51 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp35 LIMIT 1
+2013/04/05 12:10:51 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:51 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:51 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:51 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:51 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:51 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp36 LIMIT 1
+2013/04/05 12:10:51 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:51 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:51 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:51 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:54 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp37 LIMIT 1
+2013/04/05 12:10:54 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:54 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:54 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp38 LIMIT 1
+2013/04/05 12:10:54 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:54 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:55 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:55 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp39 LIMIT 1
+2013/04/05 12:10:55 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:55 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:55 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:55 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:55 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:55 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp40 LIMIT 1
+2013/04/05 12:10:55 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:55 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:55 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:55 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t`
+2013/04/05 12:10:55 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `books`
+2013/04/05 12:10:55 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `books`
+2013/04/05 12:10:55 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:10:55 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 1 LIMIT 1
+2013/04/05 12:10:55 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:55 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:55 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:55 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:56 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp41 LIMIT 1
+2013/04/05 12:10:56 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:56 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:10:56 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:10:56 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:10:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 2 LIMIT 1
+2013/04/05 12:10:56 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:56 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:56 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp42 LIMIT 1
+2013/04/05 12:10:56 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:56 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:10:56 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:10:56 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:10:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 3 LIMIT 1
+2013/04/05 12:10:56 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:56 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:58 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp43 LIMIT 1
+2013/04/05 12:10:58 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:58 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:10:58 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:10:58 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:10:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 4 LIMIT 1
+2013/04/05 12:10:58 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:58 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:59 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp44 LIMIT 1
+2013/04/05 12:10:59 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:59 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:10:59 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:10:59 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:10:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 5 LIMIT 1
+2013/04/05 12:10:59 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:59 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:59 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:10:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp45 LIMIT 1
+2013/04/05 12:10:59 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:10:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:10:59 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:10:59 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:10:59 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:10:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 6 LIMIT 1
+2013/04/05 12:10:59 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:10:59 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:10:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:00 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp46 LIMIT 1
+2013/04/05 12:11:00 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:00 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:00 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:00 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:00 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 7 LIMIT 1
+2013/04/05 12:11:03 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:03 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:03 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp47 LIMIT 1
+2013/04/05 12:11:03 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:03 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:03 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:03 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 8 LIMIT 1
+2013/04/05 12:11:03 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:03 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:04 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp48 LIMIT 1
+2013/04/05 12:11:04 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:04 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:04 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:04 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 9 LIMIT 1
+2013/04/05 12:11:04 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:04 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:04 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp49 LIMIT 1
+2013/04/05 12:11:04 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:04 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:04 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:04 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 10 LIMIT 1
+2013/04/05 12:11:04 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:04 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:05 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp50 LIMIT 1
+2013/04/05 12:11:05 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:05 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:05 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:05 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 11 LIMIT 1
+2013/04/05 12:11:05 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:05 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:05 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp51 LIMIT 1
+2013/04/05 12:11:05 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:05 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:05 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:05 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 12 LIMIT 1
+2013/04/05 12:11:05 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:05 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:05 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp52 LIMIT 1
+2013/04/05 12:11:05 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:05 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:05 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:06 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 13 LIMIT 1
+2013/04/05 12:11:06 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:06 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:06 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp53 LIMIT 1
+2013/04/05 12:11:06 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:06 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:06 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:06 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 14 LIMIT 1
+2013/04/05 12:11:06 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:06 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:06 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp54 LIMIT 1
+2013/04/05 12:11:06 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:06 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:06 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:06 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 15 LIMIT 1
+2013/04/05 12:11:06 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:06 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:06 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp55 LIMIT 1
+2013/04/05 12:11:06 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:06 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:06 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:07 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 16 LIMIT 1
+2013/04/05 12:11:07 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:07 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:07 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp56 LIMIT 1
+2013/04/05 12:11:07 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:07 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:07 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:07 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 17 LIMIT 1
+2013/04/05 12:11:07 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:07 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:07 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp57 LIMIT 1
+2013/04/05 12:11:07 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:07 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:07 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:07 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 18 LIMIT 1
+2013/04/05 12:11:07 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:07 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:07 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp58 LIMIT 1
+2013/04/05 12:11:07 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:07 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:07 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:07 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 19 LIMIT 1
+2013/04/05 12:11:07 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:07 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:08 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp59 LIMIT 1
+2013/04/05 12:11:08 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:08 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:08 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:08 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 20 LIMIT 1
+2013/04/05 12:11:08 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:08 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:09 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp60 LIMIT 1
+2013/04/05 12:11:09 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:09 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:09 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:09 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 21 LIMIT 1
+2013/04/05 12:11:09 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:09 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:09 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp61 LIMIT 1
+2013/04/05 12:11:09 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:09 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:09 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:09 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 22 LIMIT 1
+2013/04/05 12:11:09 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:09 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:10 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp62 LIMIT 1
+2013/04/05 12:11:10 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:10 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:10 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:10 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 23 LIMIT 1
+2013/04/05 12:11:10 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:10 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:10 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp63 LIMIT 1
+2013/04/05 12:11:10 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:10 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:10 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:10 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 24 LIMIT 1
+2013/04/05 12:11:10 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:10 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:11 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp64 LIMIT 1
+2013/04/05 12:11:11 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:11 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:11 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:11 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 25 LIMIT 1
+2013/04/05 12:11:11 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:11 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:11 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp65 LIMIT 1
+2013/04/05 12:11:11 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:11 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:11 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:11 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 26 LIMIT 1
+2013/04/05 12:11:11 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:11 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:12 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:12 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp66 LIMIT 1
+2013/04/05 12:11:12 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:12 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:12 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:12 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:12 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:12 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 27 LIMIT 1
+2013/04/05 12:11:12 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:12 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:12 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:12 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:12 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:12 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp67 LIMIT 1
+2013/04/05 12:11:12 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:12 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:12 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:12 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:13 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 28 LIMIT 1
+2013/04/05 12:11:13 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:13 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:13 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp68 LIMIT 1
+2013/04/05 12:11:13 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:13 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:13 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:13 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 29 LIMIT 1
+2013/04/05 12:11:13 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:13 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:14 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:14 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp69 LIMIT 1
+2013/04/05 12:11:14 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:14 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:14 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:14 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:14 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:14 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 30 LIMIT 1
+2013/04/05 12:11:14 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:14 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:14 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:14 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:14 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:14 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp70 LIMIT 1
+2013/04/05 12:11:14 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:14 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:14 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:14 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:14 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:14 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 31 LIMIT 1
+2013/04/05 12:11:14 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:14 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:14 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:14 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:15 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:15 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp71 LIMIT 1
+2013/04/05 12:11:15 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:15 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:15 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:15 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:15 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:15 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 32 LIMIT 1
+2013/04/05 12:11:15 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:15 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:15 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:15 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:15 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:15 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp72 LIMIT 1
+2013/04/05 12:11:15 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:15 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:15 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:15 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:15 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:15 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 33 LIMIT 1
+2013/04/05 12:11:15 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:15 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:15 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:15 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:16 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp73 LIMIT 1
+2013/04/05 12:11:16 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:16 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:16 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:16 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 34 LIMIT 1
+2013/04/05 12:11:16 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:16 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:16 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp74 LIMIT 1
+2013/04/05 12:11:16 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:16 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:16 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:16 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 35 LIMIT 1
+2013/04/05 12:11:16 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:16 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:17 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp75 LIMIT 1
+2013/04/05 12:11:17 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:17 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:17 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:17 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 36 LIMIT 1
+2013/04/05 12:11:17 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:17 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:17 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp76 LIMIT 1
+2013/04/05 12:11:17 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:18 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:18 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:18 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 37 LIMIT 1
+2013/04/05 12:11:18 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:18 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:18 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp77 LIMIT 1
+2013/04/05 12:11:18 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:18 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:18 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:18 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 38 LIMIT 1
+2013/04/05 12:11:18 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:18 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:19 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp78 LIMIT 1
+2013/04/05 12:11:19 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:19 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:19 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:19 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 39 LIMIT 1
+2013/04/05 12:11:19 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:19 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:19 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp79 LIMIT 1
+2013/04/05 12:11:19 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:19 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:19 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:19 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 40 LIMIT 1
+2013/04/05 12:11:19 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:19 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:20 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp80 LIMIT 1
+2013/04/05 12:11:20 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:20 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:20 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
+2013/04/05 12:11:20 [trace] [system.db.ar.CActiveRecord] Book.find()
+2013/04/05 12:11:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `books` `t` WHERE link_id = 41 LIMIT 1
+2013/04/05 12:11:20 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:20 [trace] [system.db.ar.CActiveRecord] Link.find()
+2013/04/05 12:11:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href = ? LIMIT 1
+2013/04/05 12:11:20 [trace] [system.db.ar.CActiveRecord] Link.exists()
+2013/04/05 12:11:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT 1 FROM `links` `t` WHERE `t`.`href`=:ycp81 LIMIT 1
+2013/04/05 12:11:20 [trace] [system.db.ar.CActiveRecord] Link.findAll()
+2013/04/05 12:11:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `links` `t` WHERE href LIKE :href1 OR :href1 LIKE href
+2013/04/05 12:11:20 [trace] [system.db.ar.CActiveRecord] Book.insert()
+2013/04/05 12:11:20 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `books` (`book_name`, `published_date`, `price`, `size`, `publisher`, `book_company`, `num_page`, `description`, `photo`, `author`, `link_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)
