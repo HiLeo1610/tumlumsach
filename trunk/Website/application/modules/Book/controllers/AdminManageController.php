@@ -120,6 +120,7 @@ class Book_AdminManageController extends Core_Controller_Action_Admin
 				'num_page' => $rawBook->num_page,
 				'description' => $rawBook->description,		
 				'rawbook_id' => $rawBook->getIdentity(),
+				'creation_date' => date('Y-m-d H:i:s', $rawBook->published_date),	
 				'user_id' => 1 //superadmin		
 			);
 			
