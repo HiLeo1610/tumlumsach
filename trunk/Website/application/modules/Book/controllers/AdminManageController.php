@@ -1,28 +1,156 @@
 <?php
 class Book_AdminManageController extends Core_Controller_Action_Admin
 {
+	public function managePostsAction() 
+	{
+		if ($this -> getRequest() -> isPost())
+		{
+			$values = $this -> getRequest() -> getPost();
+			if (isset($values['action']) && !empty($values['action'])) {
+				return $this->_forward($values['action'], 'admin-manage', 'book');
+			}
+		}
+		
+		$this -> view -> navigation = $navigation = Engine_Api::_() -> getApi('menus', 'core') -> getNavigation('book_admin_main', array(), 'book_admin_main_manage-posts');
+		
+		$postTable = new Book_Model_DbTable_Posts();
+		$postTableName = $postTable->info(Zend_Db_Table_Abstract::NAME);
+		
+		$postSelect = $postTable->getSelect();
+		$postSelect->order("$postTableName.post_id DESC");
+		$this->view->paginator = $paginator = Zend_Paginator::factory($postSelect);
+		$page = $this -> _getParam('page', 1);
+		$paginator->setItemCountPerPage(25);
+		$paginator->setCurrentPageNumber($page);
+	}
+	
+	public function deletePostsAction() {
+		// In smoothbox
+		$this->_helper->layout->setLayout('admin-simple');
+		if ($this->getRequest()->isPost()) {
+			$ids = $this->_getParam('id');
+			$postTbl = new Book_Model_DbTable_Posts();
+				
+			if (!empty($ids) && is_array($ids)) {
+				$postSelect = $postTbl->select();
+				$postSelect->where('post_id IN (?)', $ids);
+				$posts = $postTbl->fetchAll($postSelect);
+	
+				$db = Engine_Db_Table::getDefaultAdapter();
+				$db->beginTransaction();
+	
+				try {
+					foreach ($posts as $post) {
+						$post->delete();
+					}
+					$db->commit();
+				} catch (Exception $e) {
+					$db->rollBack();
+					throw $e;
+				}
+	
+				return $this->_forward('success', 'utility', 'core', array(
+						'layout' => 'default-simple',
+						'parentRefresh' => true,
+						'messages' => array(Zend_Registry::get('Zend_Translate')->_('The posts are deleted successfully.'))
+				));
+			}
+		}
+	}
+	
+	public function importPostsAction() {
+		$postTbl = new Book_Model_DbTable_Posts();
+		$select = $postTbl->select();
+		$select->from($postTbl->info('name'), new Zend_Db_Expr('MAX(`rawpost_id`) as max_rawpost_id'));
+		$data = $select->query()->fetch();
+		$maxRawpostId = (int)$data['max_rawpost_id'];
+	
+		$userTbl = new User_Model_DbTable_Users();
+	
+		$rawPostTbl = new Book_Model_DbTable_Rawposts();
+		$rawPostSelect = $rawPostTbl->select();
+		$rawPostSelect->where('rawpost_id > ?', $maxRawpostId);
+		foreach ($rawPostTbl->fetchAll($rawPostSelect) as $rawPost) {
+			$data = array(
+					'post_name' => $rawBook->book_name,
+					'published_date' => date('Y-m-d H:i:s', $rawBook->published_date),
+					'price' => $rawBook->price,
+					'num_page' => $rawBook->num_page,
+					'description' => $rawBook->description,
+					'rawbook_id' => $rawBook->getIdentity(),
+					'user_id' => 1 //superadmin
+			);
+				
+			if (isset($publisher) && !empty($publisher)) {
+				$data['publisher_id'] = $publisher->getIdentity();
+			}
+				
+			if (isset($bookCompany) && !empty($bookCompany)) {
+				$data['book_company_id'] = $bookCompany->getIdentity();
+			}
+				
+			$book = $bookTbl->createRow($data);
+			$book->save();
+				
+			if (!empty($rawBook['photo'])) {
+				$image = Engine_Image::factory();
+	
+				$name = basename($rawBook['photo']);
+				$path = APPLICATION_PATH . DIRECTORY_SEPARATOR . 'temporary';
+				$params = array(
+						'parent_id' => $book->getIdentity(),
+						'parent_type' => $book->getType()
+				);
+	
+				// Save
+				$storage = Engine_Api::_()->storage();
+	
+				$image->open($rawBook['photo'])
+				->write($path . '/m_' . $name)
+				->destroy();
+	
+				// Store
+				$iMain = $storage->create($path . '/m_' . $name, $params);
+	
+				// Remove temp files
+				@unlink($path . '/m_' . $name);
+	
+				$book->photo_id = $iMain->getIdentity();
+				$book->save();
+	
+				$photoTbl = new Book_Model_DbTable_Photos();
+				$photo = $photoTbl->createRow(array(
+						'parent_object_type' => $book->getType(),
+						'parent_object_id' => $book->getIdentity(),
+						'file_id' => $iMain->getIdentity(),
+						'user_id' => 1, // superadmin
+						'approved' => 1,
+						'default' => 1
+				));
+				$photo->save();
+			}
+		}
+	
+		return $this->_forward('success', 'utility', 'core', array(
+				'layout' => 'default-simple',
+				'parentRefresh' => true,
+				'messages' => array(Zend_Registry::get('Zend_Translate')->_('The data is imported successfully.'))
+		));
+	}
+	
 	public function indexAction()
 	{
-		$this -> view -> navigation = $navigation = Engine_Api::_() -> getApi('menus', 'core') -> getNavigation('book_admin_main', array(), 'book_admin_main_manage');
-
 		if ($this -> getRequest() -> isPost())
 		{
 			$values = $this -> getRequest() -> getPost();
 			if (isset($values['action']) && !empty($values['action'])) {
 				return $this->_forward($values['action'], 'admin-manage', 'book');				
 			}
-			foreach ($values as $key => $value)
-			{
-				if ($key == 'delete_' . $value)
-				{
-					$video = Engine_Api::_() -> getItem('video', $value);
-					$video -> delete();
-				}
-			}
 		}
 
+		$this -> view -> navigation = $navigation = Engine_Api::_() -> getApi('menus', 'core') -> getNavigation('book_admin_main', array(), 'book_admin_main_manage');
 		$page = $this -> _getParam('page', 1);
-		$this -> view -> paginator = Engine_Api::_() -> book() -> getBooksPaginator(array('orderby' => 'book_id', ));
+		$this -> view -> paginator = Engine_Api::_() -> book() -> getBooksPaginator(array('orderby' => 'book_id'));
 
 		$this -> view -> paginator -> setItemCountPerPage(25);
 		$this -> view -> paginator -> setCurrentPageNumber($page);

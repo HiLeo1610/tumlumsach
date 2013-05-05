@@ -30,6 +30,8 @@ return array(
 		'book_work',
 		'book_chapter',
 		'book_rawbook',
+		'book_link',
+		'book_rawpost',
 	),
 	'hooks' => array(
 		array(
