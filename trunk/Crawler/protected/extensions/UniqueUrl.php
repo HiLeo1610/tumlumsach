@@ -4,9 +4,9 @@ class UniqueURL extends CValidator {
 	{
 		$value = $object->$attribute;
 		$link = Link::model()->findAll(array(
-			'condition' => 'href LIKE :href1 OR :href1 LIKE href',
+			'condition' => 'href LIKE :href1',
 			'params' => array(
-				':href1' => '%' . $value . '%'					
+				':href1' => $value . '%'					
 			)
 		));
 		if ($link != NULL) {

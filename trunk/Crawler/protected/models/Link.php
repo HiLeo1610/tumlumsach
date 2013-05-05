@@ -14,7 +14,7 @@ class Link extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'links';
+		return 'engine4_book_links';
 	}
 
 	/**
