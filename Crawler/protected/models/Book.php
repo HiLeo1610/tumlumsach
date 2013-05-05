@@ -14,7 +14,7 @@ class Book extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'books';
+		return 'engine4_book_rawbooks';
 	}
 
 	/**

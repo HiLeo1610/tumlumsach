@@ -22,7 +22,7 @@ return array(
 	// application components
 	'components'=>array(
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=data_tumlumsach',
+			'connectionString' => 'mysql:host=localhost;dbname=tumlum_book',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
