@@ -535,7 +535,7 @@ en4.core.comments = {
         page : page
       }
     }), {
-      'element' : $('comments')
+      'element' : $('comments-' + type + '_' + id)
     });
   },
 

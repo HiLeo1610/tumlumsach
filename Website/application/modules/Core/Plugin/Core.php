@@ -152,6 +152,30 @@ class Core_Plugin_Core
     }
     $settings = Engine_Api::_()->getDbtable('settings', 'core');
     
+	// Facebook
+	$subject = $view->subject();
+	
+	$imgUrl = '';
+	if ($subject) {
+		$imgUrl = constant('_ENGINE_SSL') ? 'https://' : 'http://' . $_SERVER['HTTP_HOST'] . $subject->getPhotoUrl();
+	} else {
+		$imgUrl = 'http://www.tumlumsach.com/public/admin/small_logo2.png';
+	}
+	$strMeta = '<meta property="og:image" content="' . $imgUrl . '" />';
+	
+	$pageTitle = $view->translate($view->layout()->siteinfo['title']);
+	if (!$subject) {
+		$request = Zend_Controller_Front::getInstance()->getRequest();
+		$pageTitleKey = 'pagetitle-' . $request->getModuleName() . '-' . $request->getActionName() . '-' . $request->getControllerName();
+		$pageTitle .= ' - ' . $view->translate($pageTitleKey);
+	} else {
+		$pageTitle .= ' - ' . $subject->getTitle();
+	}
+	$strMeta .= '<meta property="og:title" content="' . $pageTitle . '" />';
+	$strMeta .= '<meta property="og:description" content="' . $view->layout()->siteinfo['description'] . '" />';
+
+	$view->layout()->headIncludes .= $strMeta;
+	
     // Generic
     if( ($script = $settings->core_site_script) ) {
       $view->headScript()->appendScript($script);

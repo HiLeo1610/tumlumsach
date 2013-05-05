@@ -181,16 +181,6 @@
   
   <?php echo $headIncludes ?>
   
-  <!--
-		/**
-	 * add description and thumbnail for Facebook fetching
-	 */
-	-->
-	
-    <meta property="og:title" content="Tùm Lum Sách - Mạng xã hội về sách" />
-    <meta property="og:description" content="<?php echo $this->translate('_SITE_DESCRIPTION_OVERVIEW')?>" />
-  	<meta property="og:image" content="http://www.tumlumsach.com/public/admin/small_logo2.png" />
-  	
 </head>
 <body id="global_page_<?php echo $identity ?>">
   <span id="global_content_simple">

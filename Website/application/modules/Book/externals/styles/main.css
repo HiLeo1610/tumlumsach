@@ -66,14 +66,17 @@ ul.book_list .book_arrow_empty {
 /**
  * 	activity
  */
-.activity_icon_book_new {
+.activity_icon_book_new, .activity_icon_comment_book {
 	background: url(~/application/modules/Book/externals/images/book_add.png);
 } 
 .activity_icon_add_favorite {
 	background: url(~/application/modules/Book/externals/images/work_favorite.png)
 }
-.activity_icon_work_new {
+.activity_icon_work_new, .activity_icon_comment_book_work {
 	background: url(~/application/modules/Book/externals/images/work_new.png)
+}
+.activity_icon_comment_book_post, .activity_icon_chapter_new, .activity_icon_comment_book_chapter {
+	background: url(~/application/modules/Book/externals/images/book_post.png);
 }
 /*
  * common
@@ -387,9 +390,7 @@ ul.book_list > li.book_item {
 }
 
 .book_user_feeling > div.book_brief_content {
-	margin-left: 10px;
-	/*width: 610px;*/
-	float: left;
+	overflow: hidden;
 }
 
 .book_brief_content > .book_feeling_title {

@@ -27,18 +27,17 @@
     $headIncludes = $this->layout()->headIncludes;
     
     $request = Zend_Controller_Front::getInstance()->getRequest();
-    $this->headTitle()
-      ->setSeparator(' - ');
+    $this->headTitle()->setSeparator(' - ');
     $pageTitleKey = 'pagetitle-' . $request->getModuleName() . '-' . $request->getActionName()
         . '-' . $request->getControllerName();
     $pageTitle = $this->translate($pageTitleKey);
     if( $pageTitle && $pageTitle != $pageTitleKey ) {
-      $this
-        ->headTitle($pageTitle, Zend_View_Helper_Placeholder_Container_Abstract::PREPEND);
-    }
-    $this
-      ->headTitle($this->translate($this->layout()->siteinfo['title']), Zend_View_Helper_Placeholder_Container_Abstract::PREPEND)
-      ;
+		$this->headTitle($pageTitle, Zend_View_Helper_Placeholder_Container_Abstract::PREPEND);
+    } 
+    
+    $this->headTitle($this->translate($this->layout()->siteinfo['title']), 
+    	Zend_View_Helper_Placeholder_Container_Abstract::PREPEND);
+    
     $this->headMeta()
       ->appendHttpEquiv('Content-Type', 'text/html; charset=UTF-8')
       ->appendHttpEquiv('Content-Language', $this->locale()->getLocale()->__toString());
@@ -61,6 +60,8 @@
     $this->headMeta()->appendName('description', trim($description));
     $this->headMeta()->appendName('keywords', trim($keywords));
 	
+    $this->layout()->headIncludes .= '<meta property="og:description" content="' . trim(description) . '" />';
+    
     // Get body identity
     if( isset($this->layout()->siteinfo['identity']) ) {
       $identity = $this->layout()->siteinfo['identity'];
