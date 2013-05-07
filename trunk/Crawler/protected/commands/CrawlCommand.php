@@ -18,7 +18,12 @@ class CrawlCommand extends CConsoleCommand
  				$provider->storeHref($link);
  			}
 			echo 'Parse Content-------------------------' . PHP_EOL; 
-			foreach (Link::model()->findAll('provider = :provider', array('provider' => $provider->getProviderName())) as $model)
+			foreach (Link::model()->findAll(
+				'provider = :provider', 
+				array(
+					'provider' => $provider->getProviderName(),
+					'fetched' => 0
+				)) as $model)
 			{
 				echo $model->href . PHP_EOL;
 				
@@ -36,6 +41,9 @@ class CrawlCommand extends CConsoleCommand
 						}
 						$newObj->link_id = $model->link_id;
 						$newObj->save();
+						
+						$model->fetched = 1;
+						$model->save();
 					} else {
 						echo PHP_EOL;
 					}
