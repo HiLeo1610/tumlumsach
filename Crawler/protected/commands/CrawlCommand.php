@@ -6,18 +6,17 @@ class CrawlCommand extends CConsoleCommand
 	{
 		$receiver = $args[0];
 		
-		if ($receiver == 'tiki.vn') 
-		{
+		if ($receiver == 'tiki.vn') {
 			$provider = new Tiki();
 		} elseif ($receiver == 'vnexpress.net') {			
 			$provider = new Vnexpress();
 		}
 		
 		foreach ($provider->getUrls() as $url) {
-// 			foreach ($provider->getLinks($url) as $link) {
-// 				echo $link . PHP_EOL;
-// 				$provider->storeHref($link);
-// 			}
+ 			foreach ($provider->getLinks($url) as $link) {
+ 				echo $link . PHP_EOL;
+ 				$provider->storeHref($link);
+ 			}
 			echo 'Parse Content-------------------------' . PHP_EOL; 
 			foreach (Link::model()->findAll('provider = :provider', array('provider' => $provider->getProviderName())) as $model)
 			{
