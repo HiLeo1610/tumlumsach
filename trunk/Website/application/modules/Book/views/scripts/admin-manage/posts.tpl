@@ -92,7 +92,7 @@
             <button type='submit' value='deletes' name="action">
                 <?php echo $this->translate("Delete Selected") ?>
             </button>
-            <button type="submit" value="import" name="action">
+            <button type="submit" value="import-posts" name="action">
             	<?php echo $this->translate("Import Data") ?>
             </button>            
         </div>
