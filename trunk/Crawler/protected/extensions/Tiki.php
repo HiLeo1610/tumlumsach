@@ -7,9 +7,7 @@ class Tiki extends CrawlBookProvider
 	function __construct()
 	{
 		$this->_urls = array(
-			'http://tiki.vn/sach-truyen-tieng-viet.html?dir=asc&limit=48&order=entity_id&p=1',
-			'http://tiki.vn/sach-truyen-tieng-viet.html?dir=asc&limit=48&order=entity_id&p=2',
-			'http://tiki.vn/sach-truyen-tieng-viet.html?dir=asc&limit=48&order=entity_id&p=3',
+			'http://tiki.vn/new-products/sach-truyen-tieng-viet.html',			
 		);
 		$this->_providerName = 'tiki.vn';
 
@@ -31,12 +29,6 @@ class Tiki extends CrawlBookProvider
 
 	public function getLinks($url)
 	{
-		/*if ($this->_links == NULL || empty($this->_links))
-		{
-			$this->_links = array();
-		}
-		
-		foreach ($this->_urls as $url) {*/
 		$links = array();
 		$content = file_get_contents($url);
 
@@ -60,8 +52,7 @@ class Tiki extends CrawlBookProvider
 				}
 			}
 		}
-		//}
-
+		
 		return $links;
 	}
 
