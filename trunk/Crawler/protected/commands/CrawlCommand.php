@@ -19,18 +19,20 @@ class CrawlCommand extends CConsoleCommand
  				echo $link . PHP_EOL;
  				$provider->storeHref($link);
  			}
-			echo 'Parse Content-------------------------' . PHP_EOL; 
+			echo 'Parse Content for ' . $url . PHP_EOL; 
 			$criteria = new CDbCriteria();
+			$criteria->addCondition(array('provider = :provider', 'fetched = :fetched'));
 			$criteria->params = array(
-				'provider' => $provider->getProviderName(),
-				'fetched' => 0
+				':provider' => $provider->getProviderName(),
+				':fetched' => 0
 			);
 			$criteria->limit = self::DEFAULT_LIMIT;
 			foreach (Link::model()->findAll($criteria) as $model)
 			{
 				echo $model->href . PHP_EOL;
 				
-				$objClsName = CrawlProvider::getObjClassName($provider->getType()); 
+				$objClsName = CrawlProvider::getObjClassName($provider->getType());
+				echo $objClsName . ' - ' . $model->link_id . PHP_EOL; 
 				$obj = $objClsName::model()->find('link_id = ' . $model->link_id);
 				if ($obj == NULL) 
 				{
