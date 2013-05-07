@@ -34,7 +34,7 @@ class CrawlCommand extends CConsoleCommand
 						foreach ($arrContent as $key => $value) {
 							$newObj->$key = $value;
 						}
-						$newObj->link_id = $model->id;
+						$newObj->link_id = $model->link_id;
 						$newObj->save();
 					} else {
 						echo PHP_EOL;
