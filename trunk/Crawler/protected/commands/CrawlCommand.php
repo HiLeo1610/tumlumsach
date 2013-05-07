@@ -23,7 +23,7 @@ class CrawlCommand extends CConsoleCommand
 				echo $model->href . PHP_EOL;
 				
 				$objClsName = CrawlProvider::getObjClassName($provider->getType()); 
-				$obj = $objClsName::model()->find('link_id = ' . $model->id);
+				$obj = $objClsName::model()->find('link_id = ' . $model->link_id);
 				if ($obj == NULL) 
 				{
 					echo 'Parse Content : ' . $model->href . ' ';
