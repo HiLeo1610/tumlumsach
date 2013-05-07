@@ -16,6 +16,12 @@
 <?php endif; ?>
 
 <?php if (count($this->paginator)): ?>
+	<div class="book_item_count">
+		<?php
+			$totalItemCount = $this->paginator->getTotalItemCount();
+			echo $this->translate(array('%s post', '%s posts', $totalItemCount), $this->locale()->toNumber($totalItemCount));
+		?>
+	</div>
     <form id='multidelete_form' method="post" action="<?php echo $this->url(); ?>" onSubmit="return multiDelete()">
         <table class='admin_table admin_book_table'>
             <thead>
