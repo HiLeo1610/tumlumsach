@@ -25,8 +25,7 @@ class Link extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('href', 'unique'),
-			array('href', 'uniqueURL')
+			array('href', 'unique'),			
 		);
 	}
 }
