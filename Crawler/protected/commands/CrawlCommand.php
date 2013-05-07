@@ -2,7 +2,7 @@
 
 class CrawlCommand extends CConsoleCommand
 {
-	const DEFAULT_LIMIT = 200;
+	const DEFAULT_LIMIT = 50;
 	
 	public function run($args)
 	{
