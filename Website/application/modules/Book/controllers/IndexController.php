@@ -2,8 +2,7 @@
 
 class Book_IndexController extends Core_Controller_Action_Standard
 {
-	public function uploadAction() 
-	{
+	public function uploadAction() {
 		$this->_helper->layout->disableLayout();
 		
         if (!isset($_FILES['Filedata']) || !is_uploaded_file($_FILES['Filedata']['tmp_name'])) {
@@ -177,5 +176,12 @@ class Book_IndexController extends Core_Controller_Action_Standard
 		$this->_helper->viewRenderer->setNoRender(true);
 		$data = Zend_Json::encode($data);
 		$this->getResponse()->setBody($data);
+	}
+	
+	public function importRawBooksAction() {		
+		if (Engine_Api::_()->book()->importRawBooks()) {
+			echo 'The books are imported successfully !';
+			die;
+		}
 	}
 }
