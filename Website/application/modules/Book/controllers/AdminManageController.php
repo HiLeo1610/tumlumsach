@@ -1,7 +1,7 @@
 <?php
 class Book_AdminManageController extends Core_Controller_Action_Admin
 {
-	public function managePostsAction() 
+	public function postsAction() 
 	{
 		if ($this -> getRequest() -> isPost())
 		{
@@ -66,69 +66,28 @@ class Book_AdminManageController extends Core_Controller_Action_Admin
 		$maxRawpostId = (int)$data['max_rawpost_id'];
 	
 		$userTbl = new User_Model_DbTable_Users();
+		$rawbookTbl = new Book_Model_DbTable_Rawbooks();
 	
 		$rawPostTbl = new Book_Model_DbTable_Rawposts();
 		$rawPostSelect = $rawPostTbl->select();
 		$rawPostSelect->where('rawpost_id > ?', $maxRawpostId);
 		foreach ($rawPostTbl->fetchAll($rawPostSelect) as $rawPost) {
 			$data = array(
-					'post_name' => $rawBook->book_name,
-					'published_date' => date('Y-m-d H:i:s', $rawBook->published_date),
-					'price' => $rawBook->price,
-					'num_page' => $rawBook->num_page,
-					'description' => $rawBook->description,
-					'rawbook_id' => $rawBook->getIdentity(),
-					'user_id' => 1 //superadmin
+				'post_name' => $rawPost->name,
+				'content' => $rawPost->content,
+				'user_id' => 1, //superadmin
+				'rawpost_id' => $rawPost->rawpost_id
 			);
-				
-			if (isset($publisher) && !empty($publisher)) {
-				$data['publisher_id'] = $publisher->getIdentity();
+			if (!empty($rawPost->book_link_id)) {
+				$book = $rawbookTbl->getBookFromBookLinkId($rawPost->book_link_id);
+				if (!empty($book)) {
+					$data['parent_type'] = $book->getType();
+					$data['parent_id'] = $book->getIdentity();
+				}	
 			}
 				
-			if (isset($bookCompany) && !empty($bookCompany)) {
-				$data['book_company_id'] = $bookCompany->getIdentity();
-			}
-				
-			$book = $bookTbl->createRow($data);
-			$book->save();
-				
-			if (!empty($rawBook['photo'])) {
-				$image = Engine_Image::factory();
-	
-				$name = basename($rawBook['photo']);
-				$path = APPLICATION_PATH . DIRECTORY_SEPARATOR . 'temporary';
-				$params = array(
-						'parent_id' => $book->getIdentity(),
-						'parent_type' => $book->getType()
-				);
-	
-				// Save
-				$storage = Engine_Api::_()->storage();
-	
-				$image->open($rawBook['photo'])
-				->write($path . '/m_' . $name)
-				->destroy();
-	
-				// Store
-				$iMain = $storage->create($path . '/m_' . $name, $params);
-	
-				// Remove temp files
-				@unlink($path . '/m_' . $name);
-	
-				$book->photo_id = $iMain->getIdentity();
-				$book->save();
-	
-				$photoTbl = new Book_Model_DbTable_Photos();
-				$photo = $photoTbl->createRow(array(
-						'parent_object_type' => $book->getType(),
-						'parent_object_id' => $book->getIdentity(),
-						'file_id' => $iMain->getIdentity(),
-						'user_id' => 1, // superadmin
-						'approved' => 1,
-						'default' => 1
-				));
-				$photo->save();
-			}
+			$post = $postTbl->createRow($data);
+			$post->save();
 		}
 	
 		return $this->_forward('success', 'utility', 'core', array(

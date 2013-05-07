@@ -14,7 +14,6 @@ class Book_View_Helper_Purify extends Zend_View_Helper_Abstract {
 	}
 
 	public function purify($name, $value = null, $attributes = array()) {
-	{
 		return $this->_purifier->purify($value);
 
 	}
