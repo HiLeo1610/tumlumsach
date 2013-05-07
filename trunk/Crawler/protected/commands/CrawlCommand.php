@@ -2,6 +2,8 @@
 
 class CrawlCommand extends CConsoleCommand
 {
+	const DEFAULT_LIMIT = 200;
+	
 	public function run($args)
 	{
 		$receiver = $args[0];
@@ -18,12 +20,13 @@ class CrawlCommand extends CConsoleCommand
  				$provider->storeHref($link);
  			}
 			echo 'Parse Content-------------------------' . PHP_EOL; 
-			foreach (Link::model()->findAll(
-				'provider = :provider', 
-				array(
-					'provider' => $provider->getProviderName(),
-					'fetched' => 0
-				)) as $model)
+			$criteria = new CDbCriteria();
+			$criteria->params = array(
+				'provider' => $provider->getProviderName(),
+				'fetched' => 0
+			);
+			$criteria->limit = self::DEFAULT_LIMIT;
+			foreach (Link::model()->findAll($criteria) as $model)
 			{
 				echo $model->href . PHP_EOL;
 				
