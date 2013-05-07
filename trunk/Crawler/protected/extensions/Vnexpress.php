@@ -62,6 +62,10 @@ class Vnexpress extends CrawlPostProvider {
 			}
 		}
 		
+		if (isset($arrContent['book_name'])) {
+			unset($arrContent['book_name']);
+		}
+		
 		return $arrContent;
 	}
 	
