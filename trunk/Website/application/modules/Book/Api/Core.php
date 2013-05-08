@@ -1,7 +1,7 @@
 <?php
 class Book_Api_Core extends Core_Api_Abstract
 {
-	const DEFAULT_LIMIT = 100;
+	const DEFAULT_LIMIT = 200;
 
 	public function getBooksSelect($params = array(), $order_by = true)
 	{
@@ -158,7 +158,8 @@ class Book_Api_Core extends Core_Api_Abstract
 			$rawBookSelect->where('rawbook_id > ?', $maxRawbookId);
 			$rawBookSelect->order('rawbook_id ASC');
 			$rawBookSelect->limit(self::DEFAULT_LIMIT);
-				
+			
+			$rawBooks = $rawBookTbl->fetchAll($rawBookSelect);
 			foreach ($rawBooks as $rawBook) {
 				if (!empty($rawBook['publisher'])) {
 					$publisherSelect = $userTbl->select()->where('displayname LIKE ?', $rawBook['publisher']);
@@ -191,8 +192,6 @@ class Book_Api_Core extends Core_Api_Abstract
 				$book = $bookTbl->createRow($data);
 				$book->save();
 					
-				echo 'Save book successfully ' . $book->book_name . PHP_EOL;
-
 				if (!empty($rawBook['photo'])) {
 					$image = Engine_Image::factory();
 
@@ -230,8 +229,6 @@ class Book_Api_Core extends Core_Api_Abstract
 					));
 					$photo->save();
 				}
-
-				echo 'Fetch image for the book successfully !' . PHP_EOL;
 			}
 				
 			return true;
