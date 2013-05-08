@@ -15,10 +15,10 @@ class CrawlCommand extends CConsoleCommand
 		}
 		
 		foreach ($provider->getUrls() as $url) {
- 			foreach ($provider->getLinks($url) as $link) {
+ 			/*foreach ($provider->getLinks($url) as $link) {
  				echo $link . PHP_EOL;
  				$provider->storeHref($link);
- 			}
+ 			}*/
 			echo 'Parse Content for ' . $url . PHP_EOL; 
 			$criteria = new CDbCriteria();
 			$criteria->addCondition(array('provider = :provider', 'fetched = :fetched'));
@@ -32,7 +32,6 @@ class CrawlCommand extends CConsoleCommand
 				echo $model->href . PHP_EOL;
 				
 				$objClsName = CrawlProvider::getObjClassName($provider->getType());
-				echo $objClsName . ' - ' . $model->link_id . PHP_EOL; 
 				$obj = $objClsName::model()->find('link_id = ' . $model->link_id);
 				if ($obj == NULL) 
 				{

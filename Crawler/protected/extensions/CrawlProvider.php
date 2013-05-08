@@ -13,6 +13,20 @@ abstract class CrawlProvider {
 		return $this->_urls;
 	}
 	
+	public function getCanonicalUrl($content) {
+		$dom = new DOMDocument();
+		libxml_use_internal_errors(true);
+		$dom->loadHTML($content);
+		libxml_use_internal_errors(false);
+
+		$xpath = new DOMXPath($dom);
+		$nodes = $xpath->query('//link[@rel="canonical"]');
+		if ($nodes->length > 0) {
+			$node = $nodes->item(0);
+			return $node->getAttribute('href'); 
+		}
+	} 
+	
 	public function storeHref($href) {
 		$model = Link::model()->find('href = ?', $href);
 		if ($model == NULL) {
@@ -21,7 +35,12 @@ abstract class CrawlProvider {
 			$model->content = file_get_contents($href);
 			$model->provider = $this->_providerName;
 			$model->type = $this->getType();
-				
+			
+			$canonicalUrl = $this->getCanonicalUrl($model->content);
+			if (!empty($canonicalUrl)) {
+				$model->href = $canonicalUrl;
+			}
+			
 			if ($model->validate()) {
 				echo 'store URL : ' . $href . PHP_EOL;
 				$model->save();

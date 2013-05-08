@@ -106,11 +106,11 @@ class Vnexpress extends CrawlPostProvider {
 						$d->appendChild($no);						
 					}	
 					$html .= $d->saveXML();
-                                        $xmlStr = '<?xml version="1.0" encoding="UTF-8"?>';
-                                        $p = strpos($html, $xmlStr);
-                                        if ($p !== false) {
-                                            $html = substr($html, strlen($xmlStr));
-                                        }
+                    $xmlStr = '<?xml version="1.0" encoding="UTF-8"?>';
+                    $p = strpos($html, $xmlStr);
+                    if ($p !== false) {
+                    	$html = substr($html, strlen($xmlStr));
+                    }
 					$arrContent[$key] = trim($html);
 				}
 			}
