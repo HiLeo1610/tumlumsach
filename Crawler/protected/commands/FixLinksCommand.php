@@ -16,7 +16,7 @@ class FixLinksCommand extends CConsoleCommand
 				$link->content = $content;
 				$link->href = $href;
 				
-				$otherLink = Link::model()->findBySql('href LIKE ' . $href . '%');
+				$otherLink = Link::model()->findBySql('href LIKE ' . $href . '% AND link_id != ' . $link->link_id);
 				if (!empty($otherLink)) {
 					$otherLink->delete();
 				}
