@@ -8,13 +8,31 @@ class Vnexpress extends CrawlPostProvider {
 		parent::__construct();
 		
 		$this->_urls = array(
-			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach',
+			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/2.html',
+			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/3.html',
+			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/4.html',
+			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/5.html',
+			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/6.html',
+			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/7.html',
+			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/8.html',
+			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/9.html',
+			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/10.html',
+			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/11.html',
+			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/12.html',
+			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/13.html',
+			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/14.html',
+			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/15.html',
+			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/16.html',
+			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/17.html',
+			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/18.html',
+			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/19.html',
+			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/20.html',
 		);
 		$this->_providerName = 'vnexpress.net';
 		$this->_arrXPath = array(
-			'name' => '//*[@id="fck_container"]/div[1]/h1',
-			'content' => '//*[@id="fck_container"]/div[3]',
-			'book_name' => "//p[contains(text(), 'Tên sách:')]/em"
+			'name' => '//*[@id="fck_container"]/div[@class="title_news"]/h1',
+			'content' => '//*[@id="fck_container"]/div[@class="fck_detail"]',
+			'book_name' => array("//p[contains(text(), 'Tên sách')]/em", "//p[contains(text(), 'Tác phẩm')]/em")
 		);
 	}
 	
@@ -55,8 +73,8 @@ class Vnexpress extends CrawlPostProvider {
 	
 	private function _normalizeContent($arrContent) 
 	{
-		if (isset($arrContent['name'])) {
-			$book = Book::model()->find('LCASE(book_name) LIKE LCASE(:name)', array('name' => '%' . $arrContent['name'] . '%'));
+		if (isset($arrContent['book_name'])) {
+			$book = Book::model()->find('LCASE(book_name) LIKE LCASE(:name)', array('name' => '%' . $arrContent['book_name'] . '%'));
 			if (isset($book) && !empty($book)) {
 				$arrContent['book_link_id'] = $book->link_id;
 			}
@@ -73,7 +91,7 @@ class Vnexpress extends CrawlPostProvider {
 	{
 		$model = Link::model()->find('href = :href AND type = :type', array('href' => $href, 'type' => $this->getType()));
 	
-		if ($model == NULL) {
+		if ($model == NULL || empty($model->content)) {
 			$model = $this->storeHref($href);
 		}
 	
@@ -85,23 +103,26 @@ class Vnexpress extends CrawlPostProvider {
 		libxml_use_internal_errors(false);
 	
 		$xpath = new DOMXPath($dom);
-		foreach ($this->_arrXPath as $key => $value)
-		{
-			$content = $xpath->query($value);
-			if ($content->length > 0)
-			{
-				if ($key != 'content') 
-				{
+		foreach ($this->_arrXPath as $key => $value) {
+			if (is_array($value)) {
+				foreach ($value as $val) {
+					$content = $xpath->query($val);
+					if ($content->length > 0) {
+						break;
+					}
+				}
+			} else {
+				$content = $xpath->query($value);
+			}
+			if ($content->length > 0) {
+				if ($key != 'content') {
 					$arrContent[$key] = $content->item(0)->nodeValue;
-				} 
-				else 
-				{
+				} else {
 					$html = '';
 					$node = $content->item(0);
 					libxml_use_internal_errors(true);
 					$d = new DOMDocument("1.0", "UTF-8");
-					foreach ($node->childNodes as $child)
-					{
+					foreach ($node->childNodes as $child) {
 						$no = $d->importNode($child,true);
 						$d->appendChild($no);						
 					}	
@@ -115,11 +136,11 @@ class Vnexpress extends CrawlPostProvider {
 				}
 			}
 		}
-		if ($this->_isValidContent($arrContent))
-		{
+		
+		if ($this->_isValidContent($arrContent)) {
 			return $this->_normalizeContent($arrContent);
 		}
 	
-		return NULL;
+		return null;
 	}
 }

@@ -122,66 +122,68 @@ class Tiki extends CrawlBookProvider
 
 	public function parseContent($href)
 	{
-		$model = Link::model()->find('href LIKE ?', '%' . $href . '%');
-
-		if ($model == NULL) {
+		$model = Link::model()->find("href LIKE '" . $href . "'");
+		
+		if ($model == null || empty($model->content)) {
 			echo 'store href ' . $href . PHP_EOL;
 			$model = $this->storeHref($href);
 		}
-		
-		$arrContent = array();
-
-		$dom = new DOMDocument();
-		libxml_use_internal_errors(true);
-		$dom->loadHTML($model->content);
-		libxml_use_internal_errors(false);
-
-		$xpath = new DOMXPath($dom);
-		foreach ($this->_arrXPath as $key => $value) {
-			if (is_array($value)) {
-				foreach ($value as $val) {
-					$content = $xpath->query($val);
-					if ($content->length > 0) {
-						break;
-					}
-				}
-			} else {
-				$content = $xpath->query($value);
-			}
-			
-			if ($content->length > 0) {
-				if ($key == 'photo') {
-					foreach ($content as $node) {
-						$href = $node->getAttribute('href');
-						if (is_string($href) && !empty($href)) {
-							$arrContent[$key] = $node->getAttribute('href');
+		if (!empty($model) && !empty($model->content)) {
+			$arrContent = array();
+	
+			$dom = new DOMDocument();
+			libxml_use_internal_errors(true);
+			$dom->loadHTML($model->content);
+			libxml_use_internal_errors(false);
+	
+			$xpath = new DOMXPath($dom);
+			foreach ($this->_arrXPath as $key => $value) {
+				if (is_array($value)) {
+					foreach ($value as $val) {
+						$content = $xpath->query($val);
+						if ($content->length > 0) {
+							break;
 						}
 					}
-				}
-				elseif ($key == 'description') {
-					$html = '';
-					$node = $content->item(0);
-					$d = new DOMDocument();
-					foreach ($node->childNodes as $child)
-					{
-						$d->appendChild($d->importNode($child,true));
-					}
-					$html .= $d->saveXML();
-					$xmlStr = '<?xml version="1.0" encoding="UTF-8"?>';
-                    $p = strpos($html, $xmlStr);
-                    if ($p !== false) {
-                    	$html = substr($html, strlen($xmlStr));
-                    }
-					$arrContent[$key] = trim($html);
 				} else {
-					$arrContent[$key] = $content->item(0)->nodeValue;
+					$content = $xpath->query($value);
 				}
-			}			
+				
+				if ($content->length > 0) {
+					if ($key == 'photo') {
+						foreach ($content as $node) {
+							$href = $node->getAttribute('href');
+							if (is_string($href) && !empty($href)) {
+								$arrContent[$key] = $node->getAttribute('href');
+							}
+						}
+					}
+					elseif ($key == 'description') {
+						$html = '';
+						$node = $content->item(0);
+						$d = new DOMDocument("1.0", "UTF-8");
+						foreach ($node->childNodes as $child)
+						{
+							$d->appendChild($d->importNode($child,true));
+						}
+						$html .= $d->saveXML();
+						$xmlStr = '<?xml version="1.0" encoding="UTF-8"?>';
+	                    $p = strpos($html, $xmlStr);
+	                    if ($p !== false) {
+	                    	$html = substr($html, strlen($xmlStr));
+	                    }
+						$arrContent[$key] = trim($html);
+					} else {
+						$arrContent[$key] = $content->item(0)->nodeValue;
+					}
+				}			
+			}
+			
+			if ($this->_isValidContent($arrContent)) {
+				return $this->_normalizeContent($arrContent);
+			}
+	
+			return null;
 		}
-		if ($this->_isValidContent($arrContent)) {
-			return $this->_normalizeContent($arrContent);
-		}
-
-		return NULL;
 	}
 }
