@@ -21,7 +21,7 @@ class Tiki extends CrawlBookProvider
 				'publisher' => "//th[text()='Nhà xuất bản']/following-sibling::*",
 				'book_company' => "//th[text()='Công ty phát hành']/following-sibling::*",
 				'num_page' => "//th[text()='Số trang']/following-sibling::*",
-				'description' => '//*[@id="fragment-1"]/div',
+				'description' => '//*[@id="fragment-1"]',
 				'photo' => '//*[@class="MagicToolboxContainer"]/*',
 				'author' => '//*[@id="product_addtocart_form"]/div[2]/a[1]'
 		);
@@ -122,12 +122,13 @@ class Tiki extends CrawlBookProvider
 
 	public function parseContent($href)
 	{
-		$model = Link::model()->find('href = ?', $href);
+		$model = Link::model()->find('href LIKE ?', '%' . $href . '%');
 
 		if ($model == NULL) {
+			echo 'store href ' . $href . PHP_EOL;
 			$model = $this->storeHref($href);
 		}
-
+		
 		$arrContent = array();
 
 		$dom = new DOMDocument();
@@ -137,6 +138,7 @@ class Tiki extends CrawlBookProvider
 
 		$xpath = new DOMXPath($dom);
 		foreach ($this->_arrXPath as $key => $value) {
+			echo $key . '-' . $value . PHP_EOL;
 			if (is_array($value)) {
 				foreach ($value as $val) {
 					$content = $xpath->query($val);
@@ -146,6 +148,12 @@ class Tiki extends CrawlBookProvider
 				}
 			} else {
 				$content = $xpath->query($value);
+				if ($key == 'description') {
+					var_dump($model->link_id);die;
+					var_dump($model->content);
+					var_dump($content);
+					die;
+				}
 			}
 			
 			if ($content->length > 0) {
@@ -164,15 +172,16 @@ class Tiki extends CrawlBookProvider
 					{
 						$d = new DOMDocument();
 						$d->appendChild($d->importNode($child,true));
-						$html .= $d->saveHTML();
+						$html .= $d->saveXML();
 					}
 					$arrContent[$key] = trim($html);
+					
 				} else {
 					$arrContent[$key] = $content->item(0)->nodeValue;
 				}
 			}			
 		}
-		
+		var_dump($arrContent);
 		if ($this->_isValidContent($arrContent)) {
 			return $this->_normalizeContent($arrContent);
 		}
