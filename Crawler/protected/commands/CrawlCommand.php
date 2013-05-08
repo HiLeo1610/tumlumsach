@@ -2,7 +2,7 @@
 
 class CrawlCommand extends CConsoleCommand
 {
-	const DEFAULT_LIMIT = 50;
+	const DEFAULT_LIMIT = 500;
 	
 	public function run($args)
 	{
@@ -14,12 +14,21 @@ class CrawlCommand extends CConsoleCommand
 			$provider = new Vnexpress();
 		}
 		
+		$operation = '';
+		if (isset($args[1])) {
+			$operation = $args[1];
+		}
+		
 		foreach ($provider->getUrls() as $url) {
- 			/*foreach ($provider->getLinks($url) as $link) {
- 				echo $link . PHP_EOL;
- 				$provider->storeHref($link);
- 			}*/
-			echo 'Parse Content for ' . $url . PHP_EOL; 
+			if ($operation != 'parse-only') {
+	 			foreach ($provider->getLinks($url) as $link) {
+	 				echo $link . PHP_EOL;
+	 				$provider->storeHref($link);
+	 			}
+			}
+			
+			echo 'Parse Content for ' . $url . PHP_EOL;
+			 
 			$criteria = new CDbCriteria();
 			$criteria->addCondition(array('provider = :provider', 'fetched = :fetched'));
 			$criteria->params = array(

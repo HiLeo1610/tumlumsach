@@ -138,7 +138,6 @@ class Tiki extends CrawlBookProvider
 
 		$xpath = new DOMXPath($dom);
 		foreach ($this->_arrXPath as $key => $value) {
-			echo $key . '-' . $value . PHP_EOL;
 			if (is_array($value)) {
 				foreach ($value as $val) {
 					$content = $xpath->query($val);
@@ -148,12 +147,6 @@ class Tiki extends CrawlBookProvider
 				}
 			} else {
 				$content = $xpath->query($value);
-				if ($key == 'description') {
-					var_dump($model->link_id);die;
-					var_dump($model->content);
-					var_dump($content);
-					die;
-				}
 			}
 			
 			if ($content->length > 0) {
@@ -168,20 +161,23 @@ class Tiki extends CrawlBookProvider
 				elseif ($key == 'description') {
 					$html = '';
 					$node = $content->item(0);
+					$d = new DOMDocument();
 					foreach ($node->childNodes as $child)
 					{
-						$d = new DOMDocument();
 						$d->appendChild($d->importNode($child,true));
-						$html .= $d->saveXML();
 					}
+					$html .= $d->saveXML();
+					$xmlStr = '<?xml version="1.0" encoding="UTF-8"?>';
+                    $p = strpos($html, $xmlStr);
+                    if ($p !== false) {
+                    	$html = substr($html, strlen($xmlStr));
+                    }
 					$arrContent[$key] = trim($html);
-					
 				} else {
 					$arrContent[$key] = $content->item(0)->nodeValue;
 				}
 			}			
 		}
-		var_dump($arrContent);
 		if ($this->_isValidContent($arrContent)) {
 			return $this->_normalizeContent($arrContent);
 		}
