@@ -133,8 +133,10 @@ class Tiki extends CrawlBookProvider
 	
 			$dom = new DOMDocument();
 			libxml_use_internal_errors(true);
-			$dom->loadHTML($model->content);
+			$content = mb_convert_encoding($model->content, 'HTML-ENTITIES', "UTF-8");
+			$dom->loadHTML($content);
 			libxml_use_internal_errors(false);
+			$doc->encoding = 'UTF-8';
 	
 			$xpath = new DOMXPath($dom);
 			foreach ($this->_arrXPath as $key => $value) {
