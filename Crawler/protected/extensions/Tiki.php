@@ -7,7 +7,7 @@ class Tiki extends CrawlBookProvider
 	function __construct()
 	{
 		$this->_urls = array(
-			'http://tiki.vn/new-products/sach-truyen-tieng-viet.html',			
+			'http://tiki.vn/new-products/sach-truyen-tieng-viet.html?limit=48',			
 		);
 		$this->_providerName = 'tiki.vn';
 
@@ -123,17 +123,18 @@ class Tiki extends CrawlBookProvider
 	public function parseContent($href)
 	{
 		$model = Link::model()->find("href LIKE '" . $href . "'");
+		$content = $model->getHTMLContent();
 		
-		if ($model == null || empty($model->content)) {
+		if ($model == null || empty($content)) {
 			echo 'store href ' . $href . PHP_EOL;
 			$model = $this->storeHref($href);
 		}
-		if (!empty($model) && !empty($model->content)) {
+		if (!empty($model) && !empty($content)) {
 			$arrContent = array();
 	
 			$dom = new DOMDocument();
 			libxml_use_internal_errors(true);
-			$content = mb_convert_encoding($model->content, 'HTML-ENTITIES', "UTF-8");
+			$content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
 			$dom->loadHTML($content);
 			libxml_use_internal_errors(false);
 			$doc->encoding = 'UTF-8';
