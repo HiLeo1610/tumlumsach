@@ -124,7 +124,7 @@ class Book_Api_Core extends Core_Api_Abstract
 				'user_id' => 1, //superadmin
 				'rawpost_id' => $rawPost->rawpost_id
 				);
-				if (!empty($rawPost->book_id)) {
+				if (!empty($rawPost->book_link_id)) {
 					$book = $rawbookTbl->getBookFromBookLinkId($rawPost->book_link_id);
 					if (!empty($book)) {
 						$data['parent_type'] = $book->getType();
