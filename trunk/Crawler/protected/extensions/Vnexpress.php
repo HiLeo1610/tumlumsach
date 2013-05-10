@@ -76,7 +76,52 @@ class Vnexpress extends CrawlPostProvider {
 		return $arrContent;
 	}
 	
-	public function parseContent($href)
+	private function _parseHTMLToContent($content) {
+		$arrContent = array();
+		$dom = new DOMDocument();
+		libxml_use_internal_errors(true);
+		$dom->loadHTML($content);
+		libxml_use_internal_errors(false);
+	
+		$xpath = new DOMXPath($dom);
+		foreach ($this->_arrXPath as $key => $value) {
+			if (is_array($value)) {
+				foreach ($value as $val) {
+					$content = $xpath->query($val);
+					if ($content->length > 0) {
+						break;
+					}
+				}
+			} else {
+				$content = $xpath->query($value);
+			}
+			if ($content->length > 0) {
+				if ($key != 'content') {
+					$arrContent[$key] = $content->item(0)->nodeValue;
+				} else {
+					$html = '';
+					$node = $content->item(0);
+					libxml_use_internal_errors(true);
+					$d = new DOMDocument("1.0", "UTF-8");
+					foreach ($node->childNodes as $child) {
+						$no = $d->importNode($child,true);
+						$d->appendChild($no);						
+					}	
+					$html .= $d->saveXML();
+                    $xmlStr = '<?xml version="1.0" encoding="UTF-8"?>';
+                    $p = strpos($html, $xmlStr);
+                    if ($p !== false) {
+                    	$html = substr($html, strlen($xmlStr));
+                    }
+					$arrContent[$key] = trim($html);
+				}
+			}
+		}
+
+		return $arrContent;
+	}
+	
+	public function parseContent($href, $isForceFix = false)
 	{
 		$model = Link::model()->find('href = :href AND type = :type', array('href' => $href, 'type' => $this->getType()));
 		$content = $model->getHTMLContent();
@@ -87,50 +132,19 @@ class Vnexpress extends CrawlPostProvider {
 		}
 	
 		if (!empty($model) && !empty($content)) {
-			$arrContent = array();
-		
-			$dom = new DOMDocument();
-			libxml_use_internal_errors(true);
-			$dom->loadHTML($content);
-			libxml_use_internal_errors(false);
-		
-			$xpath = new DOMXPath($dom);
-			foreach ($this->_arrXPath as $key => $value) {
-				if (is_array($value)) {
-					foreach ($value as $val) {
-						$content = $xpath->query($val);
-						if ($content->length > 0) {
-							break;
-						}
-					}
-				} else {
-					$content = $xpath->query($value);
-				}
-				if ($content->length > 0) {
-					if ($key != 'content') {
-						$arrContent[$key] = $content->item(0)->nodeValue;
-					} else {
-						$html = '';
-						$node = $content->item(0);
-						libxml_use_internal_errors(true);
-						$d = new DOMDocument("1.0", "UTF-8");
-						foreach ($node->childNodes as $child) {
-							$no = $d->importNode($child,true);
-							$d->appendChild($no);						
-						}	
-						$html .= $d->saveXML();
-	                    $xmlStr = '<?xml version="1.0" encoding="UTF-8"?>';
-	                    $p = strpos($html, $xmlStr);
-	                    if ($p !== false) {
-	                    	$html = substr($html, strlen($xmlStr));
-	                    }
-						$arrContent[$key] = trim($html);
-					}
-				}
-			}
+			$arrContent = $this->_parseHTMLToContent($content);
 			
 			if ($this->_isValidContent($arrContent)) {
 				return $this->_normalizeContent($arrContent);
+			} else {
+				$content = file_get_contents($model->href);
+				$model->saveHTMLContent($content);
+
+				$arrContent = $this->_parseHTMLToContent($content);
+				if ($this->_isValidContent($arrContent)) {
+					$model->saveHTMLContent($content);
+					return $this->_normalizeContent($arrContent);
+				}
 			}
 		}
 	
