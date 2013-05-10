@@ -7,8 +7,7 @@ class Tiki extends CrawlBookProvider
 	function __construct()
 	{
 		$this->_urls = array(
-			//'http://tiki.vn/new-products/sach-truyen-tieng-viet.html?limit=48',
-			'http://tiki.vn/catalogsearch/result/?q=Biển&cat='			
+			'http://tiki.vn/new-products/sach-truyen-tieng-viet.html?limit=48',
 		);
 		$this->_providerName = 'tiki.vn';
 

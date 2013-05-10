@@ -5,6 +5,10 @@ class ParseCommand extends CConsoleCommand {
 	public function run($args)
 	{
 		$receiver = $args[0];
+		$isForceFix = false;
+		if (isset($args[1]) && $args[1] == 'force-fix') {
+			$isForceFix = true;	
+		}
 		
 		if ($receiver == 'tiki.vn') {
 			$provider = new Tiki();
@@ -29,7 +33,7 @@ class ParseCommand extends CConsoleCommand {
 			if ($obj == null) 
 			{
 				echo 'Parse Content : ' . $model->href . ' ';
-				$arrContent = $provider->parseContent($model->href);
+				$arrContent = $provider->parseContent($model->href, $isForceFix);
 				if ($arrContent != null && !empty($arrContent)) {
 					echo 'Parsed Ok' . PHP_EOL;					
 					$newObj = CrawlProvider::createNewObject($provider->getType());
