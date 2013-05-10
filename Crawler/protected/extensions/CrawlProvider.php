@@ -6,7 +6,7 @@ abstract class CrawlProvider {
 	function __construct() {}
 	
 	public abstract function getLinks($url);
-	public abstract function parseContent($href);
+	public abstract function parseContent($href, $isForceFix = false);
 	public abstract function getType();
 	
 	public function getUrls() {

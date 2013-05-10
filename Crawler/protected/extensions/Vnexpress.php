@@ -65,7 +65,7 @@ class Vnexpress extends CrawlPostProvider {
 			}
 			
 			if (isset($book) && !empty($book)) {
-				$arrContent['book_id'] = $book->book_id;
+				$arrContent['book_link_id'] = $book->link_id;
 			} 
 		}
 		
