@@ -112,9 +112,6 @@ class Book_Api_Core extends Core_Api_Abstract
 			$data = $select->query()->fetch();
 			$maxRawpostId = (int)$data['max_rawpost_id'];
 
-			$userTbl = new User_Model_DbTable_Users();
-			$rawbookTbl = new Book_Model_DbTable_Rawbooks();
-
 			$rawPostTbl = new Book_Model_DbTable_Rawposts();
 			$rawPostSelect = $rawPostTbl->select();
 			$rawPostSelect->where('rawpost_id > ?', $maxRawpostId);
@@ -125,11 +122,11 @@ class Book_Api_Core extends Core_Api_Abstract
 				'user_id' => 1, //superadmin
 				'rawpost_id' => $rawPost->rawpost_id
 				);
-				if (!empty($rawPost->book_link_id)) {
-					$book = $rawbookTbl->getBookFromBookLinkId($rawPost->book_link_id);
+				if (!empty($rawPost->book_id)) {
+					$book = Engine_Api::_()->getItem('book', $rawPost->book_id);
 					if (!empty($book)) {
-						$data['parent_type'] = $book->getType();
-						$data['parent_id'] = $book->getIdentity();
+						$data['parent_type'] = 'book';
+						$data['parent_id'] = $rawPost->book_id;
 					}
 				}
 
