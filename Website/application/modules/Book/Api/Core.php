@@ -117,6 +117,9 @@ class Book_Api_Core extends Core_Api_Abstract
 			$rawPostTbl = new Book_Model_DbTable_Rawposts();
 			$rawPostSelect = $rawPostTbl->select();
 			$rawPostSelect->where('rawpost_id > ?', $maxRawpostId);
+			
+			$rawBookTbl = new Book_Model_DbTable_Rawbooks();
+			
 			foreach ($rawPostTbl->fetchAll($rawPostSelect) as $rawPost) {
 				$data = array(
 				'post_name' => $rawPost->name,
