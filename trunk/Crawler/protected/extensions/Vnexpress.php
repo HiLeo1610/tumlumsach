@@ -8,25 +8,7 @@ class Vnexpress extends CrawlPostProvider {
 		parent::__construct();
 		
 		$this->_urls = array(
-			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/2.html',
-			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/3.html',
-			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/4.html',
-			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/5.html',
-			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/6.html',
-			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/7.html',
-			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/8.html',
-			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/9.html',
-			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/10.html',
-			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/11.html',
-			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/12.html',
-			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/13.html',
-			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/14.html',
-			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/15.html',
-			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/16.html',
-			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/17.html',
-			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/18.html',
-			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/19.html',
-			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/20.html',
+			'http://giaitri.vnexpress.net/tin-tuc/sach/diem-sach/page/21.html',
 		);
 		$this->_providerName = 'vnexpress.net';
 		$this->_arrXPath = array(
@@ -90,55 +72,59 @@ class Vnexpress extends CrawlPostProvider {
 	public function parseContent($href)
 	{
 		$model = Link::model()->find('href = :href AND type = :type', array('href' => $href, 'type' => $this->getType()));
-	
-		if ($model == NULL || empty($model->content)) {
+		$content = $model->getHTMLContent();
+			
+		if ($model == NULL || empty($content)) {
+			echo 'store href ' . $href . PHP_EOL;
 			$model = $this->storeHref($href);
 		}
 	
-		$arrContent = array();
-	
-		$dom = new DOMDocument();
-		libxml_use_internal_errors(true);
-		$dom->loadHTML($model->content);
-		libxml_use_internal_errors(false);
-	
-		$xpath = new DOMXPath($dom);
-		foreach ($this->_arrXPath as $key => $value) {
-			if (is_array($value)) {
-				foreach ($value as $val) {
-					$content = $xpath->query($val);
-					if ($content->length > 0) {
-						break;
+		if (!empty($model) && !empty($content)) {
+			$arrContent = array();
+		
+			$dom = new DOMDocument();
+			libxml_use_internal_errors(true);
+			$dom->loadHTML($content);
+			libxml_use_internal_errors(false);
+		
+			$xpath = new DOMXPath($dom);
+			foreach ($this->_arrXPath as $key => $value) {
+				if (is_array($value)) {
+					foreach ($value as $val) {
+						$content = $xpath->query($val);
+						if ($content->length > 0) {
+							break;
+						}
+					}
+				} else {
+					$content = $xpath->query($value);
+				}
+				if ($content->length > 0) {
+					if ($key != 'content') {
+						$arrContent[$key] = $content->item(0)->nodeValue;
+					} else {
+						$html = '';
+						$node = $content->item(0);
+						libxml_use_internal_errors(true);
+						$d = new DOMDocument("1.0", "UTF-8");
+						foreach ($node->childNodes as $child) {
+							$no = $d->importNode($child,true);
+							$d->appendChild($no);						
+						}	
+						$html .= $d->saveXML();
+	                    $xmlStr = '<?xml version="1.0" encoding="UTF-8"?>';
+	                    $p = strpos($html, $xmlStr);
+	                    if ($p !== false) {
+	                    	$html = substr($html, strlen($xmlStr));
+	                    }
+						$arrContent[$key] = trim($html);
 					}
 				}
-			} else {
-				$content = $xpath->query($value);
 			}
-			if ($content->length > 0) {
-				if ($key != 'content') {
-					$arrContent[$key] = $content->item(0)->nodeValue;
-				} else {
-					$html = '';
-					$node = $content->item(0);
-					libxml_use_internal_errors(true);
-					$d = new DOMDocument("1.0", "UTF-8");
-					foreach ($node->childNodes as $child) {
-						$no = $d->importNode($child,true);
-						$d->appendChild($no);						
-					}	
-					$html .= $d->saveXML();
-                    $xmlStr = '<?xml version="1.0" encoding="UTF-8"?>';
-                    $p = strpos($html, $xmlStr);
-                    if ($p !== false) {
-                    	$html = substr($html, strlen($xmlStr));
-                    }
-					$arrContent[$key] = trim($html);
-				}
+			
+			if ($this->_isValidContent($arrContent)) {
+				return $this->_normalizeContent($arrContent);
 			}
-		}
-		
-		if ($this->_isValidContent($arrContent)) {
-			return $this->_normalizeContent($arrContent);
 		}
 	
 		return null;

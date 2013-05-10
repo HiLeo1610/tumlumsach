@@ -29,16 +29,26 @@ abstract class CrawlProvider {
 	
 	public function storeHref($href) {
 		$model = Link::model()->find('href = ?', $href);
-		if ($model == null || empty($model->content)) {
+		$needToFetch = false;
+		if ($model == null) {
 			if ($model == null) {
 				$model = new Link();
+				$needToFetch = true;
 			}
+		} else {
+			$content = $model->getHTMLContent();
+			if (empty($content)) {
+				$needToFetch = true;
+			}
+		}
+		
+		if ($needToFetch) {
+			$content = file_get_contents($href);
 			$model->href = $href;
-			$model->content = file_get_contents($href);
 			$model->provider = $this->_providerName;
 			$model->type = $this->getType();
 			
-			$canonicalUrl = $this->getCanonicalUrl($model->content);
+			$canonicalUrl = $this->getCanonicalUrl($content);
 			if (!empty($canonicalUrl)) {
 				$model->href = $canonicalUrl;
 			}
@@ -46,6 +56,7 @@ abstract class CrawlProvider {
 			if ($model->validate()) {
 				echo 'store URL : ' . $href . PHP_EOL;
 				$model->save();
+				$model->saveHTMLContent($content);
 				
 				return $model;
 			}

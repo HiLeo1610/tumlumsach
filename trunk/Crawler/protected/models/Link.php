@@ -28,4 +28,38 @@ class Link extends CActiveRecord
 			array('href', 'unique'),			
 		);
 	}
+	
+	public function getHTMLContent($refresh = true) 
+	{
+		$dataPath = Yii::app()->params['data_path'];
+		
+		$file = $dataPath . $this->link_id . '.html';
+		$handle = fopen($file, 'r');
+		$filesize = filesize($file);
+		if ($refresh && $filesize == 0) {
+			fclose($handle);
+			$content = file_get_contents($this->href);
+			if (!empty($content)) {
+				$handle = fopen($file, 'w');
+				fwrite($handle, $content);
+				fclose($handle);
+				
+				return $content;
+			}
+		} else {
+			$content = fread($handle,filesize($file));
+			fclose($handle);
+			
+			return $content;
+		}
+	}
+	
+	public function saveHTMLContent($content) 
+	{
+		$dataPath = Yii::app()->params['data_path'];
+		$contentFile = $dataPath . $this->link_id . '.html';
+		$handle = @fopen($contentFile, 'w');
+		@fwrite($handle, $content);
+		fclose($handle);
+	}
 }
