@@ -56,10 +56,17 @@ class Vnexpress extends CrawlPostProvider {
 	private function _normalizeContent($arrContent) 
 	{
 		if (isset($arrContent['book_name'])) {
-			$book = Book::model()->find('LCASE(book_name) LIKE LCASE(:name)', array('name' => '%' . $arrContent['book_name'] . '%'));
+			$book = Book::model()->find(
+				'LCASE(book_name) LIKE LCASE(:name)', 
+				array('name' => '%' . $arrContent['book_name'] . '%')
+			);
+			if ($book == null) {
+				$book = Book::model()->find('LCASE(book_name) LIKE LCASE(:name)', array('name' => $arrContent['name']));
+			}
+			
 			if (isset($book) && !empty($book)) {
 				$arrContent['book_link_id'] = $book->link_id;
-			}
+			} 
 		}
 		
 		if (isset($arrContent['book_name'])) {
