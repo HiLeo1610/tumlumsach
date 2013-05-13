@@ -27,7 +27,8 @@ return array(
 			'username' => 'root',
 			'password' => '',
 			'charset' => 'utf8',	
-					
+			'enableParamLogging'=>true,
+    		'enableProfiling'=>true,					
 		),
 		'log'=>array(
 			'class'=>'CLogRouter',
@@ -45,4 +46,8 @@ return array(
 			),
 		),
 	),
+	
+	'params' => array(
+		'data_path' => './data/'
+	)
 );
