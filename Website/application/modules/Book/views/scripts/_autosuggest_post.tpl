@@ -138,10 +138,16 @@
 	      		myBookDeleteElement.inject(myBookElement);
 				$('toBookValues-element').appendChild(myBookElement);
 			}
-			<?php if (!empty($this->toTaggedUsers)) : ?>
+			<?php if (!empty($this->toTaggedBooks)) : ?>
 		    	$('toBookValues-wrapper').setStyle('height', 'auto');
 		    <?php else : ?>
 		    	$('toBookValues-wrapper').setStyle('height', 0);	
+		    <?php endif; ?>
+
+		    <?php if (!empty($this->toTaggedUsers)) : ?>
+		    	$('toValues-wrapper').setStyle('height', 'auto');
+		    <?php else : ?>
+		    	$('toValues-wrapper').setStyle('height', 0);	
 		    <?php endif; ?>
 		} else {
 			// hide the wrapper for tagged users if it is empty

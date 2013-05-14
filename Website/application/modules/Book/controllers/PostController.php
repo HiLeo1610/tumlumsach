@@ -277,39 +277,86 @@ class Book_PostController extends Book_Controller_Base
 				} 
 				$subject->tags()->setTagMaps($viewer, $tags);
 
-				$userIds = explode(',', $values['toValues']);
-				$taggedUsers = $subject->getTaggedUsers();
-				$taggedUserIds = array();
-				foreach ($taggedUsers as $taggedUser)
-				{
-					array_push($taggedUserIds, $taggedUser->getIdentity());
-					if (!in_array($taggedUser->getIdentity(), $userIds))
+				$bookIds = explode(',', $values['toBookValues']);
+				$taggedBooks = $subject->getTaggedBooks();
+				$taggedBookIds = array();
+				if (empty($taggedBookIds)) {
+					$tagTbl->delete(array(
+						'object_type = ?' => 'book',
+						'post_id = ?' => $subject->getIdentity(),
+					));
+				} else {
+					foreach ($taggedBooks as $taggedBook)
 					{
-						$tagTbl->delete(array(
-							'object_type = ?' => 'user',
-							'object_id = ?' => $taggedUser->getIdentity(),
-							'post_id = ?' => $subject->getIdentity(),
-						));
-					}
-				}
-
-				foreach ($userIds as $userId)
-				{
-					if (!in_array($userId, $taggedUserIds))
-					{
-						$newUser = Engine_Api::_()->user()->getUser($userId);
-						if ($newUser)
+						array_push($taggedBookIds, $taggedBook->getIdentity());
+						if (!in_array($taggedBook->getIdentity(), $bookIds))
 						{
-							$newTaggedUser = $tagTbl->createRow(array(
-								'post_id' => $subject->getIdentity(),
-								'object_type' => 'user',
-								'object_id' => $userId
+							$tagTbl->delete(array(
+								'object_type = ?' => 'book',
+								'object_id = ?' => $taggedBook->getIdentity(),
+								'post_id = ?' => $subject->getIdentity(),
 							));
-							$newTaggedUser->save();
-							array_push($newTaggedUsers, $newUser);
+						}
+					}
+					
+					foreach ($bookIds as $bookId)
+					{
+						if (!in_array($bookId, $taggedBookIds))
+						{
+							$newBook = Engine_Api::_()->getItem('book', $bookId);
+							if ($newBook)
+							{
+								$newTaggedBook = $tagTbl->createRow(array(
+									'post_id' => $subject->getIdentity(),
+									'object_type' => 'book',
+									'object_id' => $bookId
+								));
+								$newTaggedBook->save();
+							}
 						}
 					}
 				}
+				
+				$userIds = explode(',', $values['toValues']);
+				$taggedUsers = $subject->getTaggedUsers();
+				$taggedUserIds = array();
+				if (empty($userIds)) {
+					$tagTbl->delete(array(
+						'object_type = ?' => 'user',
+						'post_id = ?' => $subject->getIdentity(),
+					));
+				} else {
+					foreach ($taggedUsers as $taggedUser)
+					{
+						array_push($taggedUserIds, $taggedUser->getIdentity());
+						if (!in_array($taggedUser->getIdentity(), $userIds))
+						{
+							$tagTbl->delete(array(
+								'object_type = ?' => 'user',
+								'object_id = ?' => $taggedUser->getIdentity(),
+								'post_id = ?' => $subject->getIdentity(),
+							));
+						}
+					}
+					
+					foreach ($userIds as $userId)
+					{
+						if (!in_array($userId, $taggedUserIds))
+						{
+							$newUser = Engine_Api::_()->user()->getUser($userId);
+							if ($newUser)
+							{
+								$newTaggedUser = $tagTbl->createRow(array(
+									'post_id' => $subject->getIdentity(),
+									'object_type' => 'user',
+									'object_id' => $userId
+								));
+								$newTaggedUser->save();
+								array_push($newTaggedUsers, $newUser);
+							}
+						}
+					}
+				}	
 
 				$db->commit();
 			}
