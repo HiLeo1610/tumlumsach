@@ -280,7 +280,7 @@ class Book_PostController extends Book_Controller_Base
 				$bookIds = explode(',', $values['toBookValues']);
 				$taggedBooks = $subject->getTaggedBooks();
 				$taggedBookIds = array();
-				if (empty($taggedBookIds)) {
+				if (empty($bookIds)) {
 					$tagTbl->delete(array(
 						'object_type = ?' => 'book',
 						'post_id = ?' => $subject->getIdentity(),
