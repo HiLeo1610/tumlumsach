@@ -152,7 +152,7 @@
 			return true;
   		}
 		
-  		var authorAutocompleter = new Autocompleter.Request.JSON('authors', '<?php echo $this->url(array('action' => 'suggest', 'format' => 'json'), 'author_general', true) ?>', {
+  		new Autocompleter.Request.JSON('authors', '<?php echo $this->url(array('action' => 'suggest', 'format' => 'json'), 'author_general', true) ?>', {
 	        'minLength': 2,
 	        'delay' : 250,
 	        'selectMode': 'pick',
@@ -163,6 +163,7 @@
 	        'tokenFormat' : 'object',
 	        'tokenValueKey' : 'label',
 	        'customChoices' : '',
+	        'hiddenElementId' : 'toValues',
 	        'injectChoice': function(token){
 	        	var toValues = $('toValues').value;
 	        	var toValueArray = toValues.split(",");
@@ -199,6 +200,7 @@
 	        'filterSubset' : true,
 	        'tokenFormat' : 'object',
 	        'tokenValueKey' : 'label',
+	        'hiddenElementId' : 'toTranslatorValues',
 	        'injectChoice': function(token){
 	        	var toValues = $('toTranslatorValues').value;
 	        	var toValueArray = toValues.split(",");

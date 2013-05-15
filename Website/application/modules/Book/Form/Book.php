@@ -55,24 +55,22 @@ class Book_Form_Book extends Engine_Form
         $this->addElement('Text', 'authors', array(
             'label' => 'Author',
             'autocomplete' => 'off',
-            'filters' => array(
-                'StripTags',
-                new Engine_Filter_Censor(),
-            )
+            'order' => 1
         ));
 		
 		// Init to Values
         $this->addElement('Hidden', 'toValues', array(
             'allowEmpty' => true,
-            'order' => 3,
             'filters' => array('HtmlEntities'),
+        	'order' => 2
         ));
         Engine_Form::addDefaultDecorators($this->toValues);
 		
 		// Is foreigner
         $this->addElement('Checkbox', 'is_foreign', array(
             'label' => 'Is Foreigner',
-            'value' => '0'
+            'value' => '0',
+        	'order' => 3
         ));
 
 		// init author autocomplete
@@ -82,14 +80,15 @@ class Book_Form_Book extends Engine_Form
             'filters' => array(
                 'StripTags',
                 new Engine_Filter_Censor(),
-            )
+            ),
+            'order' => 4
         ));
 		
 		// Init to Values
         $this->addElement('Hidden', 'toTranslatorValues', array(
             'allowEmpty' => true,
-            'order' => 4,
             'filters' => array('HtmlEntities'),
+        	'order' => 5
         ));
         Engine_Form::addDefaultDecorators($this->toTranslatorValues);
 
@@ -99,6 +98,7 @@ class Book_Form_Book extends Engine_Form
         $categoryElement = new Engine_Form_Element_Select('category_id', array(
             'label' => 'Category',
             'multiOptions' => $categoriesOptions,
+        	'order' => 6
         ));
         $this->addElement($categoryElement);
 
@@ -106,6 +106,7 @@ class Book_Form_Book extends Engine_Form
         $publishedDate = new Engine_Form_Element_Birthdate('published_date', array('yearMax' => intval(date("Y")) + 1));
         $publishedDate->setLabel("Published Date");
         $publishedDate->setAllowEmpty(true);
+        $publishedDate->setOrder(7);
         $this->addElement($publishedDate);
         
         // Price
@@ -118,7 +119,8 @@ class Book_Form_Book extends Engine_Form
             ),
             'filters' => array(
             	new Book_Filter_HTMLPurifier()
-			)                     
+			),
+			'order' => 8                     
         ));
         
         // Size
@@ -130,25 +132,29 @@ class Book_Form_Book extends Engine_Form
                 'StripTags',
                 new Engine_Filter_Censor(),
                 new Engine_Filter_StringLength( array('max' => '64')),
-            )
+            ),
+            'order' => 9
         ));
         
         // Publisher
         $this->addElement('Select', 'publisher_id', array(
             'label' => 'Publisher',
-            'multiOptions' => array_merge(array('0' => ''), Book_Plugin_Utilities::getPublishers())  
+            'multiOptions' => array_merge(array('0' => ''), Book_Plugin_Utilities::getPublishers()),
+        	'order' => 10  
         ));
 		
 		// Book company
         $this->addElement('Select', 'book_company_id', array(
             'label' => 'Book Company',
-            'multiOptions' => array_merge(array('0' => ''), Book_Plugin_Utilities::getBookCompanies())  
+            'multiOptions' => array_merge(array('0' => ''), Book_Plugin_Utilities::getBookCompanies()),
+        	'order' => 11  
         ));
         
         // Type
         $this->addElement('Select', 'type', array(
             'label' => 'Cover Type',
-            'multiOptions' => array_merge(array('0' => ''), Book_Plugin_CoverType::getAllBookTypes('id')) 
+            'multiOptions' => array_merge(array('0' => ''), Book_Plugin_CoverType::getAllBookTypes('id')),
+         	'order' => 12
         ));
 		
         // Number of page
@@ -159,6 +165,7 @@ class Book_Form_Book extends Engine_Form
                 array('GreaterThan', true, array(0)),
             ),
             'filters' => array(new Book_Filter_Null()),
+            'order' => 13
         ));
         
         // ISBN
@@ -170,10 +177,11 @@ class Book_Form_Book extends Engine_Form
                     'StripTags',
                     new Engine_Filter_Censor(),
                     new Engine_Filter_StringLength( array('max' => '32')),
-            )
+            ),
+            'order' => 14
         ));
         
-		$this->addDisplayGroup(array('authors', 'is_foreign', 'translators', 'category_id', 'published_date', 'price', 'size', 'publisher_id', 'book_company_id', 'type', 'num_page', 'isbn'), 'advanced_information');
+		$this->addDisplayGroup(array('authors', 'toValues', 'is_foreign', 'translators', 'toTranslatorValues', 'category_id', 'published_date', 'price', 'size', 'publisher_id', 'book_company_id', 'type', 'num_page', 'isbn'), 'advanced_information');
 		$this->advanced_information->setLegend(Zend_Registry::get('Zend_Translate')->_('Advanced information') 
 			. ' <span id="book_arrow_control" class="book_arrow book_view_less">&nbsp;</span>');
 		$this->advanced_information->removeDecorator('Fieldset');

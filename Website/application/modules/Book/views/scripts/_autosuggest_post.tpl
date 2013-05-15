@@ -1,9 +1,11 @@
 <script type="text/javascript">
 	var taggedUsers = [];
 	var taggedBooks = [];
+	var parentBook = [];
 	var isPopulated = false;
 	
-	<?php if(!empty($this->isPopulated) && (!empty($this->toTaggedUsers) || !empty($this->toTaggedBooks))): ?>
+	<?php if(!empty($this->isPopulated) 
+		&& (!empty($this->toTaggedUsers) || !empty($this->toTaggedBooks) || !empty($this->parentBook))): ?>
 	    isPopulated = true;
 	    
 	    <?php foreach($this->toTaggedUsers as $toTaggedUser) : ?>
@@ -25,6 +27,9 @@
 		    };
 		    taggedBooks.push(toBook);
 	    <?php endforeach; ?>
+
+	    <?php if () : ?>
+	    <?php endif; ?>
   	<?php endif; ?>
   	
   	function removeFromToValue(id, eleId) {
