@@ -292,8 +292,7 @@ class Book_BookController extends Book_Controller_Base
 
 	public function createAction()
 	{
-		if (!$this->_helper->requireUser()->isValid())
-		{
+		if (!$this->_helper->requireUser()->isValid()) {
 			return;
 		}
 		$viewer = Engine_Api::_()->user()->getViewer();
@@ -305,8 +304,7 @@ class Book_BookController extends Book_Controller_Base
 			return;
 		}
 
-		if (!$form->isValid($this->getRequest()->getPost()))
-		{
+		if (!$form->isValid($this->getRequest()->getPost())) {
 			return;
 		}
 

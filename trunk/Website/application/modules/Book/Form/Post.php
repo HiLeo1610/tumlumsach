@@ -24,6 +24,16 @@ class Book_Form_Post extends Engine_Form
 		$allowed_tags = array_map('trim', explode(',', Book_Plugin_Constants::ALLOWED_HTML_TAGS));
 		$filter->setAllowedTags($allowed_tags);
 
+		$this->addElement('Text', 'book', array(
+			'label' => 'Book',
+			'autocomplete' => 'off',
+		));
+		
+		$this->addElement('Hidden', 'toValues', array(
+            'allowEmpty' => true,
+        ));
+        Engine_Form::addDefaultDecorators($this->toValues);
+		
 		$this->addElement('Text', 'post_name', array(
 			'label' => 'Title',
 			'required' => true,
