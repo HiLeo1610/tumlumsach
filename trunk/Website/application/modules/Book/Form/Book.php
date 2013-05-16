@@ -118,7 +118,8 @@ class Book_Form_Book extends Engine_Form
                 array('GreaterThan', true, array(0)),
             ),
             'filters' => array(
-            	new Book_Filter_HTMLPurifier()
+            	new Book_Filter_HTMLPurifier(),
+            	new Book_Filter_Null()
 			),
 			'order' => 8                     
         ));

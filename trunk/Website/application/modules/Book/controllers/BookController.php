@@ -370,7 +370,7 @@ class Book_BookController extends Book_Controller_Base
 				}
 			}
 			
-			if ($book->is_foreign) {
+			if ($book->is_foreign && !empty($values['toTranslatorsValues'])) {
 				$translatorIds = explode(',', $values['toTranslatorsValues']);
 				if (!empty($translatorIds)) {
 					foreach ($translatorIds as $translatorId)

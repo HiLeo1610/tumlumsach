@@ -83,17 +83,16 @@ class Book_Model_Book extends Book_Model_Base {
 	 * @param int $type ($type = 0 for author, $type = 1 for translator)
 	 * @return Engine_Db_Table_Rowset of User_Model_User
 	 */
-	public function getAuthors($type = 0, $type = FALSE) {
+	public function getAuthors($type = 0, $isExisted = true) {
 		$bookAuthorTable = new Book_Model_DbTable_BookAuthor();
 		$select = $bookAuthorTable -> select(array('author_id', 'author_name')) -> where('book_id = ?', $this -> getIdentity()) -> where('type = ?', $type);
-
 		$authorIds = array();
 		$authorNames = array();
 		foreach ($bookAuthorTable->fetchAll($select) as $row) {
 			if (!empty($row -> author_id)) {
 				array_push($authorIds, $row -> author_id);
 			}
-			if ($type == FALSE) {
+			if ($isExisted == false) {
 				if (!empty($row -> author_name)) {
 					array_push($authorNames, $row -> author_name);
 				}
