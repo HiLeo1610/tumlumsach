@@ -812,6 +812,7 @@ http://[host][object_link]
 "Basic information (required)";"Thông tin cơ bản (bắt buộc nhập)"
 "Advanced information";"Thông tin nâng cao"
 "Price";"Giá bìa"
+"This post is about a specific book.";"Đây là bài viết về một cuốn sách."
 "{item:$subject} comment ""{var:$body}"" on the item {item:$object}.";"{item:$subject} comment ""{var:$body}"" on the item {item:$object}."
 "{item:$subject} comment ""{var:$body}"" on the item {item:$object}.";"{item:$subject} đăng bình luận ""{var:$body}"" cho cuốn sách {item:$object}."
 "{item:$subject} comment ""{var:$body}"" on the post {item:$object}"".";"{item:$subject} comment ""{var:$body}"" on the post {item:$object}""."

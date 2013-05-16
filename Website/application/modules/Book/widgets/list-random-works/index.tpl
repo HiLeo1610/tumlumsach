@@ -28,7 +28,7 @@
 				</div>
 				<?php
 					echo $this->partial('_rating_big.tpl', 'book', array(
-						'item' => $this->work,
+						'item' => $work,
 					));
 				?>
 			</div>

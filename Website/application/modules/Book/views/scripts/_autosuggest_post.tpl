@@ -1,8 +1,12 @@
 <script type="text/javascript">
 	var taggedUsers = [];
 	var taggedBooks = [];
-	var parentBook = [];
+	var parentBook = null;
 	var isPopulated = false;
+
+	var bookParentAutocompleter = null;
+	var bookAutocompleter = null;
+	var userAutocompleter = null;
 	
 	<?php if(!empty($this->isPopulated) 
 		&& (!empty($this->toTaggedUsers) || !empty($this->toTaggedBooks) || !empty($this->parentBook))): ?>
@@ -28,7 +32,13 @@
 		    taggedBooks.push(toBook);
 	    <?php endforeach; ?>
 
-	    <?php if () : ?>
+	    <?php if (!empty($this->parentBook)) : ?>
+	       	parentBook = {
+	    	    id : <?php echo sprintf("%d", $this->parentBook->getIdentity())?>,
+				type : '<?php echo $this->parentBook->getType()?>',
+				guid : '<?php echo $this->parentBook->getGuid()?>',
+				title : '<?php echo $this->string()->escapeJavascript($this->parentBook->getTitle())?>'	    	    	    	
+	    	}
 	    <?php endif; ?>
   	<?php endif; ?>
   	
@@ -62,7 +72,8 @@
   	
   	function removeToValue(id, toValueArray, eleId){
 	    for (var i = 0; i < toValueArray.length; i++){
-			if (toValueArray[i]==id) toValueIndex =i;
+			if (toValueArray[i]==id) 
+				toValueIndex = i;
 	    }
 	
 	    toValueArray.splice(toValueIndex, 1);
@@ -73,6 +84,11 @@
     	ele.parentNode.destroy();
     	removeFromToValue(id, eleId);
     }
+
+  	function showInput(ele) {
+      	ele.set('style', 'display:block');
+      	ele.focus();
+  	}
 	
     en4.core.runonce.add(function() {
         var tagsUrl = '<?php echo $this->url(array('controller' => 'tag', 'action' => 'suggest'), 'default', true) ?>';
@@ -148,12 +164,21 @@
 		    <?php else : ?>
 		    	$('toBookValues-wrapper').setStyle('height', 0);	
 		    <?php endif; ?>
-
-		    <?php if (!empty($this->toTaggedUsers)) : ?>
-		    	$('toValues-wrapper').setStyle('height', 'auto');
-		    <?php else : ?>
-		    	$('toValues-wrapper').setStyle('height', 0);	
-		    <?php endif; ?>
+		    if (parentBook != null) {
+		    	var parentBookElement = new Element("span", {
+			        'id' : 'to_book_span' + parentBook.id,
+			        'class' : 'tag tag_' + parentBook.type,
+			        'html' :  parentBook.title + ' '  
+	      		});
+	      		var parentBookDeleteElement = new Element('a', {
+	      			'href' : 'javascript:void(0)',
+	      			'onclick' : 'removeFromElement(this, ' + parentBook.id + ', "' + 'parentBookValue' + '");showInput($("book"))',
+	      			'html' : 'x'	
+	      		});
+	      		parentBookDeleteElement.inject(parentBookElement);
+				$('book-element').appendChild(parentBookElement);
+				$('book').set('style', 'display:none');
+		    }
 		} else {
 			// hide the wrapper for tagged users if it is empty
 		    if ($('toValues').value==""){
@@ -168,9 +193,13 @@
 		    }
 		
 		    $('toBookValues').disabled = false;
+
+		    if ($('parentBookValue').value == '') {
+		    	$('parentBookValue-wrapper').setStyle('height', '0');
+		    }
 		}
 
-        var userAutocompleter = new Autocompleter.Request.JSON('tags_user', '<?php echo $this->url(array('module' => 'user', 'controller' => 'friends', 'action' => 'suggest'), 'default', true) ?>', {
+        userAutocompleter = new Autocompleter.Request.JSON('tags_user', '<?php echo $this->url(array('module' => 'user', 'controller' => 'friends', 'action' => 'suggest'), 'default', true) ?>', {
             'minLength': 2,
             'delay' : 250,
             'selectMode': 'pick',
@@ -219,7 +248,7 @@
           	}
 		}
 		
-        var bookAutocompleter = new Autocompleter.Request.JSON('tags_book', '<?php echo $this->url(array(
+        bookAutocompleter = new Autocompleter.Request.JSON('tags_book', '<?php echo $this->url(array(
         		'module' => 'book',
         		'controller' => 'book',
         		'action' => 'suggest',
@@ -266,5 +295,58 @@
             	bookAutocompleter.doPushSpan(name, toID, newItem, hideLoc, list);
           	}
 		}
+
+      	bookParentAutocompleter = new Autocompleter.Request.JSON('book', '<?php echo $this->url(array(
+        		'module' => 'book',
+        		'controller' => 'book',
+        		'action' => 'suggest',
+        		'parent_id' => $this->parent_id), 'default', true) ?>', {
+            'minLength': 2,
+            'delay' : 250,
+            'selectMode': 'pick',
+            'autocompleteType': 'message',
+            'multiple': false,
+            'className': 'message-autosuggest',
+            'filterSubset' : true,
+            'tokenFormat' : 'object',
+            'tokenValueKey' : 'label',
+            'hiddenElementId' : 'parentBookValue',
+            'injectChoice': function(token){
+            	var choice = new Element('li', {
+              		'class': 'autocompleter-choices friendlist',
+              		'id':token.label
+            	});
+                new Element('div', {
+					'html': this.markQueryValue(token.label),
+                  	'class': 'autocompleter-choice'
+                }).inject(choice);
+                this.addChoiceEvents(choice).inject(this.choices);
+                choice.store('autocompleteChoice', token);
+            }
+      	});
+
+      	bookParentAutocompleter.doPushSpan = function(name, toID, newItem, hideLoc, list) {
+      		var myElement = new Element("span");
+    		if (newItem) {
+    			myElement.id = "tospan_" + name + "_" + toID;
+    			myElement.innerHTML = name 
+    				+ " <a href='javascript:void(0);' onclick='this.parentNode.destroy();showInput(bookParentAutocompleter.element);" 
+    				+ "removeFromToValue(\"" + toID + "\", \"" + hideLoc + "\");'>x</a>";
+    		} else {
+    			myElement.id = "tospan_" + name + "_" + toID;
+    			myElement.innerHTML = name 
+    				+ " <a href='javascript:void(0);' onclick='this.parentNode.destroy();showInput(bookParentAutocompleter.element);" 
+    				+ "removeFromToValue(\"" + toID + "\", \"" + hideLoc + "\");'>x</a>";
+    		}
+    		var loc = this.element.getParent();
+
+    		if (list == null)
+    			list = "";
+    		myElement.addClass("tag" + list);
+
+    		myElement.inject(loc);
+    		this.element.set('style', 'display:none');
+    		this.fireEvent('push');
+      	}
     });
 </script>

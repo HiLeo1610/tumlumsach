@@ -60,7 +60,7 @@
     $this->headMeta()->appendName('description', trim($description));
     $this->headMeta()->appendName('keywords', trim($keywords));
 	
-    $this->layout()->headIncludes .= '<meta property="og:description" content="' . trim(description) . '" />';
+    $this->layout()->headIncludes .= '<meta property="og:description" content="' . trim($description) . '" />';
     
     // Get body identity
     if( isset($this->layout()->siteinfo['identity']) ) {
