@@ -5,7 +5,8 @@
 		array(
 			'isPopulated' => $this->isPopulated, 
 			'toTaggedUsers' => $this->toTaggedUsers, 
-			'toTaggedBooks' => $this->toTaggedBooks
+			'toTaggedBooks' => $this->toTaggedBooks,
+			'parentBook' => $this->parentBook
 		)
 	);
 ?>

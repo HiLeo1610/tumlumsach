@@ -33,38 +33,6 @@ class Book_PostController extends Book_Controller_Base
 		$paginator->setCurrentPageNumber($this->_getParam('page', 1));
 	}
 
-	/**
-	 * protected function _initActions()
-	{
-		$bookId = $this->_getParam('id', 0);
-		if ($bookId)
-		{
-			//$book = Engine_Api::_()->getItem('book', $book_id);
-			$book = Engine_Api::_()->book()->getBook($bookId);
-			if ($book && $book instanceof Book_Model_Book)
-			{
-
-				Engine_Api::_()->core()->setSubject($book);
-			}
-		}
-	}
-	 */
-
-	// protected function _initActions()
-	// {
-		// $post_id = $this->_getParam('id', 0);
-		// if ($post_id)
-		// {
-			// //$post = Engine_Api::_()->getItem('book_post', $post_id);
-			// $post = Engine_Api::_()->book()->getObject('book_post', $post_id);
-// 			
-			// if ($post)
-			// {
-				// Engine_Api::_()->core()->setSubject($post);
-			// }
-		// }
-	// }
-
 	public function createAction()
 	{
 		if (!$this->_helper->requireUser->isValid())
@@ -73,23 +41,34 @@ class Book_PostController extends Book_Controller_Base
 		}
 		$viewer = Engine_Api::_()->user()->getViewer();
 
-		// set up data needed to check quota
-		$parent_type = $this->_getParam('parent_type');
-		$this->view->parent_id = $parent_id = $this->_getParam('parent_id', $this->_getParam('subject_id'));
-
 		// Create form
-		$this->view->form = $form = new Book_Form_Post( array('postName' => 'Write a post'));
+		$this->view->form = $form = new Book_Form_Post(array('postName' => 'Write a post'));
 		if (!$this->getRequest()->isPost())
 		{
+			$parent_id = $this->_getParam('parent_id');
+			$parent_type = $this->_getParam('parent_type');
+			if (!empty($parent_id) && !empty($parent_type)) {
+				if ($parent_type == 'book') {
+					$this->view->parentBook = Engine_Api::_()->getItem('book', $parent_id);
+					$form->getElement('hasParent')->setChecked(true);
+				}				
+			} else {
+				$form->getElement('hasParent')->setChecked(false);
+			}
 			return;
 		}
 
-		$parent_id = $this->_getParam('parent_id');
-		$parent_type = $this->_getParam('parent_type');
 
 		if ($form->isValid($this->getRequest()->getPost()))
 		{
 			$values = $form->getValues();
+			if ($values['hasParent'] != '1') {
+				unset($values['parentBookValue']);
+			}
+			if (isset($values['parentBookValue'])) {
+				$parent_id = $values['parentBookValue'];
+				$parent_type = 'book';
+			}
 			$postTable = new Book_Model_DbTable_Posts();
 			$tagPostsTable = new Book_Model_DbTable_Tags();
 			$notifyApi = Engine_Api::_()->getDbTable('notifications', 'activity');
@@ -239,139 +218,158 @@ class Book_PostController extends Book_Controller_Base
 	                $tagString .= ', ';
 	            $tagString .= $tagmap->getTag()->getTitle();
 	        }
-	
-			$form->populate(array_merge($subject->toArray(), array(
+	        
+	        $data = array(
 				'toValues' => implode($toValues, ','),
 				'toBookValues' => implode($toBookValues, ','),
 				'tags' => $tagString
-			)));
+			);
+			
+	        $parentBook = $subject->getParentObject();
+	        if (!empty($parentBook)) {
+	        	$this->view->parentBook = $parentBook;
+	        	$data['parentBookValue'] = $parentBook->getIdentity();
+	        	$form->getElement('hasParent')->setChecked(true);
+	        } else {
+	        	$form->getElement('hasParent')->setChecked(false);
+	        }
+	
+			$form->populate(array_merge($subject->toArray(), $data));
 
 			$this->view->isPopulated = true;
 
 			return;
-		}
-
-		if ($form->isValid($this->getRequest()->getPost()))
-		{
-			$values = $form->getValues();
-
-			$newTaggedUsers = array();
-			$bookAuthorTbl = new Book_Model_DbTable_BookAuthor;
-			$notificationTbl = Engine_Api::_()->getDbtable('notifications', 'activity');
-			$tagTbl = new Book_Model_DbTable_Tags;
-			$db = Engine_Db_Table::getDefaultAdapter();
-			$db->beginTransaction();
-
-			try
+		} else {
+			if ($form->isValid($this->getRequest()->getPost()))
 			{
 				$values = $form->getValues();
-				$subject->setFromArray($values);
-				$subject->save();
-
-				$tags = array();
-				foreach (preg_split('/[,]+/', $values['tags']) as $tag) {
-					$t = trim($tag);
-					if (!empty($t)) {
-						array_push($tags, $t);
-					}					
-				} 
-				$subject->tags()->setTagMaps($viewer, $tags);
-
-				$bookIds = explode(',', $values['toBookValues']);
-				$taggedBooks = $subject->getTaggedBooks();
-				$taggedBookIds = array();
-				if (empty($bookIds)) {
-					$tagTbl->delete(array(
-						'object_type = ?' => 'book',
-						'post_id = ?' => $subject->getIdentity(),
-					));
-				} else {
-					foreach ($taggedBooks as $taggedBook)
-					{
-						array_push($taggedBookIds, $taggedBook->getIdentity());
-						if (!in_array($taggedBook->getIdentity(), $bookIds))
-						{
-							$tagTbl->delete(array(
-								'object_type = ?' => 'book',
-								'object_id = ?' => $taggedBook->getIdentity(),
-								'post_id = ?' => $subject->getIdentity(),
-							));
-						}
-					}
-					
-					foreach ($bookIds as $bookId)
-					{
-						if (!in_array($bookId, $taggedBookIds))
-						{
-							$newBook = Engine_Api::_()->getItem('book', $bookId);
-							if ($newBook)
-							{
-								$newTaggedBook = $tagTbl->createRow(array(
-									'post_id' => $subject->getIdentity(),
-									'object_type' => 'book',
-									'object_id' => $bookId
-								));
-								$newTaggedBook->save();
-							}
-						}
+				
+				$values['parent_id'] = null;
+				$values['parent_type'] = null;
+				if ($values['hasParent'] === '1') {
+					if (!empty($values['parentBookValue'])) {
+						$values['parent_id'] = $values['parentBookValue'];
+						$values['parent_type'] = 'book';
 					}
 				}
-				
-				$userIds = explode(',', $values['toValues']);
-				$taggedUsers = $subject->getTaggedUsers();
-				$taggedUserIds = array();
-				if (empty($userIds)) {
-					$tagTbl->delete(array(
-						'object_type = ?' => 'user',
-						'post_id = ?' => $subject->getIdentity(),
-					));
-				} else {
-					foreach ($taggedUsers as $taggedUser)
-					{
-						array_push($taggedUserIds, $taggedUser->getIdentity());
-						if (!in_array($taggedUser->getIdentity(), $userIds))
+	
+				$newTaggedUsers = array();
+				$bookAuthorTbl = new Book_Model_DbTable_BookAuthor;
+				$notificationTbl = Engine_Api::_()->getDbtable('notifications', 'activity');
+				$tagTbl = new Book_Model_DbTable_Tags;
+				$db = Engine_Db_Table::getDefaultAdapter();
+				$db->beginTransaction();
+	
+				try
+				{
+					$subject->setFromArray($values);
+					$subject->save();
+	
+					$tags = array();
+					foreach (preg_split('/[,]+/', $values['tags']) as $tag) {
+						$t = trim($tag);
+						if (!empty($t)) {
+							array_push($tags, $t);
+						}					
+					} 
+					$subject->tags()->setTagMaps($viewer, $tags);
+	
+					$bookIds = explode(',', $values['toBookValues']);
+					$taggedBooks = $subject->getTaggedBooks();
+					$taggedBookIds = array();
+					if (empty($bookIds)) {
+						$tagTbl->delete(array(
+							'object_type = ?' => 'book',
+							'post_id = ?' => $subject->getIdentity(),
+						));
+					} else {
+						foreach ($taggedBooks as $taggedBook)
 						{
-							$tagTbl->delete(array(
-								'object_type = ?' => 'user',
-								'object_id = ?' => $taggedUser->getIdentity(),
-								'post_id = ?' => $subject->getIdentity(),
-							));
-						}
-					}
-					
-					foreach ($userIds as $userId)
-					{
-						if (!in_array($userId, $taggedUserIds))
-						{
-							$newUser = Engine_Api::_()->user()->getUser($userId);
-							if ($newUser)
+							array_push($taggedBookIds, $taggedBook->getIdentity());
+							if (!in_array($taggedBook->getIdentity(), $bookIds))
 							{
-								$newTaggedUser = $tagTbl->createRow(array(
-									'post_id' => $subject->getIdentity(),
-									'object_type' => 'user',
-									'object_id' => $userId
+								$tagTbl->delete(array(
+									'object_type = ?' => 'book',
+									'object_id = ?' => $taggedBook->getIdentity(),
+									'post_id = ?' => $subject->getIdentity(),
 								));
-								$newTaggedUser->save();
-								array_push($newTaggedUsers, $newUser);
+							}
+						}
+						
+						foreach ($bookIds as $bookId)
+						{
+							if (!in_array($bookId, $taggedBookIds))
+							{
+								$newBook = Engine_Api::_()->getItem('book', $bookId);
+								if ($newBook)
+								{
+									$newTaggedBook = $tagTbl->createRow(array(
+										'post_id' => $subject->getIdentity(),
+										'object_type' => 'book',
+										'object_id' => $bookId
+									));
+									$newTaggedBook->save();
+								}
 							}
 						}
 					}
-				}	
-
-				$db->commit();
+					
+					$userIds = explode(',', $values['toValues']);
+					$taggedUsers = $subject->getTaggedUsers();
+					$taggedUserIds = array();
+					if (empty($userIds)) {
+						$tagTbl->delete(array(
+							'object_type = ?' => 'user',
+							'post_id = ?' => $subject->getIdentity(),
+						));
+					} else {
+						foreach ($taggedUsers as $taggedUser)
+						{
+							array_push($taggedUserIds, $taggedUser->getIdentity());
+							if (!in_array($taggedUser->getIdentity(), $userIds))
+							{
+								$tagTbl->delete(array(
+									'object_type = ?' => 'user',
+									'object_id = ?' => $taggedUser->getIdentity(),
+									'post_id = ?' => $subject->getIdentity(),
+								));
+							}
+						}
+						
+						foreach ($userIds as $userId)
+						{
+							if (!in_array($userId, $taggedUserIds))
+							{
+								$newUser = Engine_Api::_()->user()->getUser($userId);
+								if ($newUser)
+								{
+									$newTaggedUser = $tagTbl->createRow(array(
+										'post_id' => $subject->getIdentity(),
+										'object_type' => 'user',
+										'object_id' => $userId
+									));
+									$newTaggedUser->save();
+									array_push($newTaggedUsers, $newUser);
+								}
+							}
+						}
+					}	
+	
+					$db->commit();
+				}
+				catch(Exception $e)
+				{
+					$db->rollBack();
+					throw $e;
+				}
+	
+				foreach ($newTaggedUsers as $newTaggedUser)
+				{
+					$notificationTbl->addNotification($newTaggedUser, $viewer, $subject, 'post_tagged');
+				}
+	
+				$this->_redirectCustom($subject);
 			}
-			catch(Exception $e)
-			{
-				$db->rollBack();
-				throw $e;
-			}
-
-			foreach ($newTaggedUsers as $newTaggedUser)
-			{
-				$notificationTbl->addNotification($newTaggedUser, $viewer, $subject, 'post_tagged');
-			}
-
-			$this->_redirectCustom($subject);
 		}
 	}
 
