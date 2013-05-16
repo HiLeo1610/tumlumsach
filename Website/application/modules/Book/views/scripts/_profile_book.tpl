@@ -78,10 +78,12 @@
 		<label><?php echo $this->translate('Price')?> </label>
 		<span>
 			<?php 
-				echo $this->locale()->toCurrency(
-					$this->book->price, 
-					Book_Plugin_Constants::CURRENCY_CODE, 
-					array('precision' => 0, 'position' => Zend_Currency::RIGHT))
+				if ($this->book->price != null) {
+					echo $this->locale()->toCurrency(
+						$this->book->price, 
+						Book_Plugin_Constants::CURRENCY_CODE, 
+						array('precision' => 0, 'position' => Zend_Currency::RIGHT));
+				}
 			?>
 		</span>
 	</div>
