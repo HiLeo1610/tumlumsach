@@ -19,6 +19,13 @@ class Book_Model_Work extends Book_Model_Base
 		return Zend_Controller_Front::getInstance()->getRouter()->assemble($params, $route, $reset);
 	}
 	
+	protected function _update() 
+	{
+		if (isset($this->_data['content'])) {
+			unset($this->_data['content']);
+		}	
+	}
+	
 	protected function _postInsert()
     {
     	parent::_postInsert();
@@ -33,7 +40,8 @@ class Book_Model_Work extends Book_Model_Base
 		$signature->save();
     }
 	
-	public function getChapters($published = NULL) {
+	public function getChapters($published = NULL) 
+	{
 		$chapterTbl = new Book_Model_DbTable_Chapters();
 		$select = $chapterTbl->select()->where('work_id = ?', $this->getIdentity());
 		if ($published != NULL) {
@@ -41,6 +49,10 @@ class Book_Model_Work extends Book_Model_Base
 		}
 		
 		return $chapterTbl->fetchAll($select); 
+	}
+	
+	public function setContent($content) {
+		$this->_data['content'] = $content;
 	}
 	
 	public function setPhoto($photo)

@@ -1,14 +1,8 @@
 <div class="book_chapter_title">
 	<?php
-		if (isset($this->idx)) {
-			$title = $this->translate('Chapter %d : %s', $this->idx + 1, $this->chapter->title);
-		} else {
-			$title = $this->translate('Chapter : %s', $this->chapter->title);
-		}
-		
 		echo $this->htmlLink(
 			$this->chapter->getHref(), 
-			$this->translate('Chapter %d : %s', $this->idx + 1, $this->chapter->title), 
+			$this->translate('Chapter %d : %s', $this->idx + 1, $this->chapter->title?$this->chapter->title:''), 
 			array('title' => $this->string()->stripTags($this->chapter->title))
 		);
 	?>
