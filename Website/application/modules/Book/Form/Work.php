@@ -7,6 +7,19 @@ class Book_Form_Work extends Engine_Form
 		$this->_workTitle = $value;
 	}
 	
+	public function isValid($data) {
+		$isValid = parent::isValid($data);
+		if ($isValid) {
+			if ($data['is_long'] !== '1') {
+				if (trim($data['content']) == '') {
+					$this->addErrorMessage('The content is required. Please input this field.');
+					return;
+				}
+			}
+		}
+		return $isValid;
+	}
+	
     public function init()
     {
     	$view = $this->getView();
@@ -16,13 +29,26 @@ class Book_Form_Work extends Engine_Form
         	->appendFile($baseUrl . 'externals/autocompleter/Autocompleter.js')
         	->appendFile($baseUrl . 'externals/autocompleter/Autocompleter.Local.js')
         	->appendFile($baseUrl . 'externals/autocompleter/Autocompleter.Request.js');
+        $view->headScript()->appendScript('
+        	window.addEvent("domready", function() {
+        		var showOrHideContent = function() {
+        			if (!$("is_long").get("checked")) {
+        				$("content-wrapper").set("style", "display:block");
+        			} else {
+        				$("content-wrapper").set("style", "display:none");
+        			}
+        		}
+        		showOrHideContent();
+        		$("is_long").addEvent("click", showOrHideContent);
+        	});
+        ');	
+        	
 		
-        $this->setMethod('POST')->setTitle($this->_workTitle)
-        	->setAttrib('class', 'global_form book_form');
+        $this->setMethod('POST')->setTitle($this->_workTitle)->setAttrib('class', 'global_form book_form');
 
         //init name textfield
         $this->addElement('Text', 'title', array(
-            'label' => 'Name',
+            'label' => 'Work name',
             'maxlength' => '256',
             'allowEmpty' => false,
             'required' => true,
@@ -52,7 +78,67 @@ class Book_Form_Work extends Engine_Form
         $this->addElement('TinyMce', 'description', array(
             'label' => 'Description',
             'editorOptions' => array(
-            	'width' => '800px',
+        		'editor_selector' => 'editor_description',
+            	'width' => '850px',
+				'height' => '150px',
+				'content_css' => '/application/modules/Book/externals/styles/editor.css',
+                'theme_advanced_buttons1' => array(
+                    'undo',
+                    'redo',
+                    'cleanup',
+                    'removeformat',
+                    'pasteword',
+                    '|',
+                    'media',
+                    'image',
+                    'fullscreen',
+                    'preview',
+                    'emotions'
+                ),
+                'theme_advanced_buttons2' => array(
+                    'fontselect',
+                    'fontsizeselect',
+                    'bold',
+                    'italic',
+                    'underline',
+                    'strikethrough',
+                    'forecolor',
+                    'backcolor',
+                    '|',
+                    'justifyleft',
+                    'justifycenter',
+                    'justifyright',
+                    'justifyfull',
+                    '|',
+                    'outdent',
+                    'indent',
+                    'blockquote',
+                ),
+                'upload_url' => Zend_Controller_Front::getInstance()->getRouter()->assemble(
+					array('module' => 'book', 'controller' => 'index', 'action' => 'upload'), 'default', true)
+            ),
+            'allowEmpty' => false,
+            'decorators' => array('ViewHelper'),
+            'filters' => array(
+            	new Engine_Filter_Censor(),
+            	new Book_Filter_HTMLPurifier()
+			),
+        ));
+		$this->getElement('description')->setAttrib('class', 'editor_description');
+		Engine_Form::addDefaultDecorators($this->getElement('description'));
+		
+		$this->addElement('Checkbox', 'is_long', array(
+			'label' => 'This is a story with many chapters',
+			'value' => 1,
+			'checked' => false
+		));
+		
+		// init description
+        $this->addElement('TinyMce', 'content', array(
+            'label' => 'Content',
+            'editorOptions' => array(        		
+        		'editor_selector' => 'editor_content',
+            	'width' => '850px',
 				'height' => '450px',
 				'content_css' => '/application/modules/Book/externals/styles/editor.css',
                 'theme_advanced_buttons1' => array(
@@ -97,14 +183,14 @@ class Book_Form_Work extends Engine_Form
             	new Book_Filter_HTMLPurifier()
 			),
         ));
-		
-		Engine_Form::addDefaultDecorators($this->getElement('description'));
+		$this->getElement('content')->setAttrib('class', 'editor_content');
+		Engine_Form::addDefaultDecorators($this->getElement('content'));
 
         // Element: submit
         $this->addElement('Button', 'submit', array(
-                'label' => 'Post',
-                'type' => 'submit',
-                'decorators' => array('ViewHelper'),
+        	'label' => 'Post',
+            'type' => 'submit',
+            'decorators' => array('ViewHelper'),
         ));
 		
 		$this->addElement('Cancel', 'cancel', array(

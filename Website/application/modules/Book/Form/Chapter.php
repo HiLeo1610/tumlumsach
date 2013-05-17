@@ -39,7 +39,7 @@ class Book_Form_Chapter extends Engine_Form
             'label' => 'Content',
             'editorOptions' => array(
             	'width' => '900px',
-				'height' => '800px',
+				'height' => '400px',
 				'content_css' => '/application/modules/Book/externals/styles/editor.css',
                 'theme_advanced_buttons1' => array(
                     'undo',

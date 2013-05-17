@@ -88,45 +88,52 @@
 	<?php echo $this->string()->stripTags($this->work->description)?>
 </div>
 
-<ul class="book_work_chapters">
-	<li>
-		<?php if ($this->work->isOwner($this->viewer)) : ?>
-			<div class="book_work_chapters_control">
-				<?php 
-					echo $this->htmlLink(
-						$this->url(array('action' => 'create', 'work_id' => $this->work->getIdentity()), 'chapter_general', true), 
-						$this->translate('Create a new chapter'),
-						array('class' => 'buttonlink icon_chapter_new')
-					);
-				?>
-			</div>
-		<?php endif; ?>	
-	</li>
-	<?php
-		$chapterCount = $this->paginator->getTotalItemCount();
-		$itemCountPerPage = $this->paginator->getItemCountPerPage();
-		$page = $this->paginator->getCurrentPageNumber();
-	?>
-	<?php if (isset($chapterCount) && $chapterCount > 0) : ?>
+<?php if ($this->work->is_long) :?>
+	<ul class="book_work_chapters">
 		<li>
-			<h3 class="book_chapter_stat">
-				<?php
-					echo $this->translate(array('%s chapter', '%s chapters', $chapterCount), $this->locale()->toNumber($chapterCount))
-				?>
-			</h3>
+			<?php if ($this->work->isOwner($this->viewer)) : ?>
+				<div class="book_work_chapters_control">
+					<?php 
+						echo $this->htmlLink(
+							$this->url(array('action' => 'create', 'work_id' => $this->work->getIdentity()), 'chapter_general', true), 
+							$this->translate('Create a new chapter'),
+							array('class' => 'buttonlink icon_chapter_new')
+						);
+					?>
+				</div>
+			<?php endif; ?>	
 		</li>
-		<?php foreach ($this->paginator as $idx => $chapter) : ?>
-			<?php
-				$index = ($page - 1) * $itemCountPerPage + $idx;
-			?>
-			<li class="book_chapter">
-				<?php echo $this->partial('_chapter.tpl', 'book', array('idx' => $index, 'chapter' => $chapter)) ?>
+		<?php
+			$chapterCount = $this->paginator->getTotalItemCount();
+			$itemCountPerPage = $this->paginator->getItemCountPerPage();
+			$page = $this->paginator->getCurrentPageNumber();
+		?>
+		<?php if (isset($chapterCount) && $chapterCount > 0) : ?>
+			<li>
+				<h3 class="book_chapter_stat">
+					<?php
+						echo $this->translate(array('%s chapter', '%s chapters', $chapterCount), $this->locale()->toNumber($chapterCount))
+					?>
+				</h3>
 			</li>
-		<?php endforeach; ?>
-		<li class="book_paginator book_pages">
-			<?php
-				echo $this->paginationControl($this->paginator);
-			?>
-		</li>
-	<?php endif; ?>	
-</ul>
+			<?php foreach ($this->paginator as $idx => $chapter) : ?>
+				<?php
+					$index = ($page - 1) * $itemCountPerPage + $idx;
+				?>
+				<li class="book_chapter">
+					<?php echo $this->partial('_chapter.tpl', 'book', array('idx' => $index, 'chapter' => $chapter)) ?>
+				</li>
+			<?php endforeach; ?>
+			<li class="book_paginator book_pages">
+				<?php
+					echo $this->paginationControl($this->paginator);
+				?>
+			</li>
+		<?php endif; ?>	
+	</ul>
+<?php else :?>
+	<div class="book_work_content">
+		<div class="book_work_content_header"><?php echo $this->translate('Content')?></div>
+		<div><?php echo $this->work->content;?></div>
+	</div>	
+<?php endif;?>	

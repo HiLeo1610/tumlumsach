@@ -49,12 +49,18 @@
 						?>
 					</a>
 				</h3>
-				<h4>
-					<?php 
-						$booksCount = $category->getUsedCount();
-						echo $this->translate(array('%1$s book', '%1$s books', $booksCount), $booksCount);
-					?>
-				</h4>
+				<div class="book_list_hd">
+					<h4>
+						<?php 
+							$booksCount = $category->getUsedCount();
+							echo $this->translate(array('%1$s book', '%1$s books', $booksCount), $booksCount);
+						?>
+					</h4>
+					<div class="book_list_view_more">
+						<a href="<?php echo $category->getHref()?>"><?php echo $this->translate('View More') . ' » ';?></a>
+					</div>
+					<div class="book_clear"></div>
+				</div>
 				<ul class="book_list">
 					<?php foreach($this->booksByCategory[$category->getIdentity()] as $book) : ?>
 						<li class="book_item">

@@ -60,6 +60,10 @@ class Book_WorkController extends Book_Controller_Base
 			$work = Engine_Api::_()->book()->getObject('book_work', $workId);
 			if ($work && $work instanceof Book_Model_Work)
 			{
+				if (!$work->is_long) {
+					$chapter = $work->getChapters()->current();
+					$work->setContent($chapter->content);
+				}
 				$viewer = Engine_Api::_()->user()->getViewer();
 				if ($work->published || (!$work->published && $work->user_id == $viewer->getIdentity()) || $viewer->isAdmin()) {
 					Engine_Api::_()->core()->setSubject($work);
@@ -211,9 +215,9 @@ class Book_WorkController extends Book_Controller_Base
 		{
 			return;
 		}
-
+		
 		$values = $form->getValues();
-
+		
 		$db = Engine_Db_Table::getDefaultAdapter();
 		$db->beginTransaction();
 
@@ -254,6 +258,17 @@ class Book_WorkController extends Book_Controller_Base
             foreach ($roles as $i => $role) {
                 $auth->setAllowed($work, $role, 'view', true);
             }
+            
+            if (!$work->is_long) {
+            	$chapterTbl = new Book_Model_DbTable_Chapters();
+            	$chapter = $chapterTbl->createRow(array(
+            		'title' => null,
+            		'content' => trim($values['content']),
+            		'work_id' => $work->getIdentity(),
+            		'published' => $values['published']
+            	));
+            	$chapter->save();
+            }
 
 			$db->commit();
 		}
@@ -278,12 +293,13 @@ class Book_WorkController extends Book_Controller_Base
 		$this->_checkSubject();
 		$this->_checkAuthorization('view');
 
-		$this->view->form = $form = new Book_Form_Work( array('workTitle' => 'Edit the work'));
+		$this->view->form = $form = new Book_Form_Work(array('workTitle' => 'Edit the work'));
 		$this->view->viewer = $viewer = Engine_Api::_()->user()->getViewer();
 
 		if (!$this->getRequest()->isPost())
 		{
-			$form->populate($subject->toArray());
+			$values = $subject->toArray();
+			$form->populate($values);
 			return;
 		}
 
@@ -294,20 +310,33 @@ class Book_WorkController extends Book_Controller_Base
 			$db = Engine_Db_Table::getDefaultAdapter();
 			$db->beginTransaction();
 
-			try
-			{
+			try {
+				$preIsLong = $subject->is_long;
 				$subject->setFromArray($values);
 				$subject->save();
 				
-				if (!empty($values['photo']))
-				{
+				if (!$subject->is_long && !$preIsLong) {
+					$chapter = $subject->getChapters()->current();
+					$chapter->content = $values['content'];
+					$chapter->save();
+				} else {
+					$chapterTbl = new Book_Model_DbTable_Chapters();
+					$chapterTbl->delete(array('work_id = ?' => $subject->getIdentity()));
+					$chapter = $chapterTbl->createRow(array(
+						'title' => null,
+	            		'content' => trim($values['content']),
+	            		'work_id' => $subject->getIdentity(),
+	            		'published' => $subject->published
+					));
+					$chapter->save();
+				} 					
+				
+				if (!empty($values['photo'])) {
 					$subject->setPhoto($form->photo);
 				}	
 
 				$db->commit();
-			}
-			catch(Exception $e)
-			{
+			} catch(Exception $e) {
 				$db->rollBack();
 				throw $e;
 			}

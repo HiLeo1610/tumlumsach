@@ -185,6 +185,12 @@ img.item_photo_book {
 	margin-bottom: 10px;
 	padding-bottom: 5px;
 }
+.book_list_hd > h4 {
+	float: left;
+}
+.book_list_hd > div.book_list_view_more {
+	float: right;
+}
 .book_form span.tag {
 	padding-right: 10px;	
 }
@@ -416,6 +422,13 @@ ul.book_list > li.book_item {
 	padding: 10px 0px;
 	border-bottom: 1px dotted #DDD;
 	line-height: 2em;
+}
+.book_work_content_header {
+	font-style: oblique;
+	color: $theme_font_color_light;
+}
+.book_work_content {
+	margin-bottom: 10px;
 }
 
 /**
