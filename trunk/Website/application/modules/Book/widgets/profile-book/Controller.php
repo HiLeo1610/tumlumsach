@@ -11,7 +11,7 @@ class Book_Widget_ProfileBookController extends Engine_Content_Widget_Abstract
 		}
 		if ($subject && $subject->getType() == 'book') {
 			$this->view->book = $book = $subject;
-			$this->view->authors = $authors = $book->getAuthors(0);
+			$this->view->authors = $authors = $book->getAuthors(Book_Plugin_Constants::AUTHOR);
 	
 			$categoryTable = new Book_Model_DbTable_Categories;
 			$this->view->category = $categoryTable->findRow($book->category_id);

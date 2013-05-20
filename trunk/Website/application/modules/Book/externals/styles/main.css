@@ -256,8 +256,7 @@ html[dir="rtl"] .book_rating_star_big_half
 /* SPECIFIC SCREENS */
 /* search books */
 .layout_book_search_books #search {
-	/*float: right;
-	margin-top: 10px;*/
+	margin-left: 5px;
 }
 .layout_left .layout_book_search_books > form > dl > *, 
 .layout_left .layout_book_search_works > form > dl > *, 
@@ -273,7 +272,8 @@ html[dir="rtl"] .book_rating_star_big_half
 }
 .layout_middle .layout_book_search_posts > form > dl > input,
 .layout_middle .layout_book_search_books > form > dl > input {
-	width: 65%;
+	width: 60%;
+	margin-left: 5px;
 }
 .layout_left .layout_book_search_books > form,
 .layout_left .layout_book_search_works > form, 
