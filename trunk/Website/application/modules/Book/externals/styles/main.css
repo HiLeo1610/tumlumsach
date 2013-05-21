@@ -4,23 +4,6 @@
 .book_comments {
 	margin-top:10px;
 }
-ul.book_welcome_navigation {
-	overflow: hidden;
-	text-align: center;
-	margin-bottom: 20px;
-	margin-top: 15px;
-	font-weight: 700;
-}
-ul.book_welcome_navigation li {
-	display: inline-block;
-	padding: 0px 5px;
-}
-ul.book_welcome_navigation li a:link, ul.book_welcome_navigation li a:visited {
-	font-size: 1.1em;
-}
-ul.book_welcome_navigation li a:hover {
-	/*color: white;*/
-}
 .introduction_members > .introduction_book_companies, .introduction_members > .introduction_users {
 	float: left;
 	width: 49%;
@@ -81,7 +64,15 @@ ul.book_list .book_arrow_empty {
 /*
  * common
  */
-
+.frm-search .book-search-wrapper {
+	float: left;
+}
+.frm-search .btn-search {
+	float: right;
+}
+.frm-search .book-search-wrapper input {
+	width: 395px;
+}
 .book_paginator {
 	margin-bottom: 10px;
 }
