@@ -64,6 +64,24 @@ ul.book_list .book_arrow_empty {
 /*
  * common
  */
+ .book-btn-post-new {
+ 	background: #ee7c2f;
+ }
+ .book-btn-post-new:hover {
+ 	background: #ee975c;
+ }
+ .book-btn-book-new {
+ 	background: #8eaf18;
+ }
+ .book-btn-book-new:hover {
+ 	background: #a6cc1c;
+ }
+ .book-btn-work-new {
+ 	background: #0E86B8;
+ }
+ .book-btn-work-new:hover {
+ 	background: #1798cc;
+ }
 .frm-search .book-search-wrapper {
 	float: left;
 }
@@ -621,19 +639,29 @@ ul.book_posts .book_parent_information > .book_post_parent_other_information > *
 	padding-bottom: 12px;
 	padding-top: 8px;
 }
-.quicklinks {
-	margin-top: auto;
-	margin-bottom: 10px;	
+.layout_book_browse_menu_quick ul li.book-btn-new {
+	padding: 7px;
+	text-align: center;
+	+rounded(4px);
 }
-.layout_book_profile_menu_book .quicklinks li {
-	margin-top: 5px;
-	padding-bottom: 0px;
-	border: 1px solid $theme_button_background_color_hover;
-	padding-top: 6px;
-}
-.layout_book_browse_menu_quick .quicklinks li + li {
-	border-top: 1px solid;
+.layout_book_browse_menu_quick ul > li.book-btn-new + li.book-btn-new {
+	margin-top: 10px;	
 } 
+.layout_book_browse_menu_quick ul li.book-btn-new > a {
+	color: #FFF;
+	display: block;
+}
+.layout_book_browse_menu_quick ul li.book-btn-new > a:hover {
+	text-decoration: none;
+}
+.layout_book_browse_menu_quick ul li.book-btn-new > a > span.btn-arrow {
+	background: url(~/application/themes/threecolors/images/button-arrow.png) no-repeat;
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: absolute;
+	margin-top: 3px;
+}
 .layout_book_profile_menu_book a.buttonlink:hover {
 	text-decoration: underline;
 }

@@ -90,7 +90,7 @@ DEFAULT STYLES FOR THIS THEME
   */
   theme_foreground_border_color: transparent;
   theme_foreground_border_color_light: transparent;
-  theme_foreground_background_color: transparent;
+  theme_foreground_background_color: #FFF;
 
   /*
   INPUT FIELDS AND BUTTONS
