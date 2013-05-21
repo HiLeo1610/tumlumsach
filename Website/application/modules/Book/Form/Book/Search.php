@@ -14,7 +14,7 @@ class Book_Form_Book_Search extends Zend_Form {
 				)
 		));
 		$textElement = $this->getElement('text'); 
-		$textElement->setAttrib('alt', Zend_Registry::get('Zend_Translate')->_('Which boooks are you looking for ?'));
+		$textElement->setAttrib('alt', Zend_Registry::get('Zend_Translate')->_('Which books are you looking for ?'));
 		$this->addDisplayGroup(
 			array('text'), 
 			'elements', 

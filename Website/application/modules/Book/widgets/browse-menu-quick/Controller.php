@@ -4,8 +4,9 @@ class Book_Widget_BrowseMenuQuickController extends Engine_Content_Widget_Abstra
 {
 	public function indexAction()
 	{
-		// Get quick navigation
-    	$this->view->quickNavigation = $quickNavigation = Engine_Api::_()->getApi('menus', 'core')
-      		->getNavigation('book_quick');
+		$viewer = Engine_Api::_()->user()->getViewer();
+		if (empty($viewer)) {
+			return $this->setNoRender();
+		}
 	}
 }
