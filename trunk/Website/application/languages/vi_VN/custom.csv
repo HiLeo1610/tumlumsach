@@ -519,7 +519,7 @@ http://[host][object_link]
 "%s result found";"%s kết quả"
 "Search posts";"Tìm kiếm bài viết"
 "%s book";"%s sách"
-"%s books";"%s sách";"%s sách"
+"Total %1$s book";"Tổng cộng %1$s sách";"Tổng cộng %1$s sách" 
 "No record of a member with that email was found.";"Không tìm thấy thành viên có email này."
 "Language";"Ngôn ngữ"
 "This is the site sign-up page.";"Bạn đang ở trang đăng ký thành viên."
