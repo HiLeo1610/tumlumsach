@@ -52,8 +52,7 @@ class Book_Widget_ListBooksController extends Engine_Content_Widget_Abstract
 				}
 			}
 			$this->view->booksByCategory = $booksByCategory;
-			$this->view->numberOfBooks = Engine_Api::_()->book()->getTotalBookCount($params);	
+			$this->view->numberOfBooks = Engine_Api::_()->book()->getTotalBookCount($params);
 		}	
-
 	}
 }
