@@ -36,7 +36,7 @@
 <?php else : ?>
 	<h4 class="book_list_total">
 		<?php
-			echo $this->translate(array('%s book', '%s books', $this->numberOfBooks), $this->numberOfBooks);
+			echo $this->translate(array('Total %1$s book', 'Total %1$s books', $this->numberOfBooks), $this->numberOfBooks);
 		?>
 	</h4>
 	<ul>	
