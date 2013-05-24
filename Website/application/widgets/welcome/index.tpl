@@ -31,85 +31,90 @@
 		</div>
 		
 		<div class="introduction_body">
-			<div class="introduction_books">
-				<div class="heading"><?php echo $this->translate('Most Popular Books')?></div>
-				<?php
-					echo $this->action(
-						'index', 
-						'widget', 
-						'core', 
-						array(
-							'name' => 'book.popular-books', 
-							'itemCountPerPage' => 5, 
-							'viewInfo' => false
-						)
-					);
-				?>
-			</div>
-			
-			<div class="introduction_works">
-				<div class="heading">
+			<div class="introduction_body_content">
+				<div class="introduction_books">
+					<div class="heading"><?php echo $this->translate('Most Popular Books')?></div>
 					<?php
-						echo $this->translate('Newest works'); 
+						echo $this->action(
+							'index', 
+							'widget', 
+							'core', 
+							array(
+								'name' => 'book.popular-books', 
+								'itemCountPerPage' => 7, 
+								'viewInfo' => false
+							)
+						);
 					?>
 				</div>
-				<?php 
-					echo $this->action(
-						'index', 
-						'widget', 
-						'core', 
-						array('name' => 'book.newest-works', 'thumbnailOnly' => '1', 'numberOfWorks' => 15)
-					);
-				?>
-			</div>
-			
-			<div class="introduction_members">
-				<div class="heading"><?php echo $this->translate('Members')?></div>
-				<div class="introduction_book_companies">
-					<div class="heading"><?php echo $this->translate('Authors, Publishers and Book Companies')?></div>	
-					<div class="introduction_content">
-						<?php
-							echo $this->action(
-								'index',
-								'widget',
-								'core',
-								array(
-									'name' => 'book.list-random-users',
-									'levels' => array(
-										Book_Plugin_Constants::AUTHOR_LEVEL, 
-										Book_Plugin_Constants::PUBLISHER_LEVEL,
-										Book_Plugin_Constants::BOOK_COMPANY_LEVEL
-									)
-								)	
-							);
-						?>	
-					</div>				
-				</div>
 				
-				<div class="introduction_users">
-					<div class="heading"><?php echo $this->translate('Readers')?></div>
-					<div class="introduction_content">
+				<div class="introduction_works">
+					<div class="heading">
 						<?php
-							echo $this->action(
-								'index',
-								'widget',
-								'core',
-								array(
-									'name' => 'book.list-random-users',
-									'levels' => array(
-										Book_Plugin_Constants::READER_LEVEL, 
-										
-									)
-								)	
-							);
+							echo $this->translate('Newest works'); 
 						?>
 					</div>
+					<?php 
+						echo $this->action(
+							'index', 
+							'widget', 
+							'core', 
+							array('name' => 'book.newest-works', 'thumbnailOnly' => '1', 'numberOfWorks' => 15)
+						);
+					?>
 				</div>
-				<br />			
-			</div>
+				
+				<div class="introduction_members">
+					<div class="heading"><?php echo $this->translate('Members')?></div>
+					<div class="introduction_book_companies">
+						<div class="heading"><?php echo $this->translate('Authors, Publishers and Book Companies')?></div>	
+						<div class="introduction_content">
+							<?php
+								echo $this->action(
+									'index',
+									'widget',
+									'core',
+									array(
+										'name' => 'book.list-random-users',
+										'levels' => array(
+											Book_Plugin_Constants::AUTHOR_LEVEL, 
+											Book_Plugin_Constants::PUBLISHER_LEVEL,
+											Book_Plugin_Constants::BOOK_COMPANY_LEVEL
+										)
+									)	
+								);
+							?>	
+						</div>				
+					</div>
+					
+					<div class="introduction_users">
+						<div class="heading"><?php echo $this->translate('Readers')?></div>
+						<div class="introduction_content">
+							<?php
+								echo $this->action(
+									'index',
+									'widget',
+									'core',
+									array(
+										'name' => 'book.list-random-users',
+										'levels' => array(
+											Book_Plugin_Constants::READER_LEVEL, 
+											
+										)
+									)	
+								);
+							?>
+						</div>
+					</div>
+					<br />			
+				</div>
+			</div>		
 		</div>
-		
-		<div class="introduction_footer">
+	</div>
+</div>
+<div id="global_footer">
+	<div class="layout_page_footer">
+		<div class="generic_layout_container layout_main">
 			<?php
 				//core.menu-footer
 				echo $this->action(
