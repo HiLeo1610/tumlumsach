@@ -51,7 +51,7 @@
 				if (page) {
 					var bookPaginatorEle = $(this).getParent('.book_paginator');
 					if (bookPaginatorEle) {
-						var element = bookPaginatorEle.getParent(); 
+						var element = bookPaginatorEle.getParent();
 						en4.core.request.send(new Request.HTML({
 		                    url : en4.core.baseUrl + 'widget/index/content_id/' + <?php echo sprintf('%s', $this->identity) ?>,
 		                    data : {
@@ -73,7 +73,7 @@
 			$$('ul.book_list .book_arrow').addEvent('click', function(event) {
 				var ele = event.target;
 				var page = ele.getProperty('nextPage');
-				var element = $$('.introduction_books')[0];
+				var element = $$('.introduction_books > .generic_layout_container')[0];
 				en4.core.request.send(new Request.HTML({
                     url : en4.core.baseUrl + 'widget/index',
                     data : {
