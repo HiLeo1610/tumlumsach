@@ -8,7 +8,10 @@ NETWORK SETTINGS
 Used to style the networks page in the member's
 settings area.
 */
-.networks_left{
+#network-form {
+	position: relative;
+}
+.networks_left {
   float:left;
   width: 380px;
   padding-right: 30px;

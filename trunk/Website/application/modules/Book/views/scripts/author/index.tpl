@@ -30,5 +30,6 @@
 				?>
 			</li>
 		</ul>
+		<div class="book_clear"></div>
 	</div>
 <?php endif; ?>

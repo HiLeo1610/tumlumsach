@@ -779,6 +779,15 @@ ul.book_posts .book_parent_information > .book_post_parent_other_information > *
 /**
  * 	list authors, publishers and book companies
  */
+h4.book_company_publisher_header {
+	background: #8EAF18;
+    +rounded(3px);
+    color: #FFF;
+    font-weight: normal;
+    margin: 10px 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
 ul.book_list_authors, ul.book_list_publishers {
 	clear: both;
 }

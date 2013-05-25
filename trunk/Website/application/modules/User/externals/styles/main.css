@@ -911,12 +911,18 @@ html[dir="rtl"] .browsemembers_criteria > ul > li > label
 {
   margin-top: 10px;;
 }
+.browsemembers_results {
+	background: #FFF;
+	padding: 0px 5px;
+}
 .browsemembers_results > ul > li
 {
   overflow: hidden;
-  border-top-width: 1px;
-  margin-top: 10px;
   padding-top: 10px;
+  padding-bottom: 5px;
+}
+.browsemembers_results > ul > li + li {
+  border-top-width: 1px;
 }
 .browsemembers_results > ul > li > a
 {
