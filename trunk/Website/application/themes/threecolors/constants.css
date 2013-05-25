@@ -50,7 +50,7 @@ DEFAULT STYLES FOR THIS THEME
   theme_topbar_minimenu_border: none;
   theme_topbar_minimenu_link_size: .85em;
   theme_topbar_minimenu_link_color: #0e86b8;
-  theme_topbar_minimenu_link_hover_color: #b1d13e;
+  theme_topbar_minimenu_link_hover_color: #ee7c2f;
   theme_topbar_minimenu_link_hover_decoration: none;
   theme_topbar_minimenu_link_hover_background_color: transparent;
   theme_topbar_border: 0px solid transparent;
@@ -65,8 +65,6 @@ DEFAULT STYLES FOR THIS THEME
   theme_font_color: #000;
   theme_font_color_light: #AAA;
   theme_text_align: left;
-  /*theme_link_color: #ffff00;*/
-  /*theme_link_color: #4e81a1;*/
   theme_link_color: #d46e00;
   theme_link_color_hover: #4e81a1;
   theme_link_decoration: none;
