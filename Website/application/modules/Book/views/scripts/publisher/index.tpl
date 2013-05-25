@@ -3,7 +3,9 @@
 	$publisherCount = $this->publishers->count();
 ?>
 <?php if ($publisherCount > 0) :?>
-	<h4><?php echo $this->translate('Publisher')?></h4>	
+	<h4 class="book_company_publisher_header">
+		<?php echo $this->translate('Publisher')?>
+	</h4>	
 	<div class="book_clear">
 		<?php 
 	        echo $this->translate(array('%1$s publisher', '%1$s publishers', $publisherCount), $publisherCount);
@@ -24,6 +26,7 @@
 					</li>
 				<?php endforeach; ?>		
 			</ul>
+			<div class="book_clear"></div>
 		</div>
 	</div>
 <?php endif; ?>
@@ -33,7 +36,7 @@
 ?>
 <?php if ($bookCompanyCount > 0) :?>
 	<div class="book_clear">
-		<h4><?php echo $this->translate('Book Company')?></h4>
+		<h4 class="book_company_publisher_header"><?php echo $this->translate('Book Company')?></h4>
 	    <div class="book_block_area">
 			<ul class="book_list_publishers">
 				<?php foreach($this->bookCompanies as $bookCompany) : ?>
@@ -50,6 +53,7 @@
 					</li>
 				<?php endforeach; ?>		
 			</ul>
+			<div class="book_clear"></div>
 		</div>
 	</div>
 <?php endif; ?>
