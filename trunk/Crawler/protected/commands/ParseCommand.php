@@ -45,6 +45,7 @@ class ParseCommand extends CConsoleCommand {
 					echo 'Parsed Ok' . PHP_EOL;
 					$newObj = CrawlProvider::createNewObject($provider->getType());
 					foreach ($arrContent as $key => $value) {
+					    $value = mb_convert_encoding($value, 'HTML-ENTITIES', "UTF-8");
 						$newObj->$key = $value;
 					}
 					$newObj->link_id = $model->link_id;
