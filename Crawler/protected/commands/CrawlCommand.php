@@ -5,13 +5,20 @@ class CrawlCommand extends CConsoleCommand
 	public function run($args)
 	{
 		$receiver = $args[0];
-		
-		if ($receiver == 'tiki.vn') {
-			$provider = new Tiki();
-		} elseif ($receiver == 'vnexpress.net') {			
-			$provider = new Vnexpress();
+
+		switch ($receiver)
+		{
+		    case 'tiki.vn':
+		        $provider = new Tiki();
+		        break;
+		    case 'vnexpress.net':
+		        $provider = new Vnexpress();
+		        break;
+		    case 'phunuonline.com.vn':
+		        $provider = new Phunuonline();
+                break;
 		}
-		
+
 		$operation = '';
 		if (isset($args[1])) {
 			$operation = $args[1];
@@ -28,7 +35,7 @@ class CrawlCommand extends CConsoleCommand
 	 			}
 			}
 		}
-			
+
 		echo 'Crawl successfully with ' . $count . ' new links' . PHP_EOL;
 	}
 }
