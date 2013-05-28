@@ -10,7 +10,7 @@ class Book_Model_DbTable_Rawbooks extends Engine_Db_Table
 		
 		$bookSelect = $bookTbl->select()->setIntegrityCheck(false);
 		$bookSelect->join($rawBookTblName, "$bookTblName.rawbook_id = $rawBookTblName.rawbook_id");
-		$bookSelect->where("$rawBookTblName.link_id = ?", $bookLinkId);
+		$bookSelect->where("$rawBookTblName.link_id=?", $bookLinkId);
 		
 		return $bookTbl->fetchRow($bookSelect);
 	}
