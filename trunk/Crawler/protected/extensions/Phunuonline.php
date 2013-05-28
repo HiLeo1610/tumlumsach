@@ -136,7 +136,8 @@ class Phunuonline extends CrawlPostProvider
             }
             if ($content->length > 0) {
                 if ($key != 'content') {
-                    $arrContent[$key] = $content->item(0)->nodeValue;
+                    $encoding = mb_detect_encoding( $content->item(0)->nodeValue, "auto" );
+                    $arrContent[$key] = mb_convert_encoding( $content->item(0)->nodeValue, "UTF-8", $encoding);
                 } else {
                     $html = '';
                     $node = $content->item(0);
@@ -152,7 +153,8 @@ class Phunuonline extends CrawlPostProvider
                     if ($p !== false) {
                         $html = substr($html, strlen($xmlStr));
                     }
-                    $arrContent[$key] = trim($html);
+                    $encoding = mb_detect_encoding( $html, "auto" );
+                    $arrContent[$key] =  mb_convert_encoding( $html, "UTF-8", $encoding);
                 }
             }
         }
