@@ -18,9 +18,11 @@
    $actions = $this->actions;
 } ?>
 
-<?php $this->headScript()
+<?php 
+	$this->minifyHeadScript()
         ->appendFile($this->layout()->staticBaseUrl . 'application/modules/Activity/externals/scripts/core.js')
-        ->appendFile($this->layout()->staticBaseUrl . 'externals/flowplayer/flashembed-1.0.1.pack.js') ?>
+        ->appendFile($this->layout()->staticBaseUrl . 'externals/flowplayer/flashembed-1.0.1.pack.js');
+?>
 
 <script type="text/javascript">
   var CommentLikesTooltips;

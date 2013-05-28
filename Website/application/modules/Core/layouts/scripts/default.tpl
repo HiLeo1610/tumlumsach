@@ -170,7 +170,9 @@
       }
     }
   ?>
-  <?php echo $this->headScript()->toString()."\n" ?>
+  <?php 
+  	echo $this->headScript()->toString()."\n" 
+  ?>
 
   
   
