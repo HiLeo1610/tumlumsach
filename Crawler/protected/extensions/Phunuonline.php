@@ -119,6 +119,7 @@ class Phunuonline extends CrawlPostProvider
         $arrContent = array();
         $dom = new DOMDocument();
         libxml_use_internal_errors(true);
+        $content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
         $dom->loadHTML($content);
         libxml_use_internal_errors(false);
 
