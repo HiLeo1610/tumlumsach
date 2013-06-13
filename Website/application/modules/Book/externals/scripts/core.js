@@ -140,11 +140,6 @@ en4.book = {
 					'format' : 'json',
 					'rating' : rating
 				},
-				onError : function(text, error) {
-					console.log('onError');
-				},
-				onRequest : function(){
-				},
 				onSuccess : function(responseJSON, responseText) {
 					$(guid + '_rating_text').set('text', en4.core.language.translate('Thanks for rating'));
 					rated = 1;
