@@ -328,12 +328,12 @@
       	bookParentAutocompleter.doPushSpan = function(name, toID, newItem, hideLoc, list) {
       		var myElement = new Element("span");
     		if (newItem) {
-    			myElement.id = "tospan_" + name + "_" + toID;
+    			myElement.id = "tospanbook_" + name + "_" + toID;
     			myElement.innerHTML = name 
     				+ " <a href='javascript:void(0);' onclick='this.parentNode.destroy();showInput(bookParentAutocompleter.element);" 
     				+ "removeFromToValue(\"" + toID + "\", \"" + hideLoc + "\");'>x</a>";
     		} else {
-    			myElement.id = "tospan_" + name + "_" + toID;
+    			myElement.id = "tospanbook_" + name + "_" + toID;
     			myElement.innerHTML = name 
     				+ " <a href='javascript:void(0);' onclick='this.parentNode.destroy();showInput(bookParentAutocompleter.element);" 
     				+ "removeFromToValue(\"" + toID + "\", \"" + hideLoc + "\");'>x</a>";
