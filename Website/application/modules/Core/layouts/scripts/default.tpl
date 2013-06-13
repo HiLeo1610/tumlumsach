@@ -171,7 +171,7 @@
     }
   ?>
   <?php 
-  	echo $this->headScript()->toString()."\n" 
+  	echo $this->minifyHeadScript()->toString()."\n";
   ?>
 
   

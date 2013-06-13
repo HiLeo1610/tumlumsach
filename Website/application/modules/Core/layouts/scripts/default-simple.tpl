@@ -166,7 +166,7 @@
       }
     }
   ?>
-  <?php echo $this->headScript()->toString()."\n" ?>
+  <?php echo $this->minifyHeadScript()->toString()."\n" ?>
 
   <!-- vertical scrollbar fix -->
   <style type="text/css">
