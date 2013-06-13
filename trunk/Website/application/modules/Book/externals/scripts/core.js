@@ -131,7 +131,6 @@ en4.book = {
 		}
 		
 		var rate = function(rating) {
-			$(guid + '_rating_text').set('text', en4.core.language.translate('Thanks for rating'));
 			for (var x = 1; x <= 5; x++) {
 				$(guid + '_rate_' + x).set('onclick', '');
 			}
@@ -141,13 +140,18 @@ en4.book = {
 					'format' : 'json',
 					'rating' : rating
 				},
-				'onRequest' : function(){
+				onError : function(text, error) {
+					console.log('onError');
+				},
+				onRequest : function(){
+				},
+				onSuccess : function(responseJSON, responseText) {
+					$(guid + '_rating_text').set('text', en4.core.language.translate('Thanks for rating'));
 					rated = 1;
 					total_votes = Number.from(total_votes) + 1;
 					pre_rate = (pre_rate + rating)/total_votes;
 					set_rating();
-				},
-				'onSuccess' : function(responseJSON, responseText) {
+					
 					$(guid + '_rating_text').set('text', en4.core.language.translate(Array('%s rating', '%s ratings', total_votes), total_votes));
 				}
 			})).send();
