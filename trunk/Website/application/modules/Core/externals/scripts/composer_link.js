@@ -1,19 +1,11 @@
 
 /* $Id: composer_link.js 9709 2012-05-02 01:11:14Z pamela $ */
-
-
-
 (function() { // START NAMESPACE
 var $ = 'id' in document ? document.id : window.$;
 
-
-
 Composer.Plugin.Link = new Class({
-
   Extends : Composer.Plugin.Interface,
-
   name : 'link',
-
   options : {
     title : 'Add Link',
     lang : {},
@@ -51,7 +43,6 @@ Composer.Plugin.Link = new Class({
     this.getComposer().addEvent('editorKeyPress', function() {
       this.monitorLastKeyPress = $time();
     }.bind(this));
-    
 
     return this;
   },
@@ -65,7 +56,6 @@ Composer.Plugin.Link = new Class({
   activate : function() {
     if( this.active ) return;
     this.parent();
-
     this.makeMenu();
     this.makeBody();
     
@@ -99,41 +89,41 @@ Composer.Plugin.Link = new Class({
     this.request = false;
   },
 
-  poll : function() {
-    // Active plugin, ignore
-    if( this.getComposer().hasActivePlugin() ) return;
-    // Recent key press, ignore
-    if( $time() < this.monitorLastKeyPress + this.options.monitorDelay ) return;
-    // Get content and look for links
-    var content = this.getComposer().getContent();
-    // Same as last body
-    if( content == this.monitorLastContent ) return;
-    this.monitorLastContent = content;
-    // Check for match
-    var m = content.match(/http:\/\/([-\w\.]+)+(:\d+)?(\/([-#:\w/_\.]*(\?\S+)?)?)?/);
-    if( $type(m) && $type(m[0]) && this.monitorLastMatch != m[0] )
-    {
-      this.monitorLastMatch = m[0];
-      this.activate();
-      this.elements.formInput.value = this.monitorLastMatch;
-      this.doAttach();
-    }
-  },
-
-
+//  poll : function() {
+//    // Active plugin, ignore
+//    if( this.getComposer().hasActivePlugin() ) return;
+//    // Recent key press, ignore
+//    if( $time() < this.monitorLastKeyPress + this.options.monitorDelay ) return;
+//    // Get content and look for links
+//    var content = this.getComposer().getContent();
+//    // Same as last body
+//    if( content == this.monitorLastContent ) return;
+//    this.monitorLastContent = content;
+//    // Check for match
+//    var m = content.match(/http:\/\/([-\w\.]+)+(:\d+)?(\/([-#:\w/_\.]*(\?\S+)?)?)?/);
+//    if( $type(m) && $type(m[0]) && this.monitorLastMatch != m[0] )
+//    {
+//      this.monitorLastMatch = m[0];
+//      this.activate();
+//      this.elements.formInput.value = this.monitorLastMatch;
+//      this.doAttach();
+//    }
+//  },
 
   // Getting into the core stuff now
-
   doAttach : function() {
     var val = this.elements.formInput.value;
     if( !val ) {
       return;
     }
+    
     if( !val.match(/^[a-zA-Z]{1,5}:\/\//) )
     {
       val = 'http://' + val;
     }
-    this.params.set('uri', val)
+    
+    this.params.set('uri', val);
+    
     // Input is empty, ignore attachment
     if( val == '' ) {
       e.stop();
@@ -175,7 +165,7 @@ Composer.Plugin.Link = new Class({
       var title = responseJSON.title || responseJSON.url;
       var description = responseJSON.description || responseJSON.title || responseJSON.url;
     }
-       
+
     var images = responseJSON.images || [];
 
     this.params.set('title', title);
@@ -191,10 +181,7 @@ Composer.Plugin.Link = new Class({
     }
   },
 
-
-  
   // Image loading
-  
   doLoadImages : function() {
     // Start image load timeout
     var interval = (function() {
@@ -204,7 +191,7 @@ Composer.Plugin.Link = new Class({
       }
       this.doShowPreview();
     }).delay(this.options.imageTimeout, this);
-      
+
     // Load them images
     this.params.loadedImages = [];
 
@@ -229,14 +216,12 @@ Composer.Plugin.Link = new Class({
     }));
   },
 
-
   // Preview generation
-  
   doShowPreview : function() {
     var self = this;
     this.elements.body.empty();
     this.makeFormInputs();
-    
+
     // Generate image thingy
     if( this.params.loadedImages.length > 0 ) {
       var tmp = new Array();
@@ -271,7 +256,7 @@ Composer.Plugin.Link = new Class({
       'id' : 'compose-link-preview-info',
       'class' : 'compose-preview-info'
     }).inject(this.elements.body);
-    
+
     // Generate title and description
     this.elements.previewTitle = new Element('div', {
       'id' : 'compose-link-preview-title',
@@ -330,7 +315,6 @@ Composer.Plugin.Link = new Class({
           'class' : 'compose-preview-options-count'
         }).inject(this.elements.previewChoose);
 
-
         this.elements.previewPrevious = new Element('a', {
           'id' : 'compose-link-preview-options-next',
           'class' : 'compose-preview-options-next',
@@ -376,7 +360,7 @@ Composer.Plugin.Link = new Class({
     var height = sizeAlt.y || size.y;
     var pixels = width * height;
     var aspect = width / height;
-    
+
     // Debugging
     if( this.options.debug ) {
       console.log(element.get('src'), sizeAlt, size, width, height, pixels, aspect);
@@ -396,46 +380,55 @@ Composer.Plugin.Link = new Class({
       }
       return false;
     }
+
     // Check min size
     if( width < this.options.imageMinSize ) {
       // Debugging
       if( this.options.debug ) {
         console.log('Width less than min - ', element.get('src'), width, this.options.imageMinSize);
       }
+      
       return false;
     } else if( height < this.options.imageMinSize ) {
       // Debugging
       if( this.options.debug ) {
         console.log('Height less than min - ', element.get('src'), height, this.options.imageMinSize);
       }
+      
       return false;
     }
+
     // Check max size
     if( width > this.options.imageMaxSize ) {
       // Debugging
       if( this.options.debug ) {
         console.log('Width greater than max - ', element.get('src'), width, this.options.imageMaxSize);
       }
+
       return false;
     } else if( height > this.options.imageMaxSize ) {
       // Debugging
       if( this.options.debug ) {
         console.log('Height greater than max - ', element.get('src'), height, this.options.imageMaxSize);
       }
+
       return false;
     }
+
     // Check  pixels
     if( pixels < this.options.imageMinPixels ) {
       // Debugging
       if( this.options.debug ) {
         console.log('Pixel count less than min - ', element.get('src'), pixels, this.options.imageMinPixels);
       }
+
       return false;
     } else if( pixels > this.options.imageMaxPixels ) {
       // Debugging
       if( this.options.debug ) {
         console.log('Pixel count greater than max - ', element.get('src'), pixels, this.options.imageMaxPixels);
       }
+
       return false;
     }
 
@@ -473,6 +466,7 @@ Composer.Plugin.Link = new Class({
     if( this.elements.imageThumb ) {
       this.elements.imageThumb.addClass('compose-preview-image-hidden');
     }
+
     if( element ) {
       element.removeClass('compose-preview-image-hidden');
       this.elements.imageThumb = element;
@@ -537,9 +531,5 @@ Composer.Plugin.Link = new Class({
     }).inject(element, 'after');
     input.focus();
   }
-
 });
-
-
-
 })(); // END NAMESPACE
