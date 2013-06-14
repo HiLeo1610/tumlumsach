@@ -312,7 +312,7 @@ ul.feed .comments textarea
 {
   font-size: 8pt;
 }
-ul.feed .comments textarea + button
+ul.feed .comments textarea + button, ul.feed .comments textarea + div + button
 {
   display: none;
   font-size: .8em;

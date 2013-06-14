@@ -139,7 +139,7 @@ return array(
 				'slug' => '-',
 				'id' => '-',				
 			),		
-			'reqs' => array('action' => '(view|create|rate|edit|delete)')	
+			'reqs' => array('action' => '(view|rate|edit|delete)')	
 		),
 		'work_general' => array(
 			'route' => 'works/:action/*',

@@ -1,5 +1,9 @@
 <?php
-	echo $this->partial('_autosuggest_post.tpl', 'book');
+	if (isset($this->parentBook)) {
+		echo $this->partial('_autosuggest_post.tpl', 'book', array('parentBook' => $this->parentBook));
+	} else {
+		echo $this->partial('_autosuggest_post.tpl', 'book');
+	}
 ?>
 
 <?php

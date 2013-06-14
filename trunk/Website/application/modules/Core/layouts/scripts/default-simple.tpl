@@ -166,7 +166,13 @@
       }
     }
   ?>
-  <?php echo $this->minifyHeadScript()->toString()."\n" ?>
+  <?php
+  	if (APPLICATION_ENV === 'production') { 
+  		echo $this->minifyHeadScript()->toString()."\n";
+ 	} else {
+		echo $this->headScript()->toString()."\n";
+	} 
+  ?>
 
   <!-- vertical scrollbar fix -->
   <style type="text/css">
