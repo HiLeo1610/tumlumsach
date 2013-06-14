@@ -171,7 +171,11 @@
     }
   ?>
   <?php 
-  	echo $this->minifyHeadScript()->toString()."\n";
+  	if (APPLICATION_ENV === 'production') {
+  		echo $this->minifyHeadScript()->toString()."\n";
+  	} else {
+		echo $this->headScript()->toString()."\n";
+	}
   ?>
 
   

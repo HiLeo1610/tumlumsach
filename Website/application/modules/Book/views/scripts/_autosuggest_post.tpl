@@ -9,7 +9,7 @@
 	var userAutocompleter = null;
 	
 	<?php if(!empty($this->isPopulated) 
-		&& (!empty($this->toTaggedUsers) || !empty($this->toTaggedBooks) || !empty($this->parentBook))): ?>
+		&& (!empty($this->toTaggedUsers) || !empty($this->toTaggedBooks))): ?>
 	    isPopulated = true;
 	    
 	    <?php foreach($this->toTaggedUsers as $toTaggedUser) : ?>
@@ -31,16 +31,16 @@
 		    };
 		    taggedBooks.push(toBook);
 	    <?php endforeach; ?>
-
-	    <?php if (!empty($this->parentBook)) : ?>
-	       	parentBook = {
-	    	    id : <?php echo sprintf("%d", $this->parentBook->getIdentity())?>,
-				type : '<?php echo $this->parentBook->getType()?>',
-				guid : '<?php echo $this->parentBook->getGuid()?>',
-				title : '<?php echo $this->string()->escapeJavascript($this->parentBook->getTitle())?>'	    	    	    	
-	    	}
-	    <?php endif; ?>
   	<?php endif; ?>
+
+  	<?php if (!empty($this->parentBook)) : ?>
+       	parentBook = {
+    	    id : <?php echo sprintf("%d", $this->parentBook->getIdentity())?>,
+			type : '<?php echo $this->parentBook->getType()?>',
+			guid : '<?php echo $this->parentBook->getGuid()?>',
+			title : '<?php echo $this->string()->escapeJavascript($this->parentBook->getTitle())?>'	    	    	    	
+    	}
+    <?php endif; ?>
   	
   	function removeFromToValue(id, eleId) {
 	    // code to change the values in the hidden field to have updated values
@@ -164,21 +164,6 @@
 		    <?php else : ?>
 		    	$('toBookValues-wrapper').setStyle('height', 0);	
 		    <?php endif; ?>
-		    if (parentBook != null) {
-		    	var parentBookElement = new Element("span", {
-			        'id' : 'to_book_span' + parentBook.id,
-			        'class' : 'tag tag_' + parentBook.type,
-			        'html' :  parentBook.title + ' '  
-	      		});
-	      		var parentBookDeleteElement = new Element('a', {
-	      			'href' : 'javascript:void(0)',
-	      			'onclick' : 'removeFromElement(this, ' + parentBook.id + ', "' + 'parentBookValue' + '");showInput($("book"))',
-	      			'html' : 'x'	
-	      		});
-	      		parentBookDeleteElement.inject(parentBookElement);
-				$('book-element').appendChild(parentBookElement);
-				$('book').set('style', 'display:none');
-		    }
 		} else {
 			// hide the wrapper for tagged users if it is empty
 		    if ($('toValues').value==""){
@@ -199,6 +184,22 @@
 		    }
 		}
 
+        if (parentBook != null) {
+	    	var parentBookElement = new Element("span", {
+		        'id' : 'to_book_span' + parentBook.id,
+		        'class' : 'tag tag_' + parentBook.type,
+		        'html' :  parentBook.title + ' '  
+      		});
+      		var parentBookDeleteElement = new Element('a', {
+      			'href' : 'javascript:void(0)',
+      			'onclick' : 'removeFromElement(this, ' + parentBook.id + ', "' + 'parentBookValue' + '");showInput($("book"))',
+      			'html' : 'x'	
+      		});
+      		parentBookDeleteElement.inject(parentBookElement);
+			$('book-element').appendChild(parentBookElement);
+			$('book').set('style', 'display:none');
+	    }
+        
         userAutocompleter = new Autocompleter.Request.JSON('tags_user', '<?php echo $this->url(array('module' => 'user', 'controller' => 'friends', 'action' => 'suggest'), 'default', true) ?>', {
             'minLength': 2,
             'delay' : 250,
