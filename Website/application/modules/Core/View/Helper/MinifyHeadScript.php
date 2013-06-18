@@ -110,7 +110,6 @@ class Core_View_Helper_MinifyHeadScript extends Zend_View_Helper_HeadScript {
 		if ($scripts) {
 			$items[] = $this->_generateMinifyItem($scripts);
 		}
-		
 		return $indent . implode($this->_escape($this->getSeparator()) . $indent, $items);
 	}
 

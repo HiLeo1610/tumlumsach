@@ -1,16 +1,10 @@
 <ul>
-	<?php foreach($this->paginator as $post) : ?>
+	<?php foreach($this->posts as $post) : ?>
 		<li>
 			<?php echo $this->partial('_post.tpl', 'book', array('post' => $post))?>
 		</li>
 	<?php endforeach; ?>
 </ul>
-
-<div class="book_pages book_paginator paginator_content_<?php echo $this->identity?>">
-	<?php
-		echo $this->paginationControl($this->paginator);
-	?>
-</div>
 
 <script language="javascript" type="text/javascript">
 	en4.core.runonce.add(function(){

@@ -37,21 +37,22 @@ class Book_Widget_PostsOfUserController extends Engine_Content_Widget_Abstract
 		$postSelect = $postTable->getSelect(); 
 		$postSelect->where("$postTableName.user_id = ?", $user->getIdentity());
 		$postSelect->order(new Zend_Db_Expr('rand()'));
+		$postSelect->limit($this->_getParam('itemCountPerPage', 5));
 		
-		$this->view->paginator = $paginator = Zend_Paginator::factory($postSelect);
-		$itemCountPerPage = $this->_getParam('itemCountPerPage', 10);
-		if (empty($itemCountPerPage)) {
-			$itemCountPerPage = 10;	
-		}
-		$paginator->setItemCountPerPage($itemCountPerPage);
-		$paginator->setCurrentPageNumber($this->_getParam('page', 1));
+		$this->view->posts = $posts = $postTable->fetchAll($postSelect);
+		
+// 		$this->view->paginator = $paginator = Zend_Paginator::factory($postSelect);
+// 		$itemCountPerPage = $this->_getParam('itemCountPerPage', 10);
+// 		if (empty($itemCountPerPage)) {
+// 			$itemCountPerPage = 10;	
+// 		}
+// 		$paginator->setItemCountPerPage($itemCountPerPage);
+// 		$paginator->setCurrentPageNumber($this->_getParam('page', 1));
 		
 		// Do not render if nothing to show
-	    if( $paginator->getTotalItemCount() <= 0 ) {
+	    if( count($posts) <= 0 ) {
 	      	return $this->setNoRender();
-	    } else {
-	      	$this->_childCount = $paginator->getTotalItemCount();
-	    }	
+	    } 	
 	}
 
 	public function getChildCount()
