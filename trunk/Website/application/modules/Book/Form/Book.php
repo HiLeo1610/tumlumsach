@@ -251,7 +251,6 @@ class Book_Form_Book extends Engine_Form
             	new Book_Filter_HTMLPurifier()
 			),
         ));
-		
 		Engine_Form::addDefaultDecorators($this->getElement('description'));
 
         // Element: submit
