@@ -925,9 +925,9 @@ ul.book_work_list .book_work .book_work_info {
 .book_work_photo {
 	text-align: center;
 }
-.book_work_photo img {
+/*.book_work_photo img {
 	max-width: 182px;
-}
+}*/
 ul.book_works img.item_photo_book_work.thumb_profile {
 	max-width: 140px;
 	height: auto;

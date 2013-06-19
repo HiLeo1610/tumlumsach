@@ -93,11 +93,11 @@ class Book_Model_Work extends Book_Model_Base
 
 		// Resize image (main)
 		$image = Engine_Image::factory();
-		$image->open($file)->resize(400, 600)->write($path . '/m_' . $name)->destroy();
+		$image->open($file)->resize(800, 600)->write($path . '/m_' . $name)->destroy();
 
 		// Resize image (profile)
 		$image = Engine_Image::factory();
-		$image->open($file)->resize(200, 400)->write($path . '/p_' . $name)->destroy();
+		$image->open($file)->resize(400, 400)->write($path . '/p_' . $name)->destroy();
 
 		// Resize image (featured)
 		$imageFeatured = Engine_Image::factory();
