@@ -44,7 +44,7 @@ class Book_Form_Post extends Engine_Form
 
 		$this->addElement('Checkbox', 'hasParent', array(
 			'label' => 'This post is about a specific book.',
-			'value' => 1,
+			'value' => 0,
 			'order' => 1	
 		));
 		

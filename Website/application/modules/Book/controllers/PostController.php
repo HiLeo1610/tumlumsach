@@ -51,6 +51,7 @@ class Book_PostController extends Book_Controller_Base
 				if ($parent_type == 'book') {
 					$this->view->parentBook = Engine_Api::_()->getItem('book', $parent_id);
 					$form->getElement('hasParent')->setChecked(true);
+					$form->getElement('parentBookValue')->setValue($parent_id);
 				}				
 			} else {
 				$form->getElement('hasParent')->setChecked(false);
