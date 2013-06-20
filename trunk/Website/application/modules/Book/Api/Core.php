@@ -83,9 +83,10 @@ class Book_Api_Core extends Core_Api_Abstract
 			}
 
 			$itemTbl = Engine_Api::_()->getItemTable($type);
+			$itemTblName = $itemTbl->info(Zend_Db_Table_Abstract::NAME);
 			$select = $itemTbl->getSelect();
 			$tablePrimaryKey = current($itemTbl->info(Zend_Db_Table_Abstract::PRIMARY));
-			$select->where("$tablePrimaryKey = ?", $id);
+			$select->where("$itemTblName.$tablePrimaryKey = ?", $id);
 			return $itemTbl->fetchRow($select);
 		}
 	}
