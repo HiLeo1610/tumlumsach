@@ -1,3 +1,5 @@
+<?php
+?>
 <ul class="book_list_users_widget">
 	<?php foreach($this->users as $user) : ?>
 		<li>			

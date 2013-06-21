@@ -21,4 +21,6 @@ class User_Model_DbTable_Users extends Engine_Db_Table
   protected $_name = 'users';
 
   protected $_rowClass = 'User_Model_User';
+  
+  protected $_rowsetClass = 'Core_Model_Rowset_Item';
 }

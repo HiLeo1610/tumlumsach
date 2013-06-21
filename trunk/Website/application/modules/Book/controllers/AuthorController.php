@@ -5,6 +5,8 @@ class Book_AuthorController extends Core_Controller_Action_Standard
 	{
 		$this->_helper->content->setEnabled();
 		
+		$page = $this->_getParam('page', 1);
+		
 		$userTable = Engine_Api::_()->getItemTable('user');
 		$userSelect = $userTable->select()->where('verified = 1')->where('approved = 1')->where('enabled = 1');
 		$userSelect->where('level_id = ?', Book_Plugin_Constants::AUTHOR_LEVEL);
