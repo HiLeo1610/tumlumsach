@@ -564,10 +564,7 @@ class User_Model_User extends Core_Model_Item_Abstract
     return new Engine_ProxyObject($this, Engine_Api::_()->getDbtable('status', 'core'));
   }
 
-
-
   // Utility
-  
   protected function _readData($spec)
   {
     if( is_scalar($spec) )
@@ -594,5 +591,15 @@ class User_Model_User extends Core_Model_Item_Abstract
 
     parent::_readData($spec);
   }
-
+  
+  public function getPhotoUrl($type = null) {
+      if (!empty($this->photo_url)) {
+          $photo_urls = $this->photo_url;
+          if (isset($photo_urls[$type])) {
+              return $photo_urls[$type];
+          }
+      }
+      
+      return parent::getPhotoUrl($type);
+  }
 }

@@ -1,6 +1,8 @@
 <?php
 abstract class Book_Model_DbTable_Bases extends Engine_Db_Table
 {
+    protected $_rowsetClass = 'Core_Model_Rowset_Item';
+    
 	protected abstract function _getType();
 	
 	protected $_selectedColumns = "*";

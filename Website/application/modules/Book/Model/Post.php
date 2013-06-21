@@ -87,8 +87,9 @@ class Book_Model_Post extends Book_Model_Base
 		if (!empty($bookIds))
 		{
 			$bookTbl = new Book_Model_DbTable_Books;
+			$bookTblName = $bookTbl->info(Zend_Db_Table_Abstract::NAME);
 			$bookSelect = $bookTbl->getSelect();
-			$bookSelect->where('book_id in (?)', $bookIds);
+			$bookSelect->where("$bookTblName.book_id in (?)", $bookIds);
 
 			return $bookTbl->fetchAll($bookSelect);
 		}

@@ -344,7 +344,7 @@ abstract class Core_Model_Item_Abstract extends Engine_Db_Table_Row implements C
     if( empty($this->photo_id) ) {
       return null;
     }
-
+    
     $file = Engine_Api::_()->getItemTable('storage_file')->getFile($this->photo_id, $type);
     if( !$file ) {
       return null;
