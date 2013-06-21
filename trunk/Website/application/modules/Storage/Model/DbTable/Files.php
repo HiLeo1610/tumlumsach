@@ -63,7 +63,11 @@ class Storage_Model_DbTable_Files extends Engine_Db_Table
     
     public function getMultiFiles($ids) {
         if (!empty($ids)) {
-            $select = $this->select()->where('parent_file_id IN (?)', $ids);
+            if (count($ids) > 0) {
+                $select = $this->select()->where('parent_file_id IN (?)', $ids);
+            } else {
+                $select = $this->select()->where('parent_file_id = (?)', current($ids));
+            }
             $files = $this->fetchAll($select);
             
             foreach ($files as $file) {
