@@ -110,10 +110,10 @@ class Book_Api_Core extends Core_Api_Abstract {
             	
             foreach ($rawPostTbl->fetchAll($rawPostSelect) as $rawPost) {
                 $data = array(
-                        'post_name' => $rawPost->name,
-                        'content' => $rawPost->content,
-                        'user_id' => 1, //superadmin
-                        'rawpost_id' => $rawPost->rawpost_id
+                    'post_name' => $rawPost->name,
+                    'content' => $rawPost->content,
+                    'user_id' => 1, //superadmin
+                    'rawpost_id' => $rawPost->rawpost_id
                 );
                 if (!empty($rawPost->book_link_id)) {
                     $book = $rawBookTbl->getBookFromBookLinkId($rawPost->book_link_id);
@@ -163,13 +163,13 @@ class Book_Api_Core extends Core_Api_Abstract {
                 }
 
                 $data = array(
-                        'book_name' => $rawBook->book_name,
-                        'published_date' => date('Y-m-d H:i:s', $rawBook->published_date),
-                        'price' => $rawBook->price,
-                        'num_page' => $rawBook->num_page,
-                        'description' => $rawBook->description,
-                        'rawbook_id' => $rawBook->getIdentity(),
-                        'user_id' => 1 //superadmin
+                    'book_name' => $rawBook->book_name,
+                    'published_date' => date('Y-m-d H:i:s', $rawBook->published_date),
+                    'price' => $rawBook->price,
+                    'num_page' => $rawBook->num_page,
+                    'description' => $rawBook->description,
+                    'rawbook_id' => $rawBook->getIdentity(),
+                    'user_id' => 1 //superadmin
                 );
                 	
                 if (isset($publisher) && !empty($publisher)) {
@@ -189,8 +189,9 @@ class Book_Api_Core extends Core_Api_Abstract {
                     $name = basename($rawBook['photo']);
                     $path = APPLICATION_PATH . DIRECTORY_SEPARATOR . 'temporary';
                     $params = array(
-                            'parent_id' => $book->getIdentity(),
-                            'parent_type' => $book->getType()
+                        'parent_id' => $book->getIdentity(),
+                        'parent_type' => $book->getType(),
+                        'user_id' => 1 // superadmin
                     );
 
                     // Save
