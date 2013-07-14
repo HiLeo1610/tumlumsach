@@ -293,4 +293,14 @@ return array(
 		'type' => 'widget',
 		'name' => 'book.list-random-users',
 	),
+    array(
+        'title' => 'Book excerpts',
+        'description' => 'This widget shows users excerpts',
+        'category' => 'Books',
+        'type' => 'widget',
+        'name' => 'book.book-excerpts',
+        'requirements' => array(
+             'subject' => 'book',
+         ),            
+        ),
 );

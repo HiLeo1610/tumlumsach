@@ -1,7 +1,7 @@
 <form method="get" action="<?php echo $this->url(array(
 		'action' => 'create',
 		'parent_type' => $this->book->getType(),
-		'parent_id' => $this->book->getIdentity()), 'post')?>">
+		'parent_id' => $this->book->getIdentity()), 'post_general')?>">
 	<button type="submit">
 		<?php echo $this->translate('Write New Post')?>
 	</button>
