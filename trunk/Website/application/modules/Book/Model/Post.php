@@ -1,19 +1,32 @@
 <?php
 class Book_Model_Post extends Book_Model_Base
 {
-	public function getHref($params = array())
+	public function getHref($params = array('type' => 'book_post'))
 	{
-		$params = array_merge(array(
-			'route' => 'post',
-			'reset' => true,
-			'id' => $this->getIdentity(),
-			'slug' => $this->getSlug(),
-			'action' => 'view'
-		), $params);
-		$route = $params['route'];
-		$reset = $params['reset'];
-		unset($params['route']);
-		unset($params['reset']);
+	    if ($params['type'] == 'book_post')
+	    {
+    		$params = array_merge(array(
+    			'route' => 'post',
+    			'reset' => true,
+    			'id' => $this->getIdentity(),
+    			'slug' => $this->getSlug(),
+    			'action' => 'view'
+    		), $params);
+	    }
+	    else
+	    {
+	        $params = array_merge(array(
+	                'route' => 'post',
+	                'reset' => true,
+	                'id' => $this->getIdentity(),
+	                'slug' => $this->getSlug(),
+	                'action' => 'view-excerpt'
+	        ), $params);
+	    }
+	    $route = $params['route'];
+	    $reset = $params['reset'];
+	    unset($params['route']);
+	    unset($params['reset']);	    
 		return Zend_Controller_Front::getInstance()->getRouter()->assemble($params, $route, $reset);
 	}
 
@@ -26,6 +39,11 @@ class Book_Model_Post extends Book_Model_Base
 		return null;
 	}
 
+	protected function _insert()
+	{
+	    $this->type = $this->getType();    
+	}
+	
 	public function getParentObject()
 	{
 		if (!empty($this->parent_id) && !empty($this->parent_type))

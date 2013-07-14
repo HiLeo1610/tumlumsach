@@ -131,6 +131,14 @@ return array(
 				'action' => 'index',
 			),
 		),
+        'excerpt_general' => array(
+            'route' => 'excerpts/:action/*',
+            'defaults' => array(
+                'module' => 'book',
+                'controller' => 'excerpt',
+                'action' => 'index',
+            ),
+	     ),	        
 		'post' => array(
 			'route' => 'posts/:action/:id/:slug/*',
 			'defaults' => array(
