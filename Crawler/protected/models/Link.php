@@ -34,6 +34,17 @@ class Link extends CActiveRecord
 		$dataPath = Yii::app()->params['data_path'];
 		
 		$file = $dataPath . $this->link_id . '.html';
+		if (!file_exists($file)) {
+		    $content = file_get_contents($this->href);
+		    
+		    if (!empty($content)) {
+		        $handle = fopen($file, 'w');
+		        fwrite($handle, $content);
+		        fclose($handle);
+		    
+		        return $content;
+		    }
+		}
 		$handle = fopen($file, 'r');
 		$filesize = filesize($file);
 		if ($refresh && $filesize == 0) {
