@@ -122,10 +122,6 @@ class Book_ChapterController extends Book_Controller_Base
 
 			    $db->commit();
 			}
-			catch (Engine_Image_Adapter_Exception $e)
-			{
-			    Zend_Registry::get('Zend_Log')->log($e->__toString(), Zend_Log::WARN);
-			}
 			catch (Exception $e)
 			{
 			    $db->rollBack();
@@ -173,6 +169,10 @@ class Book_ChapterController extends Book_Controller_Base
 				$values = $form->getValues();
 				$subject->setFromArray($values);
 				$subject->save();
+				
+				if (!empty($values['photo'])) {
+				    $subject->setPhoto($form->photo);
+				}
 
 				$db->commit();
 			}

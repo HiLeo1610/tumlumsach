@@ -71,6 +71,13 @@ class Book_Form_Post extends Engine_Form
 			'order' => 4
 		));
 
+		// init photo
+		$this->addElement('File', 'photo', array(
+	        'label' => 'Post Image',
+	        'description' => 'The image should have the size with the portion 200px * 150px',
+		));
+		$this->photo->addValidator('Extension', false, 'jpg,png,gif,jpeg');
+		
 		// init description
 		$this->addElement('TinyMce', 'content', array(
 			'order' => 5,

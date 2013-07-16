@@ -80,9 +80,11 @@
 	</div>
 <?php endif; ?>
 
-<div class="book_clear book_work_photo">
-	<?php echo $this->itemPhoto($this->work, NULL) ?>
-</div>
+<?php if (!empty($this->work->photo_id)) : ?>
+    <div class="book_clear book_work_photo">
+    	<?php echo $this->itemPhoto($this->work, NULL) ?>
+    </div>
+<?php endif;?>
 
 <div class="book_post_content book_clear book_work_content">	
 	<?php echo $this->string()->stripTags($this->work->description)?>

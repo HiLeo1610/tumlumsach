@@ -121,6 +121,10 @@ class Book_PostController extends Book_Controller_Base
 					));
 					$tagBook->save();
 				}
+				
+				if (!empty($values['photo'])) {
+				    $post = $post->setPhoto($form->photo);
+				}
 
 				// CREATE AUTH STUFF HERE
 	            $auth = Engine_Api::_()->authorization()->context;
@@ -265,6 +269,10 @@ class Book_PostController extends Book_Controller_Base
 				{
 					$subject->setFromArray($values);
 					$subject->save();
+					
+					if (!empty($values['photo'])) {
+					    $subject->setPhoto($form->photo);
+					}
 	
 					$tags = array();
 					foreach (preg_split('/[,]+/', $values['tags']) as $tag) {
@@ -357,6 +365,10 @@ class Book_PostController extends Book_Controller_Base
 					}	
 	
 					$db->commit();
+				}
+				catch (Engine_Image_Adapter_Exception $e)
+				{
+				    Zend_Registry::get('Zend_Log')->log($e->__toString(), Zend_Log::WARN);
 				}
 				catch(Exception $e)
 				{

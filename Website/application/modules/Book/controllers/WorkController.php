@@ -232,14 +232,7 @@ class Book_WorkController extends Book_Controller_Base
 
 			if (!empty($values['photo']))
 			{
-				try
-				{
-					$work = $work->setPhoto($form->photo);
-				}
-				catch (Engine_Image_Adapter_Exception $e)
-				{
-					Zend_Registry::get('Zend_Log')->log($e->__toString(), Zend_Log::WARN);
-				}
+				$work = $work->setPhoto($form->photo);
 			}
 
 			// CREATE AUTH STUFF HERE

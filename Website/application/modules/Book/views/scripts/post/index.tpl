@@ -36,6 +36,7 @@
 			<div class="book_rate">
 				<?php echo $this->partial('_rating_big.tpl', 'book', array('item' => $post));?>
 			</div>
+			
 			<div class="book_briefdescription">
 				<?php echo $this->string()->truncate(strip_tags($post->content), 512)?>
 			</div>
