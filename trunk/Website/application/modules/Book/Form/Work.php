@@ -69,7 +69,7 @@ class Book_Form_Work extends Engine_Form
 
         // init photo
         $this->addElement('File', 'photo', array(
-            'label' => 'Book Image',
+            'label' => 'Work Image',
             'description' => 'The image should have the size with the portion 200px * 150px',
         ));
         $this->photo->addValidator('Extension', false, 'jpg,png,gif,jpeg');
