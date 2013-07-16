@@ -27,12 +27,19 @@ class Book_Form_Chapter extends Engine_Form
                 new Engine_Filter_StringLength( array('max' => '256')),
             )
         ));
-        
+
         // is published
         $this->addElement('Checkbox', 'published', array(
             'label' => 'Publish chapter',
             'value' => 1
         ));
+        
+        // init photo
+        $this->addElement('File', 'photo', array(
+            'label' => 'Photo',
+            'description' => 'The image should have the size (140px * 230px)',
+        ));
+        $this->photo->addValidator('Extension', false, 'jpg,png,gif,jpeg');
 
         // init description
         $this->addElement('TinyMce', 'content', array(
@@ -72,6 +79,8 @@ class Book_Form_Chapter extends Engine_Form
                     'outdent',
                     'indent',
                     'blockquote',
+                    '|',
+                    'code'
                 ),
                 'upload_url' => Zend_Controller_Front::getInstance()->getRouter()->assemble(
 					array('module' => 'book', 'controller' => 'index', 'action' => 'upload'), 'default', true)

@@ -326,24 +326,24 @@ class Book_BookController extends Book_Controller_Base
 
 			if (!empty($values['photo']))
 			{
-				try
-				{
-					$book = $book->setPhoto($form->photo);
-					$photoTable = new Book_Model_DbTable_Photos;
-					$photo = $photoTable->createRow(array(
-						'parent_object_id' => $book->getIdentity(),
-						'parent_object_type' => $book->getType(),
-						'file_id' => $book->photo_id,
-						'user_id' => $viewer->getIdentity(),
-						'approved' => 1,
-						'default' => 1
-					));
-					$photo->save();
-				}
-				catch (Engine_Image_Adapter_Exception $e)
-				{
-					Zend_Registry::get('Zend_Log')->log($e->__toString(), Zend_Log::WARN);
-				}
+			    try
+			    {
+			        $book = $book->setPhoto($form->photo);
+			        $photoTable = new Book_Model_DbTable_Photos;
+			        $photo = $photoTable->createRow(array(
+		                'parent_object_id' => $book->getIdentity(),
+		                'parent_object_type' => $book->getType(),
+		                'file_id' => $book->photo_id,
+		                'user_id' => $viewer->getIdentity(),
+		                'approved' => 1,
+		                'default' => 1
+			        ));
+			        $photo->save();
+			    }
+			    catch (Engine_Image_Adapter_Exception $e)
+			    {
+			        Zend_Registry::get('Zend_Log')->log($e->__toString(), Zend_Log::WARN);
+			    }
 			}
 
 			$authorIds = explode(',', $values['toValues']);

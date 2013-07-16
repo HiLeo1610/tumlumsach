@@ -102,26 +102,34 @@ class Book_ChapterController extends Book_Controller_Base
 	
 			try
 			{
-				$chapter = $chapterTable->createRow($values);
-				$chapter->creation_date = date('Y-m-d H:i:s');
-				$chapter->modified_date = date('Y-m-d H:i:s');
-				$chapter->work_id = $workId;
-				
-				$chapter->save();				
-				
-				// CREATE AUTH STUFF HERE
-	            $auth = Engine_Api::_()->authorization()->context;
-	          	$roles = array('owner', 'parent_member', 'registered', 'everyone');
-	            foreach ($roles as $i => $role) {
-	                $auth->setAllowed($chapter, $role, 'view', true);
-	            }
-	
-				$db->commit();
+			    $chapter = $chapterTable->createRow($values);
+			    $chapter->creation_date = date('Y-m-d H:i:s');
+			    $chapter->modified_date = date('Y-m-d H:i:s');
+			    $chapter->work_id = $workId;
+
+			    $chapter->save();
+
+			    if (!empty($values['photo'])) {
+			        $chapter = $chapter->setPhoto($form->photo);
+			    }
+
+			    // CREATE AUTH STUFF HERE
+			    $auth = Engine_Api::_()->authorization()->context;
+			    $roles = array('owner', 'parent_member', 'registered', 'everyone');
+			    foreach ($roles as $i => $role) {
+			        $auth->setAllowed($chapter, $role, 'view', true);
+			    }
+
+			    $db->commit();
+			}
+			catch (Engine_Image_Adapter_Exception $e)
+			{
+			    Zend_Registry::get('Zend_Log')->log($e->__toString(), Zend_Log::WARN);
 			}
 			catch (Exception $e)
 			{
-				$db->rollBack();
-				throw $e;
+			    $db->rollBack();
+			    throw $e;
 			}
 	
 			if ($chapter->published && $work->published) {
@@ -209,9 +217,8 @@ class Book_ChapterController extends Book_Controller_Base
 		}
 		
 		$work = $chapter->getParent();
-
 		$chapter->delete();
-
+		
 		return $this->_forward('success', 'utility', 'core', array(
 			'layout' => 'default-simple',
 			'messages' => array(Zend_Registry::get('Zend_Translate')->_('The chapter is deleted successfully.')),

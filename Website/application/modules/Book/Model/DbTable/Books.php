@@ -11,6 +11,9 @@ class Book_Model_DbTable_Books extends Book_Model_DbTable_Bases
             'user_id', 
             'photo_id', 
             'creation_date', 
+            'publisher_id',
+            'book_company_id',
+            'comment_count'
         );
 
     protected function _getType() {
@@ -40,13 +43,18 @@ class Book_Model_DbTable_Books extends Book_Model_DbTable_Bases
         $bookAuthorTable = new Book_Model_DbTable_BookAuthor();
         $bookAuthorTableName = $bookAuthorTable->info(Zend_Db_Table_Abstract::NAME);
          
-        $select->join(
-                $bookAuthorTableName,
-                "$tableName.book_id = $bookAuthorTableName.book_id",
-                array('GROUP_CONCAT(author_id) As author_ids', 'GROUP_CONCAT(author_name) As author_names')
-        );
-        $select->where("$bookAuthorTableName.type = ?", Book_Plugin_Constants::AUTHOR);
-         
+//         $select->joinLeft(
+//                 $bookAuthorTableName,
+//                 "$tableName.book_id = $bookAuthorTableName.book_id",
+//                 array('GROUP_CONCAT(author_id) As author_ids', 'GROUP_CONCAT(author_name) As author_names')
+//         );
+//         $select->where("$bookAuthorTableName.type = ?", Book_Plugin_Constants::AUTHOR);
+        $bookAuthorSelect = $bookAuthorTable->select()
+            ->from($bookAuthorTableName, array(new Zend_Db_Expr('GROUP_CONCAT(author_id) As author_ids', 'GROUP_CONCAT(author_name) As author_names')))
+            ->where("$bookAuthorTableName.type = ?", Book_Plugin_Constants::AUTHOR);
+        
+        $select->columns(new Zend_Db_Expr('(' . $bookAuthorSelect->assemble() . ')'));
+        
         return $select;
     }
 }

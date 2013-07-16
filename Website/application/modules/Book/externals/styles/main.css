@@ -895,8 +895,12 @@ ul.book_chapters .book_chapter_date {
 .book_work_header .book_work_controls a, .book_chapter_header .book_chapter_controls a{
 	margin: 0px 5px;
 }
-.book_work_info_detail, .book_chapter_info_detail {
+.book_work_info_detail, .book_chapter_info_detail, 
+.book_work_info_detail, .book_chapter_thumbnail {
 	margin-top: 5px;
+}
+.book_work_info_detail, .book_chapter_thumbnail {
+	text-align: center;
 }
 .book_work_header {
 	overflow: hidden;
