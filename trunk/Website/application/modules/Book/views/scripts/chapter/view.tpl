@@ -42,6 +42,10 @@
 	</div>
 </div>
 
+<div class="book_chapter_thumbnail">
+    <?php echo $this->itemPhoto($this->subject)?>
+</div>
+
 <div class="book_post_content book_clear">
 	<?php echo $this->subject->content?>
 </div>

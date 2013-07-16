@@ -10,13 +10,15 @@ class Book_Form_Excerpt extends Engine_Form
     
     public function init()
     {
-		$view = $this->getView();
-		$baseUrl = $view->layout()->staticBaseUrl;
-		$view->headScript()
-        	->appendFile($baseUrl . 'externals/autocompleter/Observer.js')
-        	->appendFile($baseUrl . 'externals/autocompleter/Autocompleter.js')
-        	->appendFile($baseUrl . 'externals/autocompleter/Autocompleter.Local.js')
-        	->appendFile($baseUrl . 'externals/autocompleter/Autocompleter.Request.js');
+        $view = $this->getView();
+        $baseUrl = $view->layout()->staticBaseUrl;
+
+        $view->headScript()
+            ->appendFile($baseUrl . 'externals/autocompleter/Observer.js')
+            ->appendFile($baseUrl . 'externals/autocompleter/Autocompleter.js')
+            ->appendFile($baseUrl . 'externals/autocompleter/Autocompleter.Local.js')
+            ->appendFile($baseUrl . 'externals/autocompleter/Autocompleter.Request.js');
+
         $view->headScript()->appendScript("
         	window.addEvent('domready', function() {
         		var viewBookFunc = function() {        			
@@ -35,7 +37,7 @@ class Book_Form_Excerpt extends Engine_Form
         	});
         ");	
         $view->headStyle()->appendStyle('#parentBookValue-wrapper{height:0}');
-			
+
 		$this->setMethod('POST')->setTitle($this->_postName)->setAttrib('class', 'global_form book_form');
 		
 		$filter = new Engine_Filter_Html();

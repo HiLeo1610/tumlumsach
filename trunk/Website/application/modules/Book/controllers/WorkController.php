@@ -235,16 +235,6 @@ class Book_WorkController extends Book_Controller_Base
 				try
 				{
 					$work = $work->setPhoto($form->photo);
-					$photoTable = new Book_Model_DbTable_Photos;
-					$photo = $photoTable->createRow(array(
-						'parent_object_id' => $work->getIdentity(),
-						'parent_object_type' => $work->getType(),
-						'file_id' => $work->photo_id,
-						'user_id' => $viewer->getIdentity(),
-						'approved' => 1,
-						'default' => 1
-					));
-					$photo->save();
 				}
 				catch (Engine_Image_Adapter_Exception $e)
 				{
