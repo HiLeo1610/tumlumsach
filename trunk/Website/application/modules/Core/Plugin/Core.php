@@ -164,7 +164,7 @@ class Core_Plugin_Core
 	$strMeta = '<meta property="og:image" content="' . $imgUrl . '" />';
 	
 	$pageTitle = $view->translate($view->layout()->siteinfo['title']);
-	if (!$subject) {
+	if (empty($subject)) {
 		$request = Zend_Controller_Front::getInstance()->getRequest();
 		$pageTitleKey = 'pagetitle-' . $request->getModuleName() . '-' . $request->getActionName() . '-' . $request->getControllerName();
 		$pageTitle .= ' - ' . $view->translate($pageTitleKey);
