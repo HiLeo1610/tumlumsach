@@ -36,7 +36,7 @@ class Book_Form_Chapter extends Engine_Form
         
         // init photo
         $this->addElement('File', 'photo', array(
-            'label' => 'Photo',
+            'label' => 'Chapter Image',
             'description' => 'The image should have the size (140px * 230px)',
         ));
         $this->photo->addValidator('Extension', false, 'jpg,png,gif,jpeg');
